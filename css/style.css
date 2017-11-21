@@ -1,0 +1,46 @@
+body{
+	background-color:#EDEDFF;
+	padding:0;
+	margin:0;
+}
+
+/*On redimensionne toutes les images à la dimension du bloc de la balise img*/
+/*Pour plus d'infos se rendre sur https://www.w3schools.com/howto/howto_js_slideshow.asp*/
+img.resize{
+
+	max-width:100%;
+	max-height:100%;
+	height: auto;
+	width: auto;
+}
+
+/*On cache toutes nos slides afin qu'elles ne s'affichent pas les unes après les autres. 
+Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
+.slides{
+	display:none;
+}
+
+#navSlides{
+	text-align:center;
+}
+
+.point{
+	cursor: pointer;
+	height: 5px;
+	width: 5px;
+	margin: 0 3px;
+	background-color:rgba(175, 203, 224, 1);
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.4 ease;
+}
+
+.active, .dot:hover{ /*class rajoutés depuis le D.O.M du JS*/
+	background-color:#717171;
+}
+
+/*TEST DU MEDIAQUERY*/
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
