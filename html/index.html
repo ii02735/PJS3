@@ -1,2 +1,29 @@
-<html>
-	<head>
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+	<title>Les polygones</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<!--On place notre conteneur qui contiendra les slides-->
+	    <div id="slider-container">
+	    <!--Dans le conteneur on place nos slides (toutes les images que nous souhaiterons afficher-->
+	        <div class="slides">
+	        	<img src="./img/accueil/restaurants.jpg" alt="restaurant" class="resize"/>
+	        </div>
+	        <div class="slides">
+	        	<img src="./img/accueil/transports.jpg" alt="transports" class="resize"/>
+	        </div>
+	    </div>
+
+	    <!--On met en place un système de navigation pour nos slides-->
+	    <div id="navSlides">
+	    	<span class="point" onclick="SlideActuelle(1)"></span>
+	    	<span class="point" onclick="SlideActuelle(2)"></span>
+	    </div>
+
+	    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>
