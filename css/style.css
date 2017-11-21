@@ -1,4 +1,5 @@
 body{
+	position:relative;
 	background-color:#EDEDFF;
 	padding:0;
 	margin:0;
@@ -10,33 +11,113 @@ img.resize{
 
 	max-width:100%;
 	max-height:100%;
-	height: auto;
-	width: auto;
+	
 }
 
 /*On cache toutes nos slides afin qu'elles ne s'affichent pas les unes après les autres. 
 Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 .slides{
+	position:relative;
 	display:none;
 }
 
-#navSlides{
-	text-align:center;
+#tabsAndSlides
+{
+	display: flex;
+	background-color: white;
+	justify-content: center;
+
 }
 
-.point{
+#texteDyn
+{
+	position: absolute;
+	bottom:25%;
+	left:25%;
+	right: 25%;
+	font-size: 320%;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	text-align: center;
+}
+
+#moreInfo
+{
+	position:absolute;
+	bottom:18%;
+	left:25%;
+	right: 25%;
+	text-align: center;
+
+}
+
+#moreInfo button
+{
 	cursor: pointer;
-	height: 5px;
-	width: 5px;
+	font-family: 'EB Garamond', serif;
+	border: none;
+	color:white;
+	font-size: 150%;
+	padding:4px 10px;
+	background-color: rgba(209, 39, 42, 1);
+	box-shadow: 0px 5px 10px 0px black;
+	-moz-transition:background-color 0.5s;
+	-webkit-transition:background-color 0.5s;
+}
+
+#moreInfo button:hover
+{
+	background-color:rgba(0, 46, 93, 1);
+}
+
+#navSlides{
+
+	position:relative;/*positionnement relatif à son parent --> slider-container*/
+	/*De plus avec relative l'élément est enfermé dans son parent*/
+	/*En absolute, l'élément n'est plus enfermé dans son parent et peut se positionner
+	n'importe où*/
+	text-align: center;
+	bottom:5%;
+	-webkit-user-select: none;  
+  	-moz-user-select: none;    
+  	-ms-user-select: none;      
+  	user-select: none;
+}
+
+#titre_slide
+{
+	font-family: 'EB Garamond', serif;
+	position:relative;
+	display: flex;
+	justify-content: center;
+	top:70%;
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-size:320%;
+
+}
+
+
+.point{
+
+	cursor: pointer;
+	height: 6px;
+	width: 6px;
 	margin: 0 3px;
 	background-color:rgba(175, 203, 224, 1);
 	border-radius: 50%;
 	display: inline-block;
-	transition: background-color 0.4 ease;
 }
 
-.active, .dot:hover{ /*class rajoutés depuis le D.O.M du JS*/
+.active, .point:hover{ /*class rajoutés depuis le D.O.M du JS*/
 	background-color:#717171;
+}
+
+
+#presentation
+{
+	margin:2% 0;
+	background-color: rgb(43, 108, 163);
 }
 
 /*TEST DU MEDIAQUERY*/
