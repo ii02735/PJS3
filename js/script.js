@@ -57,7 +57,6 @@ function afficherSlide(indice_){
 			titreSlide.style.color="white";
 			break;
 	}
-<<<<<<< HEAD
 }
 
 function incrPicture()
@@ -108,30 +107,5 @@ function plusSlide()
 	timer = setInterval(incrPicture,5000);
 	indiceSlide++;
 	SlideSelect(indiceSlide%(slides.length));
-=======
-}
-
-function incrPicture()
-{
-	indiceSlide++;
-	SlideSelect(indiceSlide%(slides.length));
-	//alert("Modulo : " + indiceSlide + "%" + slides.length + " = " + indiceSlide%(slides.length));
-	/*La technique du modulo
-		
-		Le reste nous permet de ne pas dépasser les dimensions du tableau.
-		Supposons que notre tableau est de longueur 4 => {0,1,2,3}
-		Exemples :
-		0 mod 4 = 0
-		1 mod 4 = 1
-		2 mod 4 = 2
-		3 mod 4 = 3
-		4 mod 4 = 0 --> On revient au début du tableau (il n'y a aucun reste)
-		5 mod 4 = 1
-		6 mod 4 = 2
-		7 mod 4 = 3
-		8 mod 4 = 0 --> On revient au début du tableau
-		et ainsi de suite...
-	*/
->>>>>>> 6179a3cc1202085ec09e78ae163127393b019325
 }
 
