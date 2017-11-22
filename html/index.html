@@ -4,13 +4,14 @@
 	<title>Les polygones</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	
+
 </head>
 <body>
 
 	<!--On place notre conteneur qui contiendra les slides-->
 	<!--force le centrage des éléments dans cette balise-->
 		<section id="tabsAndSlides">
+			
 		    <div id="slider-container">
 		    <!--Dans le conteneur on place nos slides (toutes les images que nous souhaiterons afficher-->
 
@@ -28,22 +29,23 @@
  -->		        </div>
 				<div class="slides">
 		        	<img src="../img/accueil/specialite.jpg" alt="gestronomie" class="resize"/>
-<!-- 		        	<div class="titre" style="color:white">Gastronomie</div>
- -->		     </div>
- 				<div id="texteDyn"></div>
+<!-- 		        	<div class="titre" style="color:white">Gastronomie</div> -->
+		   		</div>
+			   	<div class="arrow" onclick="minusSlide()">&#10094;</div> 
+				<div class="arrow" onclick="plusSlide()">&#10095;</div> 
+ 				<div id="texteDyn"></div><!--JS-->
 		        <div id="moreInfo">
 		        	<button>En savoir plus</button>
 		    	</div>
 		        <!--On met en place un système de navigation pour nos slides-->
 		       	<div id="navSlides">
-			    	<span class="point" onclick="SlideActuelle(1)"></span>
-			    	<span class="point" onclick="SlideActuelle(2)"></span>
-			    	<span class="point" onclick="SlideActuelle(3)"></span>
-			    	<span class="point" onclick="SlideActuelle(4)"></span>
+			    	<span class="point" onclick="SlideSelectedByUser(0)"></span>
+			    	<span class="point" onclick="SlideSelectedByUser(1)"></span>
+			    	<span class="point" onclick="SlideSelectedByUser(2)"></span>
+			    	<span class="point" onclick="SlideSelectedByUser(3)"></span>
 		  		</div>
 		    </div>
 		</section>
-
 		<section id="presentation">
 			<!--Insérer introduction-->
 		</section>

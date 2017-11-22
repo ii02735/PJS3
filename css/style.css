@@ -11,7 +11,7 @@ img.resize{
 
 	max-width:100%;
 	max-height:100%;
-	
+
 }
 
 /*On cache toutes nos slides afin qu'elles ne s'affichent pas les unes après les autres. 
@@ -104,7 +104,7 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 	height: 6px;
 	width: 6px;
 	margin: 0 3px;
-	background-color:rgba(175, 203, 224, 1);
+	background-color:rgb(175, 203, 224);
 	border-radius: 50%;
 	display: inline-block;
 }
@@ -113,7 +113,46 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 	background-color:#717171;
 }
 
+.arrow
+{
 
+	background-color: rgba(255,255,255,0.1);
+	padding:12px 28px;
+	color:rgba(175, 203, 224, 1);
+	position:absolute;
+	font-weight:lighter;
+	top:50%;
+	font-size: 400%;
+	-webkit-user-select: none;  
+  	-moz-user-select: none;    
+  	-ms-user-select: none;      
+  	user-select: none;
+
+  	-webkit-transition: background-color 0.5s;  
+  	-moz-transition: background-color 0.5s;     
+  	-ms-transition: background-color 0.5s; 
+ }
+
+.arrow:hover
+{
+	cursor:pointer;
+	background-color: rgba(255,255,255,0.3);
+}
+
+.arrow:nth-child(5)/*Il s'agit du second enfant du parent tabsAndSlides*/
+{
+
+	position:absolute;
+	left:10%;
+	
+}
+
+.arrow:nth-child(6)/*Il s'agit du troisième enfant du parent tabsAndSlides*/
+{
+	position:absolute;
+	right:10%;
+	
+}
 #presentation
 {
 	margin:2% 0;
