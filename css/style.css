@@ -174,24 +174,44 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 	text-align:center;
 }
 
+/***** LOGO ****/
 .logo{
     display: flex;
     margin: auto;
-    width: 50%;
+    justify-content: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    width: 50%;
 }
 
 #logo-img{
     height: 120px;
     width: 150px;
+
 }
 
 .logo h1{
     align-self: center;
-    vertical-align: middle;
     color: #D12727;
 }
+
+
+
+
+/**** Contenu ****/
+.grand-conteneur{
+    max-width:1144px;
+    
+}
+
+.petit-conteneur{
+    background-color: white;
+    margin-bottom: 5rem;
+}
+
+
+
+
 /*TEST DU MEDIAQUERY*/
 
 @media only screen and (max-width: 300px) {
