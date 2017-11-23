@@ -3,6 +3,7 @@ body{
 	background-color:#EDEDFF;
 	padding:0;
 	margin:0;
+	font-family: 'EB Garamond',serif;
 }
 
 /*On redimensionne toutes les images à la dimension du bloc de la balise img*/
@@ -12,6 +13,14 @@ img.resize{
 	max-width:100%;
 	max-height:100%;
 
+}
+
+
+
+
+section
+{
+	margin-top: 30px;
 }
 
 /*On cache toutes nos slides afin qu'elles ne s'affichent pas les unes après les autres. 
@@ -32,6 +41,7 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 #texteDyn
 {
 	position: absolute;
+	font-weight: bolder;
 	bottom:25%;
 	left:25%;
 	right: 25%;
@@ -53,8 +63,8 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 
 #moreInfo button
 {
+	font-family: 'EB Garamond',serif;
 	cursor: pointer;
-	font-family: 'EB Garamond', serif;
 	border: none;
 	color:white;
 	font-size: 150%;
@@ -86,7 +96,6 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 
 #titre_slide
 {
-	font-family: 'EB Garamond', serif;
 	position:relative;
 	display: flex;
 	justify-content: center;
@@ -158,21 +167,49 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 	margin:2% 0;
 	background-color: rgb(43, 108, 163);
 }
-
+/*************************************/
 #Menu
 {
-	display:flex;
-	justify-content:space-around;
-	margin:auto;
+	display: flex;
+	justify-content: space-around;
+	margin:0 auto;
+	padding: 0;
 	width:50%;
-	background-color:rgb(218,237,255);
+	list-style-type: none;
+    list-style-position: inside;
+    background-color: rgb(218,237,255);
+    border:3px solid rgb(175,203,224);
 }
 
-#Menu div
+#Menu li a
 {
-	display:inline;
-	text-align:center;
+	color:rgb(76,128,167);
+	text-decoration: none;
 }
+
+#Menu li a:hover
+{
+	color:rgb(29,154,232);
+}
+
+.sub
+{
+	display:none;
+	position: absolute;
+	background-color: rgb(218,237,255);
+	list-style-type: none;
+	text-align: center;
+	margin-left:-35px;
+	padding: 0 10px;
+	z-index:1;
+	cursor:pointer;
+}
+
+#Menu li:hover .sub
+{
+	display:block;
+}
+
 
 /***** LOGO ****/
 .logo{
@@ -221,4 +258,5 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 rgb(218,237,255) couleur boîte menu
 rgb(76,128,167) couleur texte menu
 rgb(29,154,232) couleur texte menu hover	
+rgb(175,203,224) couleur bordure menu
 */
