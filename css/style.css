@@ -159,6 +159,21 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 	background-color: rgb(43, 108, 163);
 }
 
+#Menu
+{
+	display:flex;
+	justify-content:space-around;
+	margin:auto;
+	width:50%;
+	background-color:rgb(218,237,255);
+}
+
+#Menu div
+{
+	display:inline;
+	text-align:center;
+}
+
 /*TEST DU MEDIAQUERY*/
 
 @media only screen and (max-width: 300px) {
