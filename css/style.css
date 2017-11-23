@@ -159,8 +159,66 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 	background-color: rgb(43, 108, 163);
 }
 
+#Menu
+{
+	display:flex;
+	justify-content:space-around;
+	margin:auto;
+	width:50%;
+	background-color:rgb(218,237,255);
+}
+
+#Menu div
+{
+	display:inline;
+	text-align:center;
+}
+
+/***** LOGO ****/
+.logo{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 50%;
+}
+
+#logo-img{
+    height: 120px;
+    width: 150px;
+
+}
+
+.logo h1{
+    align-self: center;
+    color: #D12727;
+}
+
+
+
+
+/**** Contenu ****/
+.grand-conteneur{
+    max-width:1144px;
+    
+}
+
+.petit-conteneur{
+    background-color: white;
+    margin-bottom: 5rem;
+}
+
+
+
+
 /*TEST DU MEDIAQUERY*/
 
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+/*
+rgb(218,237,255) couleur boîte menu
+rgb(76,128,167) couleur texte menu
+rgb(29,154,232) couleur texte menu hover	
+*/
