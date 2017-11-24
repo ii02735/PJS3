@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-body{
-	position:relative;
-	background-color:#EDEDFF;
-	padding:0;
-	margin:0;
-	font-family: 'EB Garamond',serif;
-=======
+
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700,700i');
 
 /**** UTILITAIRES ****/
@@ -15,13 +8,12 @@ body {
     position: relative;
     padding: 0;
     margin: 0;
-    font-family: "EB Garamond";
+    font-family: "EB Garamond", serif;
     font-size: 19px;
 }
 
 h1 {
     font-size: 60px;
->>>>>>> 4a2f9e60402c0d9f649221802b500a2516f3a7a9
 }
 
 h2 {
@@ -67,7 +59,7 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 
 }
 
-<<<<<<< HEAD
+
 #texteDyn
 {
 	position: absolute;
@@ -79,7 +71,8 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 	text-transform: uppercase;
 	letter-spacing: 10px;
 	text-align: center;
-=======
+}
+
 #texteDyn {
     position: absolute;
     bottom: 25%;
@@ -89,7 +82,6 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     text-transform: uppercase;
     letter-spacing: 10px;
     text-align: center;
->>>>>>> 4a2f9e60402c0d9f649221802b500a2516f3a7a9
 }
 
 #moreInfo {
@@ -101,7 +93,7 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 
 }
 
-<<<<<<< HEAD
+
 #moreInfo button
 {
 	font-family: 'EB Garamond',serif;
@@ -114,7 +106,7 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 	box-shadow: 0px 5px 10px 0px black;
 	-moz-transition:background-color 0.5s;
 	-webkit-transition:background-color 0.5s;
-=======
+}
 #moreInfo button {
     cursor: pointer;
     border: none;
@@ -125,7 +117,6 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     box-shadow: 0px 5px 10px 0px black;
     -moz-transition: background-color 0.5s;
     -webkit-transition: background-color 0.5s;
->>>>>>> 4a2f9e60402c0d9f649221802b500a2516f3a7a9
 }
 
 #moreInfo button:hover {
@@ -147,7 +138,7 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     user-select: none;
 }
 
-<<<<<<< HEAD
+
 #titre_slide
 {
 	position:relative;
@@ -157,7 +148,8 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 	text-transform: uppercase;
 	font-weight: bolder;
 	font-size:320%;
-=======
+}
+
 #titre_slide {
     font-family: 'EB Garamond', serif;
     position: relative;
@@ -167,7 +159,6 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     text-transform: uppercase;
     font-weight: bolder;
     font-size: 320%;
->>>>>>> 4a2f9e60402c0d9f649221802b500a2516f3a7a9
 
 }
 
@@ -236,7 +227,8 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     margin: 2% 0;
     background-color: rgb(43, 108, 163);
 }
-<<<<<<< HEAD
+
+
 /*************************************/
 #Menu
 {
@@ -260,7 +252,7 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 #Menu li a:hover
 {
 	color:rgb(29,154,232);
-=======
+}
 
 #Menu {
     display: flex;
@@ -273,7 +265,6 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 #Menu div {
     display: inline;
     text-align: center;
->>>>>>> 4a2f9e60402c0d9f649221802b500a2516f3a7a9
 }
 
 .sub
@@ -452,8 +443,6 @@ rgb(29,154,232) couleur texte menu hover
 <<<<<<< HEAD
 rgb(175,203,224) couleur bordure menu
 */
-=======
-*/
 
 @media only screen and (max-width: 576px) {
     .grand-conteneur {
@@ -557,4 +546,3 @@ rgb(175,203,224) couleur bordure menu
         margin: auto;
     }
 }
->>>>>>> 4a2f9e60402c0d9f649221802b500a2516f3a7a9
