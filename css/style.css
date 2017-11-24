@@ -36,9 +36,6 @@ img.resize {
 
 }
 
-
-
-
 section
 {
 	margin-top: 30px;
@@ -316,6 +313,10 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 
 .grand-conteneur {
     margin: auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
 }
@@ -378,10 +379,20 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     margin: 4rem auto 4rem auto;
 }
 
+.bouton:hover{
+    background-color: #D12727;
+    -moz-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+}
+
 
 /****** GASTRONOMIE *******/
 
 .chefs {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     padding-left: 10rem;
@@ -390,6 +401,10 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 }
 
 .chef {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -410,6 +425,10 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 
 
 .chef p:nth-child(2n + 1) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     padding-bottom: 1rem;
 }
@@ -423,7 +442,52 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     width: 100%;
 }
 
+/**** GALERIE ****/
 
+#galerie{
+    padding:0 10rem 0 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.post{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.post-img {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+
+}
+
+.post-img img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+
+.post-desc{
+    background-color: white;
+    flex: 1;
+}
+
+.post-desc p,
+.post-desc small{
+    padding: 1em;
+    margin: 0;
+}
 
 
 /*TEST DU MEDIAQUERY*/
@@ -460,7 +524,8 @@ rgb(175,203,224) couleur bordure menu
 
     .petit-conteneur .contenu h2,
     .petit-conteneur .contenu > p,
-    .chefs {
+    .chefs,
+    #galerie{
         padding-left: 1rem;
         padding-right: 1rem;
     }
@@ -493,7 +558,8 @@ rgb(175,203,224) couleur bordure menu
 
     .petit-conteneur .contenu h2,
     .petit-conteneur .contenu > p,
-    .chefs {
+    .chefs,
+    #galerie{
         padding-left: 1rem;
         padding-right: 1rem;
     }
@@ -507,7 +573,8 @@ rgb(175,203,224) couleur bordure menu
 
     .petit-conteneur .contenu h2,
     .petit-conteneur .contenu > p,
-    .chefs {
+    .chefs,
+    #galerie{
         padding-left: 3rem;
         padding-right: 3rem;
     }
