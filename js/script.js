@@ -28,7 +28,6 @@ function afficherSlide(indice_){
       dots[i].className = dots[i].className.replace(" active", "");	
 	//Pour varier le texte en fonction de la slide
 	var titreSlide = document.getElementById("texteDyn");
-	titreSlide.style.fontWeight="bold";
 
 	switch(indice_)
 	{
