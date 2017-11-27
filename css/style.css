@@ -570,6 +570,7 @@ rgb(175,203,224) couleur bordure menu
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+    
     .chefs {
         flex-wrap: wrap;
     }
@@ -599,14 +600,15 @@ rgb(175,203,224) couleur bordure menu
         max-width: 960px;
         margin: auto;
     }
+    
     section img.image {
-        min-height: 40rem;
-        max-height: 40rem;
+        min-height: 45rem;
+        max-height: 45rem;
     }
 }
 
 @media only screen and (min-width: 1200px) {
-    .grand-conteneur {
+    main {
         max-width: 1140px;
         margin: auto;
     }
