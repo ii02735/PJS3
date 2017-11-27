@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!doctype html>
 <html>
 
@@ -6,10 +6,7 @@
     <title>Villes Touristiques</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 	
 	<!-- STYLE A METTRE DANS LE CSS POUR LES BOUTONS
 	
@@ -24,14 +21,34 @@
 <body>
     <!--Menu-->
     <header>
-        <img src="../css/logo-alsace.png" alt="logo">
-        <h1>Bienvenue en Alsace !</h1>
+        <div class="logo">
+            <img id="logo-img" src="../../img/logo.png" alt="logo">
+            <h1>Bienvenue en Alsace !</h1>
+        </div>
         <nav>
             <ul id="Menu">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="transports.html">Transports</a></li>
-                <li><a href="activites.html">Activites</a></li>
-                <li><a href="">Plus</a></li>
+                   <li><a href="../index.html">Accueil</a></li>
+                   <li><a href="#">Transports</a>
+             	   <ul class="sub">
+                       <li><a href="../transports/transports.html">Se rendre en Alsace</a></li>
+                       <li><a href="../transports/se-deplacer-en-alsace.html">Se déplacer en Alsace</a></li>
+	                </ul>
+                </li>
+                <li><a href="../activites/activites.html">Activités</a>
+                	 <ul class="sub">
+	                	 <li><a href="../activites/visites-historiques.html">Visites historiques</a></li>
+	                	 <li><a href="../activites/sport.html">Sport</a></li>
+	                	 <li><a href="../activites/villes-touristiques.html">Villes touristiques</a></li>
+	                </ul>
+                </li>
+                <li><a href="#">Plus</a>
+                	<ul class="sub">
+ 						 <li><a href="../plus/gastronomie.html">Gastronomie</a></li>
+	                	 <li><a href="../plus/hebergements.html">Hébergement</a></li>
+	                	 <li><a href="../plus/galerie.html">Galerie</a></li>
+	                	 <li><a href="../plus/contact.html">Nous contacter</a></li>
+                	</ul>
+                </li>
             </ul>
         </nav>
     </header>
@@ -57,7 +74,7 @@
 			Théâtre national de Strasbourg ou bien même le musée d’art moderne et contemporain de 
 			Strasbourg qui font partie de ce patrimoine mondial. La ville européenne accueille aussi 
 			de nombreux événements culturels pour le plaisir de l’art et l’histoire.
-	​
+	
 			<br> <br>
 			</p>
 			<p class="source">
@@ -122,5 +139,3 @@
 </body>
 
 </html>
-=======
->>>>>>> 3dc29c16a9f45a3c8081def7ffcf8525704518b5
