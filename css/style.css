@@ -501,7 +501,10 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     margin: 0;
 }
 
-
+#montOdile
+{
+	width:70%;
+}
 /*TEST DU MEDIAQUERY*/
 
 @media only screen and (max-width: 300px) {
@@ -519,6 +522,7 @@ rgb(29,154,232) couleur texte menu hover
 <<<<<<< HEAD
 rgb(175,203,224) couleur bordure menu
 */
+
 
 @media only screen and (max-width: 576px) {
     .grand-conteneur {
