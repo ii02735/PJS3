@@ -615,3 +615,21 @@ rgb(175,203,224) couleur bordure menu
         margin: auto;
     }
 }
+
+/* ARTICLES DE LA PAGE ACTIVITES*/
+.colonnes3{
+	display:flex;
+	align-items: stretch;
+	justify-content:space-around;
+}
+
+article img{
+	width: 100%;
+}
+
+article{
+	width : 30%;
+	float : left;
+	margin:0 10px;
+	text-align:justify;
+}
