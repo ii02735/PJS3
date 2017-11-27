@@ -222,7 +222,7 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 }
 
 
-/************* MENU **************/
+/*************************************/
 
 #Menu {
     display: flex;
@@ -296,7 +296,6 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 .logo h1 {
     align-self: center;
     color: #D12727;
-    text-align: center;
 }
 
 
@@ -564,6 +563,7 @@ rgb(175,203,224) couleur bordure menu
     .chefs {
         flex-wrap: wrap;
     }
+
 
     .petit-conteneur .contenu h2,
     .petit-conteneur .contenu > p,
