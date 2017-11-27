@@ -356,26 +356,6 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     padding-right: 20px;
 }
 
-.contenu-bloc {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: baseline;
-}
-
-.bloc {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border: 2px solid #002E5D;
-    text-align: center;
-}
-
-.bloc p {
-    font-size: 15px;
-
-}
-
 
 .bande-rouge {
     background-color: #D12727;
