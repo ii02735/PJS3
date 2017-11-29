@@ -36,9 +36,7 @@ img.resize {
 
 }
 
-section {
-    margin-top: 30px;
-}
+section {}
 
 /*On cache toutes nos slides afin qu'elles ne s'affichent pas les unes après les autres. 
 Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
@@ -601,7 +599,9 @@ rgb(175,203,224) couleur bordure menu
     .contenu-3 {
         display: flex;
         align-items: stretch;
-        justify-content: space-around;
+    }
+    .contenu-3 img {
+        width: inherit;
     }
 
     .div-3 {
@@ -611,15 +611,18 @@ rgb(175,203,224) couleur bordure menu
     }
 
     .bloc {
-
         border: 2px solid #002E5D;
         text-align: center;
-        justify-content: space-between;
+        margin-bottom: 10px;
+        width: 250px;
+        height: 200px;
     }
 
     .contenu-bloc {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
     }
 
     .bloc p {
