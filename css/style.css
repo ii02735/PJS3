@@ -648,3 +648,57 @@ rgb(175,203,224) couleur bordure menu
     article {
         text-align: justify;
     }
+
+	
+	
+	/* Page activités */
+	
+	img.displayed{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.multiple {
+		width : 30%;
+	}
+
+    /*    Page Hébergement*/
+    .contenu-3 {
+        display: flex;
+        align-items: stretch;
+    }
+    .contenu-3 img {
+        width: inherit;
+    }
+
+    .div-3 {
+        display: flex;
+        flex-direction: column;
+        border-right: 2px solid black;
+    }
+    .div-3 img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .bloc {
+        border: 2px solid #002E5D;
+        text-align: center;
+        margin-bottom: 10px;
+        width: 250px;
+        height: 200px;
+    }
+
+    .contenu-bloc {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+
+    .bloc p {
+        font-size: 15px;
+
+    }
+
