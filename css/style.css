@@ -594,6 +594,15 @@ rgb(175,203,224) couleur bordure menu
         margin: 0 10px;
         text-align: justify;
     }
+	
+	
+	/* Page activités */
+	
+	img.displayed{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
     /*    Page Hébergement*/
     .contenu-3 {
