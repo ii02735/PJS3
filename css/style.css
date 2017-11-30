@@ -464,6 +464,32 @@ section img.image {
     width: 70%;
 }
 
+#carte_aeroports
+{
+    width:50%;
+}
+
+.multipleContents
+{
+    display: flex;
+
+}
+
+.multipleContents div:nth-of-type(2) a
+{
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    margin-left:250px;
+    margin-top: 125px;
+    background-color: rgba(0, 46, 93, 1);
+    color:white;
+    text-decoration: none;
+    padding:10px 30px;
+    border-radius: 20px;
+    font-family: "Arial", serif;
+}
+
 
 /*TEST DU MEDIAQUERY*/
 
