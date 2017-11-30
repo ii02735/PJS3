@@ -36,7 +36,6 @@ img.resize {
 
 }
 
-section {}
 
 /*On cache toutes nos slides afin qu'elles ne s'affichent pas les unes après les autres. 
 Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
@@ -414,17 +413,70 @@ section img.image {
     width: 100%;
 }
 
+/*    Page Hébergement*/
+
+.contenu-3 {
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+
+
+.div-3 {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.div-3 img {
+    height: 170px;
+    width: 235px;
+}
+
+.bloc {
+    border: 2px solid #002E5D;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 200px;
+    align-content: center;
+}
+
+.contenu-bloc {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.bloc p {
+    font-size: 15px;
+
+}
+
+.article-3 {
+    padding-right: 200px;
+    padding-left: 200px;
+    height: 600px;
+}
+
+.article-6 {
+    height: 600px;
+}
+
 /**** GALERIE ****/
 
 #galerie {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: flex-start;
+    
 }
 
 .post {
-    width: 200px;
+    width: 30%;
     display: flex;
     flex-direction: column;
     margin-bottom: 2em;
@@ -432,8 +484,7 @@ section img.image {
 
 .post-img {
     position: relative;
-    width: 200px;
-    height: 200px;
+    padding-top:100%;
     overflow: hidden;
 
 }
@@ -443,7 +494,6 @@ section img.image {
     left: 50%;
     top: 50%;
     height: 100%;
-    width: auto;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -452,12 +502,20 @@ section img.image {
 .post-desc {
     background-color: white;
     flex: 1;
+/*    padding-bottom: 1em;*/
 }
 
-.post-desc p,
-.post-desc small {
+.post-desc {
     padding: 1em;
+}
+
+.post-desc p{
     margin: 0;
+}
+
+.post-desc small{
+    display: block;
+    color: gray;
 }
 
 #montOdile {
@@ -493,6 +551,8 @@ section img.image {
 
 /*TEST DU MEDIAQUERY*/
 
+/* --------------------Très petit écran-------------------- */
+
 @media only screen and (max-width: 300px) {
     .prev,
     .next,
@@ -508,6 +568,8 @@ rgb(29,154,232) couleur texte menu hover
 <<<<<<< HEAD
 rgb(175,203,224) couleur bordure menu
 */
+
+/* --------------------Petit écran-------------------- */
 
 @media only screen and (max-width: 576px) {
     main {
@@ -526,6 +588,17 @@ rgb(175,203,224) couleur bordure menu
         padding-left: 1rem;
         padding-right: 1rem;
     }
+    
+    #galerie{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    
+    .post{
+        align-self: center;
+        width: 70%;
+        flex: 1;
+    }
 }
 
 
@@ -539,11 +612,17 @@ rgb(175,203,224) couleur bordure menu
         min-height: 30rem;
         max-height: 30rem;
     }
-
+    
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    
+    
+    .post{
+        width: 45%;
+    }
+    
     .chefs {
         flex-wrap: wrap;
     }
@@ -552,22 +631,30 @@ rgb(175,203,224) couleur bordure menu
         flex: none;
         width: 50%;
     }
-
+    
     article {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
+
+
+    
 }
+
+/* --------------------Moyen écran-------------------- */
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
 
     .chefs {
         flex-wrap: wrap;
     }
+    
     article {
         padding-left: 3rem;
         padding-right: 3rem;
     }
+
+
 }
 
 
@@ -615,11 +702,22 @@ rgb(175,203,224) couleur bordure menu
     }
 
     article {
-        /*        width: 30%;*/
-        float: left;
-        margin: 0 10px;
         text-align: justify;
     }
+
+	
+	
+	/* Page activités */
+	
+	img.displayed{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.multiple {
+		width : 30%;
+	}
 
     /*    Page Hébergement*/
     .contenu-3 {
@@ -659,3 +757,4 @@ rgb(175,203,224) couleur bordure menu
         font-size: 15px;
 
     }
+
