@@ -36,7 +36,6 @@ img.resize {
 
 }
 
-section {}
 
 /*On cache toutes nos slides afin qu'elles ne s'affichent pas les unes après les autres. 
 Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
@@ -414,6 +413,58 @@ section img.image {
     width: 100%;
 }
 
+/*    Page Hébergement*/
+
+.contenu-3 {
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+
+
+.div-3 {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.div-3 img {
+    height: 170px;
+    width: 235px;
+}
+
+.bloc {
+    border: 2px solid #002E5D;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 200px;
+    align-content: center;
+}
+
+.contenu-bloc {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.bloc p {
+    font-size: 15px;
+
+}
+
+.article-3 {
+    padding-right: 200px;
+    padding-left: 200px;
+    height: 600px;
+}
+
+.article-6 {
+    height: 600px;
+}
+
 /**** GALERIE ****/
 
 #galerie {
@@ -467,6 +518,8 @@ section img.image {
 
 /*TEST DU MEDIAQUERY*/
 
+/* --------------------Très petit écran-------------------- */
+
 @media only screen and (max-width: 300px) {
     .prev,
     .next,
@@ -482,6 +535,8 @@ rgb(29,154,232) couleur texte menu hover
 <<<<<<< HEAD
 rgb(175,203,224) couleur bordure menu
 */
+
+/* --------------------Petit écran-------------------- */
 
 @media only screen and (max-width: 576px) {
     main {
@@ -532,6 +587,8 @@ rgb(175,203,224) couleur bordure menu
         padding-right: 1rem;
     }
 }
+
+/* --------------------Moyen écran-------------------- */
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
 
@@ -589,47 +646,5 @@ rgb(175,203,224) couleur bordure menu
     }
 
     article {
-        /*        width: 30%;*/
-        float: left;
-        margin: 0 10px;
         text-align: justify;
-    }
-
-    /*    Page Hébergement*/
-    .contenu-3 {
-        display: flex;
-        align-items: stretch;
-    }
-    .contenu-3 img {
-        width: inherit;
-    }
-
-    .div-3 {
-        display: flex;
-        flex-direction: column;
-        border-right: 2px solid black;
-    }
-    .div-3 img {
-        height: 200px;
-        width: 200px;
-    }
-
-    .bloc {
-        border: 2px solid #002E5D;
-        text-align: center;
-        margin-bottom: 10px;
-        width: 250px;
-        height: 200px;
-    }
-
-    .contenu-bloc {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-    }
-
-    .bloc p {
-        font-size: 15px;
-
     }
