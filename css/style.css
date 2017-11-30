@@ -642,3 +642,7 @@ rgb(175,203,224) couleur bordure menu
         font-size: 15px;
 
     }
+
+	.multiple {
+		width : 30%;
+	}
