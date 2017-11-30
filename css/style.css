@@ -603,6 +603,10 @@ rgb(175,203,224) couleur bordure menu
 		margin-left: auto;
 		margin-right: auto;
 	}
+	
+	.multiple {
+		width : 30%;
+	}
 
     /*    Page Hébergement*/
     .contenu-3 {
@@ -642,7 +646,3 @@ rgb(175,203,224) couleur bordure menu
         font-size: 15px;
 
     }
-
-	.multiple {
-		width : 30%;
-	}
