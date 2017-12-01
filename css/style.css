@@ -465,6 +465,46 @@ section img.image {
     height: 600px;
 }
 
+/*Page de contact */
+
+input[type=submit] {
+    background-color: #5c697b;
+    color: #DAEDFF;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #3078be;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    resize: vertical;
+}
+
+.sous-contact {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    border: 2px solid #3078be;
+
+}
+
+.contact {
+    background-color: #DAEDFF;
+    margin-top: 20px;
+}
+
+
+
+
 /**** GALERIE ****/
 
 #galerie {
@@ -472,7 +512,7 @@ section img.image {
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: flex-start;
-    
+
 }
 
 .post {
@@ -484,7 +524,7 @@ section img.image {
 
 .post-img {
     position: relative;
-    padding-top:100%;
+    padding-top: 100%;
     overflow: hidden;
 
 }
@@ -502,18 +542,18 @@ section img.image {
 .post-desc {
     background-color: white;
     flex: 1;
-/*    padding-bottom: 1em;*/
+    /*    padding-bottom: 1em;*/
 }
 
 .post-desc {
     padding: 1em;
 }
 
-.post-desc p{
+.post-desc p {
     margin: 0;
 }
 
-.post-desc small{
+.post-desc small {
     display: block;
     color: gray;
 }
@@ -522,28 +562,25 @@ section img.image {
     width: 70%;
 }
 
-#carte_aeroports
-{
-    width:50%;
+#carte_aeroports {
+    width: 50%;
 }
 
-.multipleContents
-{
+.multipleContents {
     display: flex;
 
 }
 
-.multipleContents div:nth-of-type(2) a
-{
+.multipleContents div:nth-of-type(2) a {
     display: flex;
     text-align: center;
     vertical-align: middle;
-    margin-left:250px;
+    margin-left: 250px;
     margin-top: 125px;
     background-color: rgba(0, 46, 93, 1);
-    color:white;
+    color: white;
     text-decoration: none;
-    padding:10px 30px;
+    padding: 10px 30px;
     border-radius: 20px;
     font-family: "Arial", serif;
 }
@@ -588,13 +625,13 @@ rgb(175,203,224) couleur bordure menu
         padding-left: 1rem;
         padding-right: 1rem;
     }
-    
-    #galerie{
+
+    #galerie {
         flex-direction: column;
         flex-wrap: nowrap;
     }
-    
-    .post{
+
+    .post {
         align-self: center;
         width: 70%;
         flex: 1;
@@ -612,17 +649,17 @@ rgb(175,203,224) couleur bordure menu
         min-height: 30rem;
         max-height: 30rem;
     }
-    
+
 }
 
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
-    
-    
-    .post{
+
+
+    .post {
         width: 45%;
     }
-    
+
     .chefs {
         flex-wrap: wrap;
     }
@@ -631,14 +668,14 @@ rgb(175,203,224) couleur bordure menu
         flex: none;
         width: 50%;
     }
-    
+
     article {
         padding-left: 3rem;
         padding-right: 3rem;
     }
 
 
-    
+
 }
 
 /* --------------------Moyen écran-------------------- */
@@ -648,7 +685,7 @@ rgb(175,203,224) couleur bordure menu
     .chefs {
         flex-wrap: wrap;
     }
-    
+
     article {
         padding-left: 3rem;
         padding-right: 3rem;
@@ -705,19 +742,18 @@ rgb(175,203,224) couleur bordure menu
         text-align: justify;
     }
 
-	
-	
-	/* Page activités */
-	
-	img.displayed{
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	
-	.multiple {
-		width : 30%;
-	}
+
+
+    /* Page activités */
+    img.displayed {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .multiple {
+        width: 30%;
+    }
 
     /*    Page Hébergement*/
     .contenu-3 {
@@ -757,4 +793,3 @@ rgb(175,203,224) couleur bordure menu
         font-size: 15px;
 
     }
-
