@@ -496,11 +496,15 @@ section#tabsAndSlides {
     justify-content: space-around;
 }
 
+.hrVertical {
+    background-color: #002E5D;
+    width: 2px;
+}
+
 
 .div-3 {
     display: flex;
     flex-direction: column;
-
 }
 
 .div-3 img {
@@ -565,14 +569,14 @@ textarea {
     resize: vertical;
 }
 
-fieldset {
+.fieldsetContact {
     border: none;
     border-top: 4px solid #afcbe0;
     text-align: center;
 
 }
 
-h2 {
+.contacth2 {
     border: 4px solid #afcbe0;
     color: #5c697b;
     font-weight: bold;
