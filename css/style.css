@@ -626,10 +626,10 @@ textarea {
 }
 
 .post {
-    width: 30%;
+    width: 33%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 2em;
+    margin-bottom: 0.15em;
 }
 
 .post-img {
@@ -770,8 +770,7 @@ rgb(175,203,224) couleur bordure menu
     }
 
 
-
-    article {
+    article,header,#galerie{
         padding-left: 1rem;
         padding-right: 1rem;
     }
@@ -779,12 +778,11 @@ rgb(175,203,224) couleur bordure menu
     #galerie {
         flex-direction: column;
         flex-wrap: nowrap;
+        justify-content: center;
     }
 
     .post {
-        align-self: center;
-        width: 70%;
-        flex: 1;
+        width: 100%;
     }
 }
 
@@ -807,7 +805,7 @@ rgb(175,203,224) couleur bordure menu
 
 
     .post {
-        width: 45%;
+        width: 49.445%;
     }
 
     .chefs {
