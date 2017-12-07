@@ -342,6 +342,58 @@ section img.image {
     display: block;
 }
 
+#menuDeplacement
+{
+    margin-top:25px;
+    height: 100%;
+    max-height: 500px;
+    overflow: hidden;
+
+}
+
+#menuDeplacement h2
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform:translateX(-50%);
+    color: white;
+    text-align: center;
+    background-color: #D12727;
+    width: 460px;
+    padding: 1rem 0 1rem 0;
+}
+
+#menuDeplacement img
+{
+    height: 100%;
+    width: 100%;
+
+}
+
+#transportationButtons
+{
+    position: relative;
+    bottom:60%;
+    display: flex;
+    margin:0 8.5%;
+    justify-content: space-between;
+
+}
+
+.transportationChoice
+{
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    background-color: #D12727;
+    font-size: 120%;
+    padding:0.9rem 3rem ;
+    justify-content: center;
+}
+
+
+
 .bouton {
     display: block;
     width: 9rem;
@@ -359,6 +411,7 @@ section img.image {
     -moz-transition: background-color 0.5s;
     -webkit-transition: background-color 0.5s;
 }
+
 
 
 /***** ACCUEIL ***/
