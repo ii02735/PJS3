@@ -494,11 +494,7 @@ section#tabsAndSlides {
     display: flex;
     justify-content: space-between;
     justify-content: space-around;
-}
-
-.hrVertical {
-    background-color: #002E5D;
-    width: 2px;
+    flex-wrap: wrap;
 }
 
 
@@ -760,7 +756,7 @@ rgb(29,154,232) couleur texte menu hover
 rgb(175,203,224) couleur bordure menu
 */
 
-/* --------------------Petit écran-------------------- */
+/* --------------------Très petit écran-------------------- */
 
 @media only screen and (max-width: 576px) {
     main {
@@ -790,6 +786,24 @@ rgb(175,203,224) couleur bordure menu
     .post {
         width: 100%;
     }
+
+
+    /*    Page Hébergement    */
+    .article-6 {
+        height: inherit;
+        padding-right: 50px;
+        padding left: 50px;
+
+    }
+
+    .article-3 {
+        height: inherit;
+        padding: 0;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+}
+
 }
 
 
@@ -806,6 +820,7 @@ rgb(175,203,224) couleur bordure menu
 
 }
 
+/* -------------------- petit écran-------------------- */
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
 
@@ -828,6 +843,19 @@ rgb(175,203,224) couleur bordure menu
         padding-right: 3rem;
     }
 
+    /*    Page Hébergement     */
+    .article-6 {
+        height: inherit;
+    }
+
+    .article-3 {
+        padding: 0;
+        height: inherit;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+
 
 
 }
@@ -843,6 +871,17 @@ rgb(175,203,224) couleur bordure menu
     article {
         padding-left: 3rem;
         padding-right: 3rem;
+    }
+
+
+
+    /*    Page Hébergement     */
+    .article-6 {
+        height: inherit;
+    }
+
+    .article-3 {
+        height: inherit;
     }
 
 
