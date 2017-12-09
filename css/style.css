@@ -588,14 +588,15 @@ textarea {
 }
 
 
+
+
 .sous-contact {
     margin-top: -10px;
     display: flex;
     justify-content: space-around;
     margin-left: 50px;
     margin-right: 50px;
-    margin-bottom: 20px;
-    border: 2px solid #3078be;
+    margin-right: 50px;
 
 }
 
@@ -604,12 +605,15 @@ textarea {
     margin-top: 20px;
     font-family: 'EB Garamond', serif;
 
+
 }
 
 .sous-contact2 {
-    margin: inherit;
-    margin-top: 30px;
+    border: 2px solid #3078be;
+}
 
+.sous-contact3 {
+    margin: 50px;
 }
 
 
@@ -770,7 +774,9 @@ rgb(175,203,224) couleur bordure menu
     }
 
 
-    article,header,#galerie{
+    article,
+    header,
+    #galerie {
         padding-left: 1rem;
         padding-right: 1rem;
     }
