@@ -898,6 +898,15 @@ rgb(175,203,224) couleur bordure menu
         min-height: 35rem;
         max-height: 35rem;
     }
+
+    /*    Page Hébergement     */
+    .article-6 {
+        height: inherit;
+    }
+
+    .article-3 {
+        height: inherit;
+    }
 }
 
 
