@@ -9,6 +9,7 @@ body {
     margin: 0;
     font-family: "EB Garamond", serif;
     font-size: 19px;
+    text-align: justify;
 }
 
 h1 {
@@ -222,9 +223,53 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 
 /************* MENU **************/
 
+#Menu
+{
+	display: flex;
+	justify-content: space-around;
+	margin:0 auto;
+	padding: 0;
+	width:50%;
+	list-style-type: none;
+    list-style-position: inside;
+    background-color: rgb(218,237,255);
+    border:3px solid rgb(175,203,224);
+}
+
+#Menu li a
+{
+	color:rgb(76,128,167);
+	text-decoration: none;
+}
+
+#Menu li a:hover
+{
+	color:rgb(29,154,232);
+}
+
+.sub
+{
+	display:none;
+	position: absolute;
+	background-color: rgb(218,237,255);
+	list-style-type: none;
+	text-align: center;
+	margin-left:-35px;
+	padding: 0 10px;
+	z-index:1;
+	cursor:pointer;
+}
+
+#Menu li:hover .sub
+{
+	display:block;
+}
+
+/*Menu Alternatif*/
+/*
 #Menu {
     display: flex;
-    justify-content: space-around;
+    justify-content:center;
     margin: 0 auto;
     padding: 10px 0;
     width: 50%;
@@ -234,44 +279,58 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     border: 3px solid rgb(175, 203, 224);
 }
 
-#Menu li a {
-    color: rgb(76, 128, 167);
-    text-decoration: none;
+#Menu > li{
+    width: 15%;
+    position: relative;
 }
 
+#Menu > li > a{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2em;
+    border-bottom: 3px solid rgba(29, 154, 232, 0);
+}
+
+#Menu li a {
+    display: inline-block;
+    color: rgb(76, 128, 167);
+    text-decoration: none;
+    transition: color 0.5s, border-color 0.5s;
+}
+
+#Menu > li > a:hover {
+    color: rgb(29, 154, 232);
+    border-bottom: 3px solid rgb(29, 154, 232);
+}
+
+#Menu > li > a:hover,
 #Menu li a:hover {
     color: rgb(29, 154, 232);
 }
 
-/*
-#Menu {
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
-    width: 50%;
-    background-color: rgb(218, 237, 255);
-}*/
 
-#Menu div {
-    display: inline;
-    text-align: center;
-}
 
 .sub {
-    display: none;
+    visibility: hidden;
     position: absolute;
+    display: inline;
     background-color: rgb(218, 237, 255);
     list-style-type: none;
     text-align: center;
-    margin-left: -35px;
     padding: 0 10px;
     z-index: 1;
     cursor: pointer;
+    width: 180px;
 }
-
 #Menu li:hover .sub {
     display: block;
+    margin: auto;
+    top:2em;
+    left: 50%;
+    margin-left: -100px;
+    visibility: visible;
 }
+*/
 
 
 /***** LOGO ****/
@@ -337,10 +396,6 @@ article {
     margin: 2rem auto 3rem auto;
 }
 
-section img.image {
-    width: 100%;
-    display: block;
-}
 
 .bouton {
     display: block;
@@ -352,14 +407,29 @@ section img.image {
     color: white;
     text-decoration: none;
     margin: 4rem auto;
-}
-
-.bouton:hover {
-    background-color: #D12727;
     -moz-transition: background-color 0.5s;
     -webkit-transition: background-color 0.5s;
 }
 
+.bouton:hover {
+    background-color: #D12727;
+    
+}
+
+.image{
+    position: relative;
+    overflow: hidden;
+}
+
+.image img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 
 /***** ACCUEIL ***/
 
@@ -436,6 +506,10 @@ section#tabsAndSlides {
 
 /****** GASTRONOMIE *******/
 
+.gastronomie-img img{
+    width: 100%
+}
+
 .chefs {
     display: -webkit-box;
     display: -moz-box;
@@ -444,6 +518,7 @@ section#tabsAndSlides {
     display: flex;
     flex-direction: row;
     margin-bottom: 2rem;
+    justify-content: center;
 }
 
 .chef {
@@ -462,6 +537,7 @@ section#tabsAndSlides {
     flex: 1;
     padding: 0 1rem 0 1rem;
     margin: 0;
+    text-align: center;
 }
 
 
@@ -485,7 +561,6 @@ section#tabsAndSlides {
 
 .chef-img {
     height: 20rem;
-    width: 100%;
 }
 
 /*    Page Hébergement*/
@@ -584,8 +659,6 @@ textarea {
 }
 
 
-
-
 .sous-contact {
     margin-top: -10px;
     display: flex;
@@ -633,21 +706,15 @@ textarea {
 }
 
 .post-img {
-    position: relative;
     padding-top: 100%;
-    overflow: hidden;
-
+    
 }
 
-.post-img img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    height: 100%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+
+.w-100{
+    width: 100%;
 }
+
 
 .post-desc {
     background-color: white;
@@ -764,7 +831,7 @@ rgb(175,203,224) couleur bordure menu
         margin: auto;
     }
 
-    section img.image {
+    .gastronomie-img {
         min-height: 25rem;
         max-height: 25rem;
     }
@@ -785,6 +852,15 @@ rgb(175,203,224) couleur bordure menu
 
     .post {
         width: 100%;
+    }
+    
+    .chefs {
+        flex-wrap: wrap;
+    }
+
+    .chef {
+        flex: none;
+        width: 50%;
     }
 
 
@@ -807,35 +883,35 @@ rgb(175,203,224) couleur bordure menu
 }
 
 
+
+/* -------------------- petit écran-------------------- */
+
 @media only screen and (min-width: 576px) {
     main {
         max-width: 540px;
         margin: auto;
     }
 
-    section img.image {
+    .gastronomie-img {
         min-height: 30rem;
         max-height: 30rem;
     }
 
 }
 
-/* -------------------- petit écran-------------------- */
-
 @media only screen and (min-width: 576px) and (max-width: 768px) {
 
-
-    .post {
+.post {
         width: 49.445%;
     }
-
+    
     .chefs {
         flex-wrap: wrap;
     }
 
     .chef {
         flex: none;
-        width: 50%;
+        width: 40%;
     }
 
     article {
@@ -854,13 +930,10 @@ rgb(175,203,224) couleur bordure menu
         padding-right: 50px;
         padding-left: 50px;
     }
-
-
-
-
 }
 
 /* --------------------Moyen écran-------------------- */
+
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
 
@@ -887,18 +960,18 @@ rgb(175,203,224) couleur bordure menu
 
 }
 
-
 @media only screen and (min-width: 768px) {
     main {
         max-width: 720px;
         margin: auto;
     }
 
-    section img.image {
+    .gastronomie-img {
         min-height: 35rem;
         max-height: 35rem;
     }
 }
+
 
 
 
@@ -908,7 +981,7 @@ rgb(175,203,224) couleur bordure menu
         margin: auto;
     }
 
-    section img.image {
+    .gastronomie-img {
         min-height: 45rem;
         max-height: 45rem;
     }
@@ -929,10 +1002,6 @@ rgb(175,203,224) couleur bordure menu
 
     article img {
         width: 100%;
-    }
-
-    article {
-        text-align: justify;
     }
 
 }
