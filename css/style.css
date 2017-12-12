@@ -1058,7 +1058,6 @@ rgb(175,203,224) couleur bordure menu
         padding-left: 3rem;
         padding-right: 3rem;
     }
-<<<<<<< HEAD
 
     /*    Page Hébergement     */
     .article-6 {
@@ -1071,9 +1070,6 @@ rgb(175,203,224) couleur bordure menu
         padding-right: 50px;
         padding-left: 50px;
     }
-
-
-=======
     
     .images
     {
@@ -1088,8 +1084,12 @@ rgb(175,203,224) couleur bordure menu
         min-height: 8rem;
         max-height: 20rem;
     }
->>>>>>> temporary
 
+    #airports_choice
+    {
+        grid-row-gap: 10px;
+        grid-template-columns: 1fr;
+    }
 
 }
 
