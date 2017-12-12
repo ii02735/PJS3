@@ -965,6 +965,14 @@ tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
 }
 
+/****ACTIVITES****/
+    
+	.colonnes3 {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-around;
+    }
+
 /*****MEDIAQUERIES******/
 
 /* --------------------Très petit écran-------------------- */
