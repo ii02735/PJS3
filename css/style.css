@@ -223,6 +223,7 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 
 /************* MENU **************/
 
+ 
 #Menu
 {
 	display: flex;
@@ -329,6 +330,80 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     left: 50%;
     margin-left: -100px;
     visibility: visible;
+ 
+ul
+{
+   padding:0;
+   list-style:none;
+   font-size:19px;
+   
+}
+  
+ul > li
+{
+   text-align:center;
+   padding:10px;
+}
+ul li a
+{
+	color:rgb(76, 128, 167);
+	text-decoration:none;
+}
+ul > li:hover
+{
+  color:rgb(29, 154, 232);
+  cursor:pointer;
+}
+
+nav
+{
+	display: flex;
+	justify-content: center;
+}
+
+#wrapper1
+{
+   display:grid;
+   grid-template-columns:1fr 1fr 1fr 1fr;
+   width:50%;
+   margin:0;
+   border:3px solid rgb(175, 203, 224);
+   background-color:rgb(218, 237, 255);
+   color:rgb(76, 128, 167);
+   
+ }
+ 
+ #wrapper1 > li:hover > ul
+ {
+   color:rgb(76, 128, 167);
+ }
+ 
+#wrapper1 > li
+{
+    position:relative;
+}
+
+#wrapper1 > li:hover > ul
+{
+  background-color:rgb(218, 237, 255);
+  margin:0px -10px;
+  position:absolute;
+  display:block;
+  left:0; /*Réinitialisation pour coller à la position du parent*/
+  right:0;
+  z-index:1000;
+    
+}
+  
+#wrapper1 > li > ul
+{
+  display:none;
+}
+  
+li > ul > li:hover 
+{
+  color:rgb(29, 154, 232); 
+ 
 }
 */
 
@@ -397,6 +472,57 @@ article {
 }
 
 
+#menuDeplacement
+{
+    margin-top:25px;
+    height: 100%;
+    max-height: 500px;
+    overflow: hidden;
+
+}
+
+#menuDeplacement h2
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform:translateX(-50%);
+    color: white;
+    text-align: center;
+    background-color: #D12727;
+    width: 460px;
+    padding: 1rem 0 1rem 0;
+}
+
+#menuDeplacement img
+{
+    height: 100%;
+    width: 100%;
+
+}
+
+#transportationButtons
+{
+    position: relative;
+    bottom:60%;
+    display: flex;
+    margin:0 8.5%;
+    justify-content: space-between;
+
+}
+
+.transportationChoice
+{
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    background-color: #D12727;
+    font-size: 120%;
+    padding:0.9rem 3rem ;
+    justify-content: center;
+}
+
+
 .bouton {
     display: block;
     width: 9rem;
@@ -416,6 +542,7 @@ article {
     
 }
 
+ 
 .image{
     position: relative;
     overflow: hidden;
@@ -429,6 +556,93 @@ article {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+ 
+@media only screen and (max-width: 810px){
+    
+    #wrapper1
+	{
+		width:80%;
+		grid-template-columns: 1fr;
+		margin:0;
+  		padding: 0;
+	}
+
+	
+	#wrapper1 > li:hover > ul
+	{
+  		background-color:rgb(196, 226, 255);
+  		grid-column: -1;
+  		position:relative;
+  		display: block;
+  		margin:0;
+  		padding: 0;
+  		left:0; /*Réinitialisation pour coller à la position du parent*/
+  		right:0;
+  		z-index: 1;
+    }
+    
+    #menuDeplacement
+    {
+        overflow: hidden;
+    }
+
+
+
+    #transportationButtons
+    {
+        transform: scale(0.85);
+        position:absolute;
+    }
+    .transportationChoice
+    {
+        position:relative;
+        margin:60px 20px;
+        top:350px;
+        transform: translateX(70%);
+        margin-top:950px;
+        display: inline;
+    }
+    #airports_choice
+    {
+       display: block;
+       grid-template-columns: 1fr;
+       grid-row-gap: 10px;
+    }
+    #buttonsTrans > a
+    {
+        position:relative;
+        right:68%;
+    }
+}
+
+/*@media only screen and (max-width: 780px)
+{
+    #transportationButtons
+    {
+        transform: scale(0.85);
+        position:absolute;
+        display: block;
+    }
+    .transportationChoice
+    {
+        position:relative;
+        top:300px;
+        margin-right: 60px;
+        left:50%;
+        transform: translateX(90%);
+        margin-top:100px;
+        display: block;
+        color:black;
+    }
+}*/
+
+@media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+        font-size: 200%;
+    }
+ 
 }
 
 /***** ACCUEIL ***/
@@ -457,14 +671,13 @@ section#tabsAndSlides {
 }
 
 #airports_choice {
-    display: flex;
-    margin: auto;
-    width: 98%;
+	margin:0px 10px;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+	grid-column-gap:10px;
 }
 
 #airports_choice div {
-    margin: 0 5px;
-    flex-basis: 100%;
     /*répartition égale sur le parent*/
     border: 2px solid rgba(48, 120, 190, 1);
 }
@@ -502,6 +715,23 @@ section#tabsAndSlides {
     max-height: 2000px;
     height: 20%;
     width: 100%;
+}
+
+#mapBus
+{
+	text-decoration:none;
+	color:#002E50;
+}
+
+.images
+{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+}
+
+#SoleaMark
+{
+	align-self:end;
 }
 
 /****** GASTRONOMIE *******/
@@ -819,7 +1049,7 @@ tr:last-child td:last-child {
 rgb(218,237,255) couleur boîte menu
 rgb(76,128,167) couleur texte menu
 rgb(29,154,232) couleur texte menu hover	
-<<<<<<< HEAD
+ 
 rgb(175,203,224) couleur bordure menu
 */
 
@@ -864,6 +1094,7 @@ rgb(175,203,224) couleur bordure menu
     }
 
 
+
     /*    Page Hébergement    */
     .article-6 {
         height: inherit;
@@ -878,7 +1109,29 @@ rgb(175,203,224) couleur bordure menu
         padding-right: 50px;
         padding-left: 50px;
     }
-}
+
+    
+    .images 
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items:center;
+    }
+    
+    .images > img
+    {
+        min-width: 10rem;
+        max-width: 20rem;
+        min-height: 8rem;
+        max-height: 20rem;
+    }
+    
+    #airports_choice
+    {
+       grid-template-columns: 1fr;
+       grid-column-gap:10px;
+    }
+
 
 }
 
@@ -896,7 +1149,24 @@ rgb(175,203,224) couleur bordure menu
         min-height: 30rem;
         max-height: 30rem;
     }
-
+    .images > img
+    {
+        min-width: 25rem;
+        max-width: 20rem;
+        min-height: 12rem;
+        max-height: 20rem;
+    }
+    
+    #airports_choice
+    {
+        grid-row-gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    #buttonsTrans > a
+    {
+        position:relative;
+    }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
@@ -930,6 +1200,30 @@ rgb(175,203,224) couleur bordure menu
         padding-right: 50px;
         padding-left: 50px;
     }
+ 
+ 
+    
+    .images
+    {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    
+    .images > img
+    {
+        min-width: 8rem;
+        max-width: 20rem;
+        min-height: 8rem;
+        max-height: 20rem;
+    }
+
+    #airports_choice
+    {
+        grid-row-gap: 10px;
+        grid-template-columns: 1fr;
+    }
+
+ 
 }
 
 /* --------------------Moyen écran-------------------- */
@@ -945,6 +1239,7 @@ rgb(175,203,224) couleur bordure menu
         padding-left: 3rem;
         padding-right: 3rem;
     }
+ 
 
 
 
@@ -958,6 +1253,25 @@ rgb(175,203,224) couleur bordure menu
     }
 
 
+ 
+        article {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    
+    .images > img
+    {
+        min-width: 15rem;
+        max-width: 20rem;
+        min-height: 10rem;
+        max-height: 20rem;
+    }
+    #buttonsTrans > a
+    {
+        position:relative;
+        right:35%;
+    }
+ 
 }
 
 @media only screen and (min-width: 768px) {
@@ -969,6 +1283,15 @@ rgb(175,203,224) couleur bordure menu
     .gastronomie-img {
         min-height: 35rem;
         max-height: 35rem;
+    }
+
+    /*    Page Hébergement     */
+    .article-6 {
+        height: inherit;
+    }
+
+    .article-3 {
+        height: inherit;
     }
 }
 
