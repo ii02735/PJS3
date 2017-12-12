@@ -237,6 +237,9 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     border:3px solid rgb(175,203,224);
 }
 
+#Menu li{
+    position: relative;
+}
 #Menu li a
 {
 	color:rgb(76,128,167);
@@ -248,25 +251,28 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 	color:rgb(29,154,232);
 }
 
-.sub
-{
-	display:none;
-	position: absolute;
-	background-color: rgb(218,237,255);
-	list-style-type: none;
-	text-align: center;
-	margin-left:-35px;
-	padding: 0 10px;
-	z-index:1;
-	cursor:pointer;
+.sub {
+    visibility: hidden;
+    position: absolute;
+    display: inline;
+    background-color: rgb(218, 237, 255);
+    list-style-type: none;
+    text-align: center;
+    padding: 0 10px;
+    z-index: 1;
+    cursor: pointer;
+    width: 180px;
 }
-
-#Menu li:hover .sub
-{
-	display:block;
+#Menu li:hover .sub {
+    display: block;
+    margin: auto;
+    left: 50%;
+    margin-left: -100px;
+    visibility: visible;
 }
 
 /*Menu Alternatif*/
+
 /*
 #Menu {
     display: flex;
@@ -330,82 +336,10 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     left: 50%;
     margin-left: -100px;
     visibility: visible;
- 
-ul
-{
-   padding:0;
-   list-style:none;
-   font-size:19px;
-   
-}
-  
-ul > li
-{
-   text-align:center;
-   padding:10px;
-}
-ul li a
-{
-	color:rgb(76, 128, 167);
-	text-decoration:none;
-}
-ul > li:hover
-{
-  color:rgb(29, 154, 232);
-  cursor:pointer;
-}
-
-nav
-{
-	display: flex;
-	justify-content: center;
-}
-
-#wrapper1
-{
-   display:grid;
-   grid-template-columns:1fr 1fr 1fr 1fr;
-   width:50%;
-   margin:0;
-   border:3px solid rgb(175, 203, 224);
-   background-color:rgb(218, 237, 255);
-   color:rgb(76, 128, 167);
-   
- }
- 
- #wrapper1 > li:hover > ul
- {
-   color:rgb(76, 128, 167);
- }
- 
-#wrapper1 > li
-{
-    position:relative;
-}
-
-#wrapper1 > li:hover > ul
-{
-  background-color:rgb(218, 237, 255);
-  margin:0px -10px;
-  position:absolute;
-  display:block;
-  left:0; /*Réinitialisation pour coller à la position du parent*/
-  right:0;
-  z-index:1000;
-    
-}
-  
-#wrapper1 > li > ul
-{
-  display:none;
-}
-  
-li > ul > li:hover 
-{
-  color:rgb(29, 154, 232); 
- 
 }
 */
+ 
+
 
 
 /***** LOGO ****/
@@ -471,6 +405,7 @@ article {
     margin: 2rem auto 3rem auto;
 }
 
+/***Transport***/
 
 #menuDeplacement
 {
@@ -556,7 +491,7 @@ article {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
- 
+}
 @media only screen and (max-width: 810px){
     
     #wrapper1
@@ -657,7 +592,7 @@ section#tabsAndSlides {
     margin-top: 3rem;
 }
 
-/****** TRANSPORTS *********/
+/********* TRANSPORTS *********/
 
 #comeByPlane {
     padding: 0;
@@ -793,7 +728,7 @@ section#tabsAndSlides {
     height: 20rem;
 }
 
-/*    Page Hébergement*/
+/****HEBERGEMENTS****/
 
 .contenu-3 {
     display: flex;
@@ -845,7 +780,7 @@ section#tabsAndSlides {
     height: 600px;
 }
 
-/*Page de contact */
+/****CONTACT*****/
 
 input[type=submit] {
     background-color: #5c697b;
@@ -916,8 +851,6 @@ textarea {
 }
 
 
-
-
 /**** GALERIE ****/
 
 #galerie {
@@ -949,7 +882,6 @@ textarea {
 .post-desc {
     background-color: white;
     flex: 1;
-    /*    padding-bottom: 1em;*/
 }
 
 .post-desc {
@@ -1033,7 +965,7 @@ tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
 }
 
-/*TEST DU MEDIAQUERY*/
+/*****MEDIAQUERIES******/
 
 /* --------------------Très petit écran-------------------- */
 
@@ -1134,8 +1066,6 @@ rgb(175,203,224) couleur bordure menu
 
 
 }
-
-
 
 /* -------------------- petit écran-------------------- */
 
@@ -1294,9 +1224,6 @@ rgb(175,203,224) couleur bordure menu
         height: inherit;
     }
 }
-
-
-
 
 @media only screen and (min-width: 992px) {
     main {
