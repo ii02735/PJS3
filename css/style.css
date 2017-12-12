@@ -405,7 +405,7 @@ article {
     margin: 2rem auto 3rem auto;
 }
 
-/***Transport***/
+/***TRANSPORT***/
 
 #menuDeplacement
 {
@@ -494,27 +494,6 @@ article {
 }
 @media only screen and (max-width: 810px){
     
-    #wrapper1
-	{
-		width:80%;
-		grid-template-columns: 1fr;
-		margin:0;
-  		padding: 0;
-	}
-
-	
-	#wrapper1 > li:hover > ul
-	{
-  		background-color:rgb(196, 226, 255);
-  		grid-column: -1;
-  		position:relative;
-  		display: block;
-  		margin:0;
-  		padding: 0;
-  		left:0; /*Réinitialisation pour coller à la position du parent*/
-  		right:0;
-  		z-index: 1;
-    }
     
     #menuDeplacement
     {
