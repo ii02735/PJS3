@@ -947,13 +947,11 @@ tr:last-child td:last-child {
 <<<<<<< HEAD
 /****ACTIVITES****/
     
-	.colonnes3 {
-        display: flex;
-        align-items: stretch;
-        justify-content: space-around;
-    }
-=======
-/*****ACTIVITES******/
+.colonnes3 {
+	display: flex;
+	align-items: stretch;
+	justify-content: space-around;
+}
 
 #texte_villes
 {
@@ -1000,7 +998,6 @@ tr:last-child td:last-child {
 {
 	height:200px;
 }
->>>>>>> 256c783e1e72d5babdbb8537d9cef3e2acf5ed08
 
 /*****MEDIAQUERIES******/
 
@@ -1238,6 +1235,12 @@ rgb(175,203,224) couleur bordure menu
         position:relative;
         right:35%;
     }
+	
+	/* PAGE VILLES TOURISTIQUES */
+	
+	#img_villesT img{
+		max-witdh : 600px;
+	}
  
 }
 
@@ -1260,6 +1263,14 @@ rgb(175,203,224) couleur bordure menu
     .article-3 {
         height: inherit;
     }
+	
+	/* PAGE VILLES TOURISTIQUES */
+	
+	#img_villesT img{
+		max-witdh : 650px;
+	}
+	
+	
 }
 
 @media only screen and (min-width: 992px) {
@@ -1272,6 +1283,12 @@ rgb(175,203,224) couleur bordure menu
         min-height: 45rem;
         max-height: 45rem;
     }
+	
+	/* PAGE VILLES TOURISTIQUES */
+	
+	#img_villesT img{
+		max-witdh : 700px;
+	}
 }
 
 /* --------------------Grand écran-------------------- */
