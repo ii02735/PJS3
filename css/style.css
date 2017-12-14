@@ -944,6 +944,7 @@ tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
 }
 
+<<<<<<< HEAD
 /****ACTIVITES****/
     
 	.colonnes3 {
@@ -951,6 +952,55 @@ tr:last-child td:last-child {
         align-items: stretch;
         justify-content: space-around;
     }
+=======
+/*****ACTIVITES******/
+
+#texte_villes
+{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-column-gap:1%;
+}
+
+
+#image_villes
+{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-column-gap:1%;
+}
+
+#image_villes img
+{
+	height:200px;
+}
+
+#texte_visitest
+{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-column-gap:1%;
+}
+
+#h2_visitest
+{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-column-gap:1%;
+}
+
+#image_visitest
+{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-column-gap:1%;
+}
+
+#image_visitest img
+{
+	height:200px;
+}
+>>>>>>> 256c783e1e72d5babdbb8537d9cef3e2acf5ed08
 
 /*****MEDIAQUERIES******/
 
@@ -1231,11 +1281,11 @@ rgb(175,203,224) couleur bordure menu
         max-width: 1140px;
         margin: auto;
     }
-    .colonnes3 {
-        display: flex;
-        align-items: stretch;
-        justify-content: space-around;
-    }
+    /* .colonnes3 { */
+        /* display: flex; */
+        /* align-items: stretch; */
+        /* justify-content: space-around; */
+    /* } */
 
     article img {
         width: 100%;
