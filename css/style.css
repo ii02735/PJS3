@@ -527,6 +527,8 @@ article {
         position:relative;
         right:68%;
     }
+    
+    
 }
 
 /*@media only screen and (max-width: 780px)
@@ -944,7 +946,7 @@ tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
 }
 
-<<<<<<< HEAD
+
 /****ACTIVITES****/
     
 .colonnes3 {
@@ -999,6 +1001,23 @@ tr:last-child td:last-child {
 	height:200px;
 }
 
+/*****SPORT*****/
+.displayed
+{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:40%;
+}
+
+/* VISITE HISTORIQUE */
+.imgVH
+{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 800px;
+}
 /*****MEDIAQUERIES******/
 
 /* --------------------Très petit écran-------------------- */
@@ -1097,10 +1116,28 @@ rgb(175,203,224) couleur bordure menu
        grid-template-columns: 1fr;
        grid-column-gap:10px;
     }
+    
+	/*SPORT*/
+    .displayed
+    {
+        width: 80%;
+    }
 
+    /*VISITE HISTORIQUE*/
+    .imgVH
+    {
+        width: 300px;
+    }
 
 }
 
+@media only screen and (min-width:380px)
+{
+    .imgVH
+    {
+    width:400px;
+    }
+}
 /* -------------------- petit écran-------------------- */
 
 @media only screen and (min-width: 576px) {
@@ -1130,6 +1167,18 @@ rgb(175,203,224) couleur bordure menu
     #buttonsTrans > a
     {
         position:relative;
+    }
+    
+    /*SPORT*/
+        .displayed
+    {
+        width: 60%;
+    }
+    
+    /*VISITE HISTORIQUE*/
+    .imgVH
+    {
+        width: 600px;
     }
 }
 
@@ -1187,6 +1236,11 @@ rgb(175,203,224) couleur bordure menu
         grid-template-columns: 1fr;
     }
 
+	/*VISITE HISTORIQUE*/
+    .imgVH
+    {
+        width: 450px;
+    }
  
 }
 
@@ -1241,7 +1295,8 @@ rgb(175,203,224) couleur bordure menu
 	#img_villesT img{
 		max-witdh : 600px;
 	}
- 
+    
+    
 }
 
 @media only screen and (min-width: 768px) {
@@ -1270,7 +1325,18 @@ rgb(175,203,224) couleur bordure menu
 		max-witdh : 650px;
 	}
 	
-	
+	/* SPORT */
+    .displayed
+    {
+        width:50%;
+    }
+    
+	/*VISITE HISTORIQUE*/
+    .imgVH
+    {
+        width: 600px;
+    }
+    	
 }
 
 @media only screen and (min-width: 992px) {
@@ -1289,6 +1355,7 @@ rgb(175,203,224) couleur bordure menu
 	#img_villesT img{
 		max-witdh : 700px;
 	}
+
 }
 
 /* --------------------Grand écran-------------------- */
@@ -1306,6 +1373,12 @@ rgb(175,203,224) couleur bordure menu
 
     article img {
         width: 100%;
+    }
+    
+	/*VISITE HISTORIQUE */
+    .imgVH
+    {
+        width: 800px;
     }
 
 }
