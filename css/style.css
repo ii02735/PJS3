@@ -1126,7 +1126,7 @@ rgb(175,203,224) couleur bordure menu
     /*VISITE HISTORIQUE*/
     .imgVH
     {
-        width: 300px;
+        width: 250px;
     }
 
 }
@@ -1135,7 +1135,7 @@ rgb(175,203,224) couleur bordure menu
 {
     .imgVH
     {
-    width:400px;
+    width:350px;
     }
 }
 /* -------------------- petit écran-------------------- */
