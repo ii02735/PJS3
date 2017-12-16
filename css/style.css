@@ -11,213 +11,113 @@ body {
     font-size: 19px;
 }
 
-h1 {
-    font-size: 60px;
-}
-
-h2 {
-    font-size: 40px;
-    font-weight: normal;
-    text-align: center;
-}
-
 
 
 /***** CAROUSSEL ****/
+#tabsAndSlides
+{
+    position:relative;
+    display:flex;
+    justify-content: center;
+}
+.arrow
+{
+    position:absolute;
+    cursor:pointer;
+    text-align:center;
+    height:9vw;
+    padding-left:1vw;
+    padding-right:1vw;
+    font-size:6vw;
+    top:24vw;
+    z-index:1;
+    color:rgb(218, 237, 255);
+    transition:background 2s;
+}
+.arrow:hover
+{
+    background:rgba(218, 237, 255,0.25);
+}
+.arrow:nth-child(2)
+{
+  right:2vw;
+}
+.arrow:nth-child(1)
+{
+    left:2vw;
+}
+#container
+{
+  border:1px solid black;
+  width:100%;
+  height:55vw;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:100% 100% 100% 100% 100%;
+}
+#container>div{width:100%;height:100%;font-size:2.5vw;}
+#container>div:nth-child(1){background:url(../img/accueil/restaurants.jpg);}
+#container>div:nth-child(2){background:url(../img/accueil/transports.jpg);}
+#container>div:nth-child(3){background:url(../img/accueil/hebergement.jpg);}
+#container>div:nth-child(4){background:url(../img/accueil/specialite.jpg);}
+#container>div
+{
+  position:relative;
+}
+#container>div
+{
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+  align-items:center;
+}
+#container>div>*
+{
+  position:relative;
+  top:11vw;
+  margin:2%;
+  color:white;
+}
+#container p
+{
+  background:rgba(209, 39, 42, 1);
+  text-align:center;
+  padding:0.25vw 1vw;
+  color:white;
+}
+#container p:hover
+{
+  cursor:pointer;
+  background:darkblue;
+}
+#container>div:first-child>h2
+{
+    color:black;
+}
+#container>div:first-child>p,#container>div:first-child>h2
+{
+    position:relative;
+    top:13vw;
+}
+
+@media only screen and (max-width:1420px)
+{
+    #container>div:first-child>p,#container>div:first-child>h2
+    {
+        color:white;
+        position:relative;
+        top:13vw;
+    }
+}
+/*Utiliser display:flex pour réafficher les divs dans JS*/
 
 /*On redimensionne toutes les images à la dimension du bloc de la balise img*/
 
 /*Pour plus d'infos se rendre sur https://www.w3schools.com/howto/howto_js_slideshow.asp*/
 
-img.resize {
-
-    max-width: 100%;
-    max-height: 100%;
-
-}
-
 
 /*On cache toutes nos slides afin qu'elles ne s'affichent pas les unes après les autres. 
 Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
-
-.slides {
-    position: relative;
-    display: none;
-}
-
-#tabsAndSlides {
-    display: flex;
-    background-color: white;
-    justify-content: center;
-
-}
-
-
-#texteDyn {
-    position: absolute;
-    font-weight: bolder;
-    bottom: 25%;
-    left: 25%;
-    right: 25%;
-    font-size: 320%;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    text-align: center;
-}
-
-#texteDyn {
-    position: absolute;
-    bottom: 25%;
-    left: 25%;
-    right: 25%;
-    font-size: 320%;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    text-align: center;
-}
-
-#moreInfo {
-    position: absolute;
-    bottom: 18%;
-    left: 25%;
-    right: 25%;
-    text-align: center;
-
-}
-
-
-#moreInfo button {
-    font-family: 'EB Garamond', serif;
-    cursor: pointer;
-    border: none;
-    color: white;
-    font-size: 150%;
-    padding: 4px 10px;
-    background-color: rgba(209, 39, 42, 1);
-    box-shadow: 0px 5px 10px 0px black;
-    -moz-transition: background-color 0.5s;
-    -webkit-transition: background-color 0.5s;
-}
-
-#moreInfo button {
-    cursor: pointer;
-    border: none;
-    color: white;
-    font-size: 150%;
-    padding: 4px 10px;
-    background-color: rgba(209, 39, 42, 1);
-    box-shadow: 0px 5px 10px 0px black;
-    -moz-transition: background-color 0.5s;
-    -webkit-transition: background-color 0.5s;
-}
-
-#moreInfo button:hover {
-    background-color: rgba(0, 46, 93, 1);
-}
-
-#navSlides {
-
-    position: relative;
-    /*positionnement relatif à son parent --> slider-container*/
-    /*De plus avec relative l'élément est enfermé dans son parent*/
-    /*En absolute, l'élément n'est plus enfermé dans son parent et peut se positionner
-	n'importe où*/
-    text-align: center;
-    bottom: 5%;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-
-#titre_slide {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    top: 70%;
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 320%;
-}
-
-#titre_slide {
-    font-family: 'EB Garamond', serif;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    top: 70%;
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 320%;
-
-}
-
-
-.point {
-
-    cursor: pointer;
-    height: 6px;
-    width: 6px;
-    margin: 0 3px;
-    background-color: rgb(175, 203, 224);
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.active,
-.point:hover {
-    /*class rajoutés depuis le D.O.M du JS*/
-    background-color: #717171;
-}
-
-.arrow {
-
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 12px 28px;
-    color: rgba(175, 203, 224, 1);
-    position: absolute;
-    font-weight: lighter;
-    top: 50%;
-    font-size: 400%;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
-    -webkit-transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
-    -ms-transition: background-color 0.5s;
-}
-
-.arrow:hover {
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.arrow:nth-child(5)
-/*Il s'agit du second enfant du parent tabsAndSlides*/
-
-    {
-
-    position: absolute;
-    left: 10%;
-
-}
-
-.arrow:nth-child(6)
-/*Il s'agit du troisième enfant du parent tabsAndSlides*/
-
-    {
-    position: absolute;
-    right: 10%;
-
-}
-
-#presentation {
-    margin: 2% 0;
-    background-color: rgb(43, 108, 163);
-}
 
 
 /************* MENU **************/
@@ -324,7 +224,7 @@ main > h2 {
 
 
 section {
-    border-top: 3rem solid #D12727;
+    border-top: 10vh solid #D12727;
     background-color: white;
     margin-bottom: 5rem;
 }
