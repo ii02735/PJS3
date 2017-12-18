@@ -954,69 +954,7 @@ tr:last-child td:last-child {
 	justify-content: space-around;
 }
 
-#texte_villes
-{
-	display:grid;
-	grid-template-columns:1fr 1fr 1fr;
-	grid-column-gap:1%;
-	grid-template-rows: 100px 300px 200px;
-	grid-row-gap:1%;
-}
-#texte_villes h2:first-child,
-#texte_villes p:first-child,
-#texte_villes img:first-child
-{
-	grid-column:1/2;
-}
 
-#texte_villes h2:nth-child(2),
-#texte_villes p:nth-child(2),
-#texte_villes img:nth-child(2) {
-	grid-column:2/3;
-}
-
-#texte_villes h2:last-child,
-#texte_villes p:last-child,
-#texte_villes img:last-child {
-	grid-column : 3/4;
-}
-
-#texte_villes h2
-{
-	grid-row:1;
-}
-
-#texte_villes p {
-	grid-row:2;
-}
-
-#texte_villes img{
-	grid-row:3;
-}
-
-#texte_villes img
-{
-	width:100%;
-	height:200px;
-}
-
-#texte_visitest
-{
-	display:grid;
-	grid-template-columns:1fr 1fr 1fr;
-	grid-column-gap:1%;
-}
-
-#texte_visitest img
-{
-	height:200px;
-}
-
-.img-activites{
-	display:flex;
-	align-items: stretch;
-	width : 250px;
-}
 
 
 /*****MEDIAQUERIES******/
@@ -1412,11 +1350,19 @@ rgb(175,203,224) couleur bordure menu
 	
 	/* PAGE VILLES TOURISTIQUES */
 	
-	/* #img_villesT img{
-		max-witdh : 650px;
-	}
-	 */
+	#texte_villes img{
+		width: 100%;
+	} 
     
+    #texte_visitest img{
+        width: 100%;
+    }
+    
+    #texte_acti img {
+        width: 100%;
+    }
+    
+
 	
 }
 
@@ -1433,9 +1379,18 @@ rgb(175,203,224) couleur bordure menu
 	
 	/* PAGE VILLES TOURISTIQUES */
 	
-/* 	#img_villesT {
-		max-witdh : 700px;
-	} */
+	#texte_villes img{
+		width: 100%;
+	} 
+    
+    #texte_visitest img{
+        width: 100%;
+    }
+    
+    #texte_acti img {
+        width: 100%;
+    }
+    
     
 }
 
@@ -1455,5 +1410,107 @@ rgb(175,203,224) couleur bordure menu
     article img {
         width: 100%;
     }
+    
+    /* PAGE ACTIVITES */
+    
+    #texte_villes
+{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-column-gap:1%;
+	grid-template-rows: 100px 300px 200px;
+	grid-row-gap:1%;
+}
+#texte_villes h2:first-child,
+#texte_villes p:first-child,
+#texte_villes img:first-child
+{
+	grid-column:1/2;
+}
+
+#texte_villes h2:nth-child(2),
+#texte_villes p:nth-child(2),
+#texte_villes img:nth-child(2) {
+	grid-column:2/3;
+}
+
+#texte_villes h2:last-child,
+#texte_villes p:last-child,
+#texte_villes img:last-child {
+	grid-column : 3/4;
+}
+
+#texte_villes h2
+{
+	grid-row:1;
+}
+
+#texte_villes p {
+	grid-row:2;
+}
+
+#texte_villes img{
+	grid-row:3;
+}
+
+#texte_villes img
+{
+	width:100%;
+	height:200px;
+}
+
+
+
+    #texte_visitest
+{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-column-gap:1%;
+	grid-template-rows: 100px 300px 200px;
+	grid-row-gap:1%;
+}
+#texte_visitest h2:first-child,
+#texte_visitest p:first-child,
+#texte_visitest img:first-child
+{
+	grid-column:1/2;
+}
+
+#texte_visitest h2:nth-child(2),
+#texte_visitest p:nth-child(2),
+#texte_visitest img:nth-child(2) {
+	grid-column:2/3;
+}
+
+#texte_visitest h2:last-child,
+#texte_visitest p:last-child,
+#texte_visitest img:last-child {
+	grid-column : 3/4;
+}
+
+#texte_visitest h2
+{
+	grid-row:1;
+}
+
+#texte_visitest p {
+	grid-row:2;
+}
+
+#texte_visitest img{
+	grid-row:3;
+}
+
+#texte_visitest img
+{
+	width:100%;
+	height:200px;
+}
+    
+.img-activites{
+	display:flex;
+	align-items: stretch;
+	width : 250px;
+    
     
 }
