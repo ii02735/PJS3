@@ -492,6 +492,7 @@ article {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
 @media only screen and (max-width: 810px){
     
     
@@ -527,8 +528,6 @@ article {
         position:relative;
         right:68%;
     }
-    
-    
 }
 
 /*@media only screen and (max-width: 780px)
@@ -946,7 +945,7 @@ tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
 }
 
-
+<<<<<<< HEAD
 /****ACTIVITES****/
     
 .colonnes3 {
@@ -960,18 +959,44 @@ tr:last-child td:last-child {
 	display:grid;
 	grid-template-columns:1fr 1fr 1fr;
 	grid-column-gap:1%;
+	grid-template-rows: 100px 300px 200px;
+	grid-row-gap:1%;
+}
+#texte_villes h2:first-child,
+#texte_villes p:first-child,
+#texte_villes img:first-child
+{
+	grid-column:1/2;
 }
 
-
-#image_villes
-{
-	display:grid;
-	grid-template-columns:1fr 1fr 1fr;
-	grid-column-gap:1%;
+#texte_villes h2:nth-child(2),
+#texte_villes p:nth-child(2),
+#texte_villes img:nth-child(2) {
+	grid-column:2/3;
 }
 
-#image_villes img
+#texte_villes h2:last-child,
+#texte_villes p:last-child,
+#texte_villes img:last-child {
+	grid-column : 3/4;
+}
+
+#texte_villes h2
 {
+	grid-row:1;
+}
+
+#texte_villes p {
+	grid-row:2;
+}
+
+#texte_villes img{
+	grid-row:3;
+}
+
+#texte_villes img
+{
+	width:100%;
 	height:200px;
 }
 
@@ -982,42 +1007,18 @@ tr:last-child td:last-child {
 	grid-column-gap:1%;
 }
 
-#h2_visitest
-{
-	display:grid;
-	grid-template-columns:1fr 1fr 1fr;
-	grid-column-gap:1%;
-}
-
-#image_visitest
-{
-	display:grid;
-	grid-template-columns:1fr 1fr 1fr;
-	grid-column-gap:1%;
-}
-
-#image_visitest img
+#texte_visitest img
 {
 	height:200px;
 }
 
-/*****SPORT*****/
-.displayed
-{
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    width:40%;
+.img-activites{
+	display:flex;
+	align-items: stretch;
+	width : 250px;
 }
 
-/* VISITE HISTORIQUE */
-.imgVH
-{
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    width: 800px;
-}
+
 /*****MEDIAQUERIES******/
 
 /* --------------------Très petit écran-------------------- */
@@ -1028,6 +1029,28 @@ tr:last-child td:last-child {
     .text {
         font-size: 11px
     }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 415px) {
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+	
+	/* PAGE ACTIVITES */
+    #texte_acti {
+        max-width: 280px;
+    }
+    
+    #texte_villes {
+        max-width: 280px;
+    }
+    
+    #texte_visitest {
+        max-width: 280px;
+    }
+	
 }
 
 /*
@@ -1116,28 +1139,46 @@ rgb(175,203,224) couleur bordure menu
        grid-template-columns: 1fr;
        grid-column-gap:10px;
     }
+
+        /* PAGE VILLES TOURISTIQUES */
+	
+     #texte_villes
+    {
+        grid-template-columns: 1fr;
+    }
     
-	/*SPORT*/
-    .displayed
+    #texte_villes img
     {
-        width: 80%;
+        display: block;
+        margin:auto;
+        width:400px;
+        height: 250px;
     }
-
-    /*VISITE HISTORIQUE*/
-    .imgVH
+        #texte_visitest
     {
-        width: 250px;
+        grid-template-columns: 1fr;
     }
+    
+    #texte_visitest img
+    {
+        display: block;
+        margin:auto;
+        width: 400px;
+        height: 250px;
+    }
+    
+    #texte_acti img
+    {
+        display: block;
+        margin:auto;
+        width:400px;
+        height: 250px;
+    }
+    
+ 
 
 }
 
-@media only screen and (min-width:380px)
-{
-    .imgVH
-    {
-    width:350px;
-    }
-}
 /* -------------------- petit écran-------------------- */
 
 @media only screen and (min-width: 576px) {
@@ -1169,17 +1210,9 @@ rgb(175,203,224) couleur bordure menu
         position:relative;
     }
     
-    /*SPORT*/
-        .displayed
-    {
-        width: 60%;
-    }
     
-    /*VISITE HISTORIQUE*/
-    .imgVH
-    {
-        width: 600px;
-    }
+
+
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
@@ -1236,11 +1269,41 @@ rgb(175,203,224) couleur bordure menu
         grid-template-columns: 1fr;
     }
 
-	/*VISITE HISTORIQUE*/
-    .imgVH
+    /* PAGE VILLES TOURISTIQUES */
+	
+     #texte_villes
     {
-        width: 450px;
+        grid-template-columns: 1fr;
     }
+    
+    #texte_villes img
+    {
+        display: block;
+        margin:auto;
+        width:400px;
+        height: 250px;
+    }
+        #texte_visitest
+    {
+        grid-template-columns: 1fr;
+    }
+    
+    #texte_visitest img
+    {
+        display: block;
+        margin:auto;
+        width: 400px;
+        height: 250px;
+    }
+    
+    #texte_acti img
+    {
+        display: block;
+        margin:auto;
+        width:400px;
+        height: 250px;
+    }
+    
  
 }
 
@@ -1292,10 +1355,38 @@ rgb(175,203,224) couleur bordure menu
 	
 	/* PAGE VILLES TOURISTIQUES */
 	
-	#img_villesT img{
-		max-witdh : 600px;
-	}
+     #texte_villes
+    {
+        grid-template-columns: 1fr;
+    }
     
+    #texte_villes img
+    {
+        display: block;
+        margin:auto;
+        width:600px;
+        height: 400px;
+    }
+        #texte_visitest
+    {
+        grid-template-columns: 1fr;
+    }
+    
+    #texte_visitest img
+    {
+        display: block;
+        margin:auto;
+        width:600px;
+        height: 400px;
+    }
+    
+    #texte_acti img
+    {
+        display: block;
+        margin:auto;
+        width:600px;
+        height: 400px;
+    }
     
 }
 
@@ -1321,22 +1412,12 @@ rgb(175,203,224) couleur bordure menu
 	
 	/* PAGE VILLES TOURISTIQUES */
 	
-	#img_villesT img{
+	/* #img_villesT img{
 		max-witdh : 650px;
 	}
-	
-	/* SPORT */
-    .displayed
-    {
-        width:50%;
-    }
+	 */
     
-	/*VISITE HISTORIQUE*/
-    .imgVH
-    {
-        width: 600px;
-    }
-    	
+	
 }
 
 @media only screen and (min-width: 992px) {
@@ -1352,10 +1433,10 @@ rgb(175,203,224) couleur bordure menu
 	
 	/* PAGE VILLES TOURISTIQUES */
 	
-	#img_villesT img{
+/* 	#img_villesT {
 		max-witdh : 700px;
-	}
-
+	} */
+    
 }
 
 /* --------------------Grand écran-------------------- */
@@ -1375,10 +1456,4 @@ rgb(175,203,224) couleur bordure menu
         width: 100%;
     }
     
-	/*VISITE HISTORIQUE */
-    .imgVH
-    {
-        width: 800px;
-    }
-
 }
