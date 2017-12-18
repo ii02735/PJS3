@@ -38,13 +38,50 @@ body {
 {
     background:rgba(218, 237, 255,0.25);
 }
-.arrow:nth-child(2)
+.arrow:nth-child(even)
 {
   right:2vw;
 }
-.arrow:nth-child(1)
+.arrow:nth-child(odd)
 {
     left:2vw;
+}
+input[name="button"]:nth-child(5)
+{
+	position:absolute;
+	margin:190px 50px;
+	z-index:1900;
+}
+input[name="button"]:nth-child(6)
+{
+	position:absolute;
+	margin:200px 80px;
+	z-index:2100;
+}
+input[name="button"]:nth-child(7)
+{
+	position:absolute;
+	margin:230px 80px;
+	z-index:2100;
+}
+input[name="button"]:nth-child(8)
+{
+	position:absolute;
+	margin:280px 130px;
+	z-index:2200;
+}
+
+input[name="button"]:nth-child(5):checked ~ #container div:nth-child(1)
+{
+	display:none;
+}
+input[name="button"]:nth-child(6):checked ~ #container div:nth-child(2)
+{
+	display:none;
+}
+input[name="button"]:nth-child(7):checked ~ #container div:nth-child(3)
+{
+	display:none;
 }
 #container
 {
@@ -56,10 +93,10 @@ body {
   grid-template-columns:100% 100% 100% 100% 100%;
 }
 #container>div{width:100%;height:100%;font-size:2.5vw;}
-#container>div:nth-child(1){background:url(../img/accueil/restaurants.jpg);}
-#container>div:nth-child(2){background:url(../img/accueil/transports.jpg);}
-#container>div:nth-child(3){background:url(../img/accueil/hebergement.jpg);}
-#container>div:nth-child(4){background:url(../img/accueil/specialite.jpg);}
+#container>div:nth-child(1){background:url(../img/accueil/restaurants.jpg); background-repeat:no-repeat;}
+#container>div:nth-child(2){background:url(../img/accueil/transports.jpg); background-repeat:no-repeat;}
+#container>div:nth-child(3){background:url(../img/accueil/hebergement.jpg); background-repeat:no-repeat;}
+#container>div:nth-child(4){background:url(../img/accueil/specialite.jpg); background-repeat:no-repeat;}
 #container>div
 {
   position:relative;
