@@ -975,6 +975,21 @@ tr:last-child td:last-child {
     .text {
         font-size: 11px
     }
+    
+     
+#Menu
+{
+	display: flex;
+	justify-content: space-around;
+	margin:0 auto;
+	padding: 0;
+	width:100%;
+	list-style-type: none;
+    list-style-position: inside;
+    background-color: rgb(218,237,255);
+    border:3px solid rgb(175,203,224);
+}
+
 	
 	/* PAGE ACTIVITES */
     #texte_acti {
@@ -1011,6 +1026,21 @@ rgb(175,203,224) couleur bordure menu
         min-height: 25rem;
         max-height: 25rem;
     }
+    
+     
+#Menu
+{
+	display: flex;
+	justify-content: space-around;
+	margin:0 auto;
+	padding: 0;
+	width:70%;
+	list-style-type: none;
+    list-style-position: inside;
+    background-color: rgb(218,237,255);
+    border:3px solid rgb(175,203,224);
+}
+
 
 
     article,
@@ -1078,7 +1108,7 @@ rgb(175,203,224) couleur bordure menu
        grid-column-gap:10px;
     }
 
-        /* PAGE VILLES TOURISTIQUES */
+        /* PAGE ACTIVITES */
 	
      #texte_villes
     {
@@ -1113,7 +1143,17 @@ rgb(175,203,224) couleur bordure menu
         height: 250px;
     }
     
- 
+ /* PAGES VILLES TOURISTIQUES*/
+    
+    #Colmar img {
+        width: 100%;
+    }
+    #Strasbourg img {
+        width: 100%;
+    }
+    #Mulhouse img {
+        width: 100%;
+    }
 
 }
 
@@ -1242,6 +1282,17 @@ rgb(175,203,224) couleur bordure menu
         height: 250px;
     }
     
+    /* PAGES VILLES TOURISTIQUES*/
+    
+    #Colmar img {
+        width: 100%;
+    }
+    #Strasbourg img {
+        width: 100%;
+    }
+    #Mulhouse img {
+        width: 100%;
+    }
  
 }
 
@@ -1326,6 +1377,17 @@ rgb(175,203,224) couleur bordure menu
         height: 400px;
     }
     
+    /* PAGES VILLES TOURISTIQUES*/
+    
+    #Colmar img {
+        width: 100%;
+    }
+    #Strasbourg img {
+        width: 100%;
+    }
+    #Mulhouse img {
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1511,6 +1573,9 @@ rgb(175,203,224) couleur bordure menu
 	display:flex;
 	align-items: stretch;
 	width : 250px;
+    
+    /* PAGE VILLES TOURISTIQUES*/
+    
     
     
 }
