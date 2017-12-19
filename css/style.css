@@ -20,7 +20,7 @@ body {
     display:flex;
     justify-content: center;
 }
-.arrow
+.leftarrow,.rightarrow
 {
     position:absolute;
     cursor:pointer;
@@ -38,98 +38,91 @@ body {
 {
     background:rgba(218, 237, 255,0.25);
 }
-.arrow:nth-child(even)
+.rightarrow
 {
   right:2vw;
 }
-.arrow:nth-child(odd)
+.leftarrow
 {
     left:2vw;
 }
 
-input[name="button"]:nth-child(5)
+#button1,#button2,#button3,#button4
 {
 	position:absolute;
-	margin:190px 50px;
-	z-index:1900;
-}
-input[name="button"]:nth-child(6)
-{
-	position:absolute;
-	margin:200px 80px;
-	z-index:2100;
-}
-input[name="button"]:nth-child(7)
-{
-	position:absolute;
-	margin:230px 80px;
-	z-index:2100;
-}
-input[name="button"]:nth-child(8)
-{
-	position:absolute;
-	margin:280px 130px;
-	z-index:2200;
+	z-index:1000;
 }
 
-label[for="button"]:nth-child(1):active ~ #container div:nth-child(1),
-label[for="button"]:nth-child(1):active ~ #container div:nth-child(2),
-label[for="button"]:nth-child(1):active ~ #container div:nth-child(3)
+#button1
+{
+	left:20%;
+}
+
+#button2
+{
+	left:30%;
+}
+
+#button3
+{
+	left:50%;
+}
+
+#button4
+{
+	left:70%;
+}
+
+
+
+.rightarrow:nth-child(6),.rightarrow:nth-child(8),.rightarrow:nth-child(10),.rightarrow:nth-child(12)
 {
 	display:none;
 }
 
-label[for="button"]:nth-child(1):active ~ #container div:nth-child(4)
-{
-	color:flex;
-}
-
-input[name="button"]:nth-child(5):checked ~ #container div:nth-child(2),
-input[name="button"]:nth-child(5):checked ~ #container div:nth-child(3),
-input[name="button"]:nth-child(5):checked ~ #container div:nth-child(4)
+#button1:checked ~ #container div:nth-child(2),
+#button1:checked ~ #container div:nth-child(3),
+#button1:checked ~ #container div:nth-child(4),
 {
 	display:none;
 }
-input[name="button"]:nth-child(5):checked ~ #container div:nth-child(1)
+#button1:checked ~ #container div:nth-child(1)
 {
 	display:flex;
 }
-input[name="button"]:nth-child(6):checked ~ #container div:nth-child(1),
-input[name="button"]:nth-child(6):checked ~ #container div:nth-child(3),
-input[name="button"]:nth-child(6):checked ~ #container div:nth-child(4)
+#button2:checked ~ #container div:nth-child(1),
+#button2:checked ~ #container div:nth-child(3),
+#button2:checked ~ #container div:nth-child(4),
+#button2:checked ~ label[for="button1"],
+#button2:checked ~ label[for="button2"],
 {
 	display:none;
 }
-input[name="button"]:nth-child(6):checked ~ #container div:nth-child(2)
+#button2:checked ~ #container div:nth-child(2),
+#button2:checked ~ label[for="button2"]
 {
 	display:flex;
 }
-input[name="button"]:nth-child(7):checked ~ #container div:nth-child(1),
-input[name="button"]:nth-child(7):checked ~ #container div:nth-child(2),
-input[name="button"]:nth-child(7):checked ~ #container div:nth-child(4)
+#button3:checked ~ #container div:nth-child(1),
+#button3:checked ~ #container div:nth-child(2),
+#button3:checked ~ #container div:nth-child(4)
 {
 	display:none;
 }
-input[name="button"]:nth-child(7):checked ~ #container div:nth-child(3)
+#button3:checked ~ #container div:nth-child(3)
 {
 	display:flex;
 }
-input[name="button"]:nth-child(8):checked ~ #container div:nth-child(1),
-input[name="button"]:nth-child(8):checked ~ #container div:nth-child(2),
-input[name="button"]:nth-child(8):checked ~ #container div:nth-child(3)
+#button4:checked ~ #container div:nth-child(1),
+#button4:checked ~ #container div:nth-child(2),
+#button4:checked ~ #container div:nth-child(3)
 {
 	display:none;
 }
-input[name="button"]:nth-child(8):checked ~ #container div:nth-child(4)
+#button4:checked ~ #container div:nth-child(4)
 {
 	display:flex;
 }
-
-label[for="button"]:active
-{
-	color:red;
-}
-
 #container
 {
   border:1px solid black;
