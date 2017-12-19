@@ -223,32 +223,29 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 
 /************* MENU **************/
 
- 
-#Menu
-{
-	display: flex;
-	justify-content: space-around;
-	margin:0 auto;
-	padding: 0;
-	width:50%;
-	list-style-type: none;
+#Menu {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 0;
+    width: 50%;
+    list-style-type: none;
     list-style-position: inside;
-    background-color: rgb(218,237,255);
-    border:3px solid rgb(175,203,224);
+    background-color: rgb(218, 237, 255);
+    border: 3px solid rgb(175, 203, 224);
 }
 
-#Menu li{
+#Menu li {
     position: relative;
 }
-#Menu li a
-{
-	color:rgb(76,128,167);
-	text-decoration: none;
+
+#Menu li a {
+    color: rgb(76, 128, 167);
+    text-decoration: none;
 }
 
-#Menu li a:hover
-{
-	color:rgb(29,154,232);
+#Menu li a:hover {
+    color: rgb(29, 154, 232);
 }
 
 .sub {
@@ -263,6 +260,7 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     cursor: pointer;
     width: 180px;
 }
+
 #Menu li:hover .sub {
     display: block;
     margin: auto;
@@ -338,9 +336,6 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     visibility: visible;
 }
 */
- 
-
-
 
 /***** LOGO ****/
 
@@ -407,21 +402,19 @@ article {
 
 /***TRANSPORT***/
 
-#menuDeplacement
-{
-    margin-top:25px;
+#menuDeplacement {
+    margin-top: 25px;
     height: 100%;
     max-height: 500px;
     overflow: hidden;
 
 }
 
-#menuDeplacement h2
-{
+#menuDeplacement h2 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    -webkit-transform:translateX(-50%);
+    -webkit-transform: translateX(-50%);
     color: white;
     text-align: center;
     background-color: #D12727;
@@ -429,31 +422,28 @@ article {
     padding: 1rem 0 1rem 0;
 }
 
-#menuDeplacement img
-{
+#menuDeplacement img {
     height: 100%;
     width: 100%;
 
 }
 
-#transportationButtons
-{
+#transportationButtons {
     position: relative;
-    bottom:60%;
+    bottom: 60%;
     display: flex;
-    margin:0 8.5%;
+    margin: 0 8.5%;
     justify-content: space-between;
 
 }
 
-.transportationChoice
-{
-    color:white;
+.transportationChoice {
+    color: white;
     text-align: center;
     text-decoration: none;
     background-color: #D12727;
     font-size: 120%;
-    padding:0.9rem 3rem ;
+    padding: 0.9rem 3rem;
     justify-content: center;
 }
 
@@ -474,16 +464,16 @@ article {
 
 .bouton:hover {
     background-color: #D12727;
-    
+
 }
 
- 
-.image{
+
+.image {
     position: relative;
     overflow: hidden;
 }
 
-.image img{
+.image img {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -493,40 +483,35 @@ article {
     transform: translate(-50%, -50%);
 }
 
-@media only screen and (max-width: 810px){
-    
-    
-    #menuDeplacement
-    {
+@media only screen and (max-width: 810px) {
+
+
+    #menuDeplacement {
         overflow: hidden;
     }
 
 
 
-    #transportationButtons
-    {
+    #transportationButtons {
         transform: scale(0.85);
-        position:absolute;
+        position: absolute;
     }
-    .transportationChoice
-    {
-        position:relative;
-        margin:60px 20px;
-        top:350px;
+    .transportationChoice {
+        position: relative;
+        margin: 60px 20px;
+        top: 350px;
         transform: translateX(70%);
-        margin-top:950px;
+        margin-top: 950px;
         display: inline;
     }
-    #airports_choice
-    {
-       display: block;
-       grid-template-columns: 1fr;
-       grid-row-gap: 10px;
+    #airports_choice {
+        display: block;
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
     }
-    #buttonsTrans > a
-    {
-        position:relative;
-        right:68%;
+    #buttonsTrans > a {
+        position: relative;
+        right: 68%;
     }
 }
 
@@ -557,7 +542,7 @@ article {
     .text {
         font-size: 200%;
     }
- 
+
 }
 
 /***** ACCUEIL ***/
@@ -586,10 +571,10 @@ section#tabsAndSlides {
 }
 
 #airports_choice {
-	margin:0px 10px;
+    margin: 0px 10px;
     display: grid;
-    grid-template-columns:1fr 1fr 1fr;
-	grid-column-gap:10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
 }
 
 #airports_choice div {
@@ -632,26 +617,23 @@ section#tabsAndSlides {
     width: 100%;
 }
 
-#mapBus
-{
-	text-decoration:none;
-	color:#002E50;
+#mapBus {
+    text-decoration: none;
+    color: #002E50;
 }
 
-.images
-{
-	display:grid;
-	grid-template-columns:1fr 1fr;
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-#SoleaMark
-{
-	align-self:end;
+#SoleaMark {
+    align-self: end;
 }
 
 /****** GASTRONOMIE *******/
 
-.gastronomie-img img{
+.gastronomie-img img {
     width: 100%
 }
 
@@ -850,11 +832,11 @@ textarea {
 
 .post-img {
     padding-top: 100%;
-    
+
 }
 
 
-.w-100{
+.w-100 {
     width: 100%;
 }
 
@@ -945,16 +927,53 @@ tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
 }
 
-<<<<<<< HEAD
+
 /****ACTIVITES****/
-    
-.colonnes3 {
-	display: flex;
-	align-items: stretch;
-	justify-content: space-around;
-}
 
 
+  /* PAGE ACTIVITES */
+    .grid-activités {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2%;
+        grid-row-gap: 1%;
+    }
+
+    .grid-activités h2 {
+        grid-row: 1;
+    }
+
+    .grid-activités p {
+        grid-row: 2;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid-activités p span{
+        display: block;
+    }
+
+    .plus-info{
+        align-self:  stretch;
+        font-weight: 700;
+    }
+
+    .grid-activités img {
+        grid-row: 3;
+    }
+
+    .grid-activités img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .lien-activites {
+        display: block;
+    }
+
+    #texte_acti img {
+        width: 100%;
+    }
 
 
 /*****MEDIAQUERIES******/
@@ -975,46 +994,38 @@ tr:last-child td:last-child {
     .text {
         font-size: 11px
     }
-    
-     
-#Menu
-{
-	display: flex;
-	justify-content: space-around;
-	margin:0 auto;
-	padding: 0;
-	width:100%;
-	list-style-type: none;
-    list-style-position: inside;
-    background-color: rgb(218,237,255);
-    border:3px solid rgb(175,203,224);
-}
 
-	
-	/* PAGE ACTIVITES */
-    #texte_acti {
+
+    #Menu {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        list-style-type: none;
+        list-style-position: inside;
+        background-color: rgb(218, 237, 255);
+        border: 3px solid rgb(175, 203, 224);
+    }
+
+
+    /* PAGE ACTIVITES */
+
+    .grid-activités,
+    #texte-acti {
         max-width: 280px;
     }
-    
-    #texte_villes {
-        max-width: 280px;
-    }
-    
-    #texte_visitest {
-        max-width: 280px;
-    }
-	
+
 }
 
 /*
 rgb(218,237,255) couleur boîte menu
 rgb(76,128,167) couleur texte menu
 rgb(29,154,232) couleur texte menu hover	
- 
 rgb(175,203,224) couleur bordure menu
 */
 
-/* --------------------Très petit écran-------------------- */
+/* --------------------Petit écran-------------------- */
 
 @media only screen and (max-width: 576px) {
     main {
@@ -1026,20 +1037,11 @@ rgb(175,203,224) couleur bordure menu
         min-height: 25rem;
         max-height: 25rem;
     }
-    
-     
-#Menu
-{
-	display: flex;
-	justify-content: space-around;
-	margin:0 auto;
-	padding: 0;
-	width:70%;
-	list-style-type: none;
-    list-style-position: inside;
-    background-color: rgb(218,237,255);
-    border:3px solid rgb(175,203,224);
-}
+
+
+    #Menu {
+        width: 70%;
+    }
 
 
 
@@ -1059,7 +1061,7 @@ rgb(175,203,224) couleur bordure menu
     .post {
         width: 100%;
     }
-    
+
     .chefs {
         flex-wrap: wrap;
     }
@@ -1086,78 +1088,27 @@ rgb(175,203,224) couleur bordure menu
         padding-left: 50px;
     }
 
-    
-    .images 
-    {
+
+    .images {
         display: grid;
         grid-template-columns: 1fr;
-        justify-items:center;
+        justify-items: center;
     }
-    
-    .images > img
-    {
+
+    .images > img {
         min-width: 10rem;
         max-width: 20rem;
         min-height: 8rem;
         max-height: 20rem;
     }
-    
-    #airports_choice
-    {
-       grid-template-columns: 1fr;
-       grid-column-gap:10px;
-    }
 
-        /* PAGE ACTIVITES */
-	
-     #texte_villes
-    {
+    #airports_choice {
         grid-template-columns: 1fr;
+        grid-column-gap: 10px;
     }
-    
-    #texte_villes img
-    {
-        display: block;
-        margin:auto;
-        width:400px;
-        height: 250px;
-    }
-        #texte_visitest
-    {
-        grid-template-columns: 1fr;
-    }
-    
-    #texte_visitest img
-    {
-        display: block;
-        margin:auto;
-        width: 400px;
-        height: 250px;
-    }
-    
-    #texte_acti img
-    {
-        display: block;
-        margin:auto;
-        width:400px;
-        height: 250px;
-    }
-    
- /* PAGES VILLES TOURISTIQUES*/
-    
-    #Colmar img {
-        width: 100%;
-    }
-    #Strasbourg img {
-        width: 100%;
-    }
-    #Mulhouse img {
-        width: 100%;
-    }
+   
 
 }
-
-/* -------------------- petit écran-------------------- */
 
 @media only screen and (min-width: 576px) {
     main {
@@ -1169,36 +1120,30 @@ rgb(175,203,224) couleur bordure menu
         min-height: 30rem;
         max-height: 30rem;
     }
-    .images > img
-    {
+    .images > img {
         min-width: 25rem;
         max-width: 20rem;
         min-height: 12rem;
         max-height: 20rem;
     }
-    
-    #airports_choice
-    {
+
+    #airports_choice {
         grid-row-gap: 10px;
         grid-template-columns: 1fr 1fr 1fr;
     }
-    
-    #buttonsTrans > a
-    {
-        position:relative;
-    }
-    
-    
 
+    #buttonsTrans > a {
+        position: relative;
+    }
 
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
 
-.post {
+    .post {
         width: 49.445%;
     }
-    
+
     .chefs {
         flex-wrap: wrap;
     }
@@ -1224,80 +1169,27 @@ rgb(175,203,224) couleur bordure menu
         padding-right: 50px;
         padding-left: 50px;
     }
- 
- 
-    
-    .images
-    {
+
+    .images {
         grid-template-columns: 1fr;
         justify-items: center;
     }
-    
-    .images > img
-    {
+
+    .images > img {
         min-width: 8rem;
         max-width: 20rem;
         min-height: 8rem;
         max-height: 20rem;
     }
 
-    #airports_choice
-    {
+    #airports_choice {
         grid-row-gap: 10px;
         grid-template-columns: 1fr;
     }
 
-    /* PAGE VILLES TOURISTIQUES */
-	
-     #texte_villes
-    {
-        grid-template-columns: 1fr;
-    }
-    
-    #texte_villes img
-    {
-        display: block;
-        margin:auto;
-        width:400px;
-        height: 250px;
-    }
-        #texte_visitest
-    {
-        grid-template-columns: 1fr;
-    }
-    
-    #texte_visitest img
-    {
-        display: block;
-        margin:auto;
-        width: 400px;
-        height: 250px;
-    }
-    
-    #texte_acti img
-    {
-        display: block;
-        margin:auto;
-        width:400px;
-        height: 250px;
-    }
-    
-    /* PAGES VILLES TOURISTIQUES*/
-    
-    #Colmar img {
-        width: 100%;
-    }
-    #Strasbourg img {
-        width: 100%;
-    }
-    #Mulhouse img {
-        width: 100%;
-    }
- 
 }
 
 /* --------------------Moyen écran-------------------- */
-
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
 
@@ -1309,9 +1201,6 @@ rgb(175,203,224) couleur bordure menu
         padding-left: 3rem;
         padding-right: 3rem;
     }
- 
-
-
 
     /*    Page Hébergement     */
     .article-6 {
@@ -1322,72 +1211,17 @@ rgb(175,203,224) couleur bordure menu
         height: inherit;
     }
 
-
- 
-        article {
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
-    
-    .images > img
-    {
+    .images > img {
         min-width: 15rem;
         max-width: 20rem;
         min-height: 10rem;
         max-height: 20rem;
     }
-    #buttonsTrans > a
-    {
-        position:relative;
-        right:35%;
-    }
-	
-	/* PAGE VILLES TOURISTIQUES */
-	
-     #texte_villes
-    {
-        grid-template-columns: 1fr;
+    #buttonsTrans > a {
+        position: relative;
+        right: 35%;
     }
     
-    #texte_villes img
-    {
-        display: block;
-        margin:auto;
-        width:600px;
-        height: 400px;
-    }
-        #texte_visitest
-    {
-        grid-template-columns: 1fr;
-    }
-    
-    #texte_visitest img
-    {
-        display: block;
-        margin:auto;
-        width:600px;
-        height: 400px;
-    }
-    
-    #texte_acti img
-    {
-        display: block;
-        margin:auto;
-        width:600px;
-        height: 400px;
-    }
-    
-    /* PAGES VILLES TOURISTIQUES*/
-    
-    #Colmar img {
-        width: 100%;
-    }
-    #Strasbourg img {
-        width: 100%;
-    }
-    #Mulhouse img {
-        width: 100%;
-    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1409,23 +1243,7 @@ rgb(175,203,224) couleur bordure menu
     .article-3 {
         height: inherit;
     }
-	
-	/* PAGE VILLES TOURISTIQUES */
-	
-	#texte_villes img{
-		width: 100%;
-	} 
-    
-    #texte_visitest img{
-        width: 100%;
-    }
-    
-    #texte_acti img {
-        width: 100%;
-    }
-    
 
-	
 }
 
 @media only screen and (min-width: 992px) {
@@ -1438,22 +1256,22 @@ rgb(175,203,224) couleur bordure menu
         min-height: 45rem;
         max-height: 45rem;
     }
-	
-	/* PAGE VILLES TOURISTIQUES */
-	
-	#texte_villes img{
-		width: 100%;
-	} 
-    
-    #texte_visitest img{
-        width: 100%;
+
+}
+
+@media only screen and (max-width: 1200px) {
+     
+    .grid-activités h2{margin-bottom: 0;}
+    .grid-activités h2,
+    .grid-activités p,
+    .grid-activités .lien-activites{
+        grid-column: 1/4;
+        grid-row: auto;
     }
     
-    #texte_acti img {
-        width: 100%;
+    .grid-activités img{
+        height:20em;
     }
-    
-    
 }
 
 /* --------------------Grand écran-------------------- */
@@ -1463,119 +1281,9 @@ rgb(175,203,224) couleur bordure menu
         max-width: 1140px;
         margin: auto;
     }
-    /* .colonnes3 { */
-        /* display: flex; */
-        /* align-items: stretch; */
-        /* justify-content: space-around; */
-    /* } */
 
     article img {
         width: 100%;
     }
-    
-    /* PAGE ACTIVITES */
-    
-    #texte_villes
-{
-	display:grid;
-	grid-template-columns:1fr 1fr 1fr;
-	grid-column-gap:1%;
-	grid-template-rows: 100px 300px 200px;
-	grid-row-gap:1%;
-}
-#texte_villes h2:first-child,
-#texte_villes p:first-child,
-#texte_villes img:first-child
-{
-	grid-column:1/2;
-}
 
-#texte_villes h2:nth-child(2),
-#texte_villes p:nth-child(2),
-#texte_villes img:nth-child(2) {
-	grid-column:2/3;
-}
-
-#texte_villes h2:last-child,
-#texte_villes p:last-child,
-#texte_villes img:last-child {
-	grid-column : 3/4;
-}
-
-#texte_villes h2
-{
-	grid-row:1;
-}
-
-#texte_villes p {
-	grid-row:2;
-}
-
-#texte_villes img{
-	grid-row:3;
-}
-
-#texte_villes img
-{
-	width:100%;
-	height:200px;
-}
-
-
-
-    #texte_visitest
-{
-	display:grid;
-	grid-template-columns:1fr 1fr 1fr;
-	grid-column-gap:1%;
-	grid-template-rows: 100px 300px 200px;
-	grid-row-gap:1%;
-}
-#texte_visitest h2:first-child,
-#texte_visitest p:first-child,
-#texte_visitest img:first-child
-{
-	grid-column:1/2;
-}
-
-#texte_visitest h2:nth-child(2),
-#texte_visitest p:nth-child(2),
-#texte_visitest img:nth-child(2) {
-	grid-column:2/3;
-}
-
-#texte_visitest h2:last-child,
-#texte_visitest p:last-child,
-#texte_visitest img:last-child {
-	grid-column : 3/4;
-}
-
-#texte_visitest h2
-{
-	grid-row:1;
-}
-
-#texte_visitest p {
-	grid-row:2;
-}
-
-#texte_visitest img{
-	grid-row:3;
-}
-
-#texte_visitest img
-{
-	width:100%;
-	height:200px;
-}
-    
-.img-activites{
-	display:flex;
-	align-items: stretch;
-	width : 250px;
-    
-    /* PAGE VILLES TOURISTIQUES*/
-    
-    
-    
 }
