@@ -11,14 +11,122 @@ body {
     font-size: 19px;
 }
 
+#enableMenu
+{
+    display: none;
+}
+#control label
+{
+    padding:2.5vh 2px;
+    background: #164270;
+    	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
 
+#showMenu
+{
+    display:none;
+    width:20%;
+    margin:12px 0px;
+}
+
+#mediaquery, #mediaquery>label
+{
+    margin:0;
+    display:none;
+    cursor:pointer;
+}
+
+#tabsAndSlides
+{
+    margin-top:20px;
+}
+
+@media only screen and (max-width:500px)
+{   
+   
+    #mediaquery, #mediaquery>label
+    {
+        display: block;
+    }
+    #mediaquery:hover
+    {
+        color:crimson;
+    }
+    
+    #control
+    {
+    position:relative;
+    background:#164270;
+    width:75px;
+    padding:2px 0px;
+    }
+
+    #control span
+    {
+		cursor:pointer;
+        display: block;
+        background:#5C87B5;
+        margin:12px;
+        padding:4px 0px;
+    }
+
+    #control:hover
+    {
+        background:#ED6C6C;
+    }
+
+    #control:hover > span
+    {
+        background:white;
+    }
+
+    #control:active
+    {
+        background:#164270;
+    }
+    
+    #control:active > span
+    {
+        background:#5C87B5;
+    }
+    
+    #enableMenu:not(:checked) ~ #Menu
+    {
+        display:none;
+    }
+    
+    #enableMenu:not(:checked) ~ #showMenu
+    {
+        display:block;
+    }
+    
+    #enableMenu:checked ~ #Menu
+    {
+        display:block;
+    }
+
+}
 
 /***** CAROUSSEL ****/
 #tabsAndSlides
 {
+    border-width:3rem;
     position:relative;
     display:flex;
     justify-content: center;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 .leftarrow,.rightarrow
 {
@@ -47,72 +155,60 @@ body {
     left:2vw;
 }
 
-#button1,#button2,#button3,#button4
+#button1,
+#button2,
+#button3,
+#button4,
+#button5,
+#button6,
+#button7,
+#button8
 {
+	visibility:hidden;
 	position:absolute;
-	z-index:1000;
 }
 
 #button1
 {
-	left:20%;
+	left:10%;
 }
 
 #button2
 {
-	left:30%;
+	left:20%;
 }
 
 #button3
 {
-	left:50%;
+	left:30%;
 }
 
 #button4
 {
+	left:40%;
+}
+#button5
+{
+	left:50%;
+}
+#button6
+{
+	left:60%;
+}
+#button7
+{
 	left:70%;
 }
-
-
-
-.rightarrow:nth-child(6),.rightarrow:nth-child(8),.rightarrow:nth-child(10),.rightarrow:nth-child(12)
+#button8
 {
-	display:none;
+	left:80%;
 }
 
-#button1:checked ~ #container div:nth-child(2),
-#button1:checked ~ #container div:nth-child(3),
-#button1:checked ~ #container div:nth-child(4),
+#l3,#l4,#l5,#l6,#l7,#l8
 {
-	display:none;
+	visibility:hidden;
 }
-#button1:checked ~ #container div:nth-child(1)
-{
-	display:flex;
-}
-#button2:checked ~ #container div:nth-child(1),
-#button2:checked ~ #container div:nth-child(3),
-#button2:checked ~ #container div:nth-child(4),
-#button2:checked ~ label[for="button1"],
-#button2:checked ~ label[for="button2"],
-{
-	display:none;
-}
-#button2:checked ~ #container div:nth-child(2),
-#button2:checked ~ label[for="button2"]
-{
-	display:flex;
-}
-#button3:checked ~ #container div:nth-child(1),
-#button3:checked ~ #container div:nth-child(2),
-#button3:checked ~ #container div:nth-child(4)
-{
-	display:none;
-}
-#button3:checked ~ #container div:nth-child(3)
-{
-	display:flex;
-}
+
 #button4:checked ~ #container div:nth-child(1),
 #button4:checked ~ #container div:nth-child(2),
 #button4:checked ~ #container div:nth-child(3)
@@ -123,20 +219,117 @@ body {
 {
 	display:flex;
 }
+
+#button4:checked ~ #l1,
+#button4:checked ~ #l2,
+#button4:checked ~ #l5,
+#button4:checked ~ #l6,
+#button4:checked ~ #l7,
+#button4:checked ~ #l8
+{
+	visibility:hidden;
+}
+
+#button4:checked ~ #l7,
+#button4:checked ~ #l8
+{
+	visibility:visible;
+}
+
+#button2:checked ~ #l1,
+#button2:checked ~ #l2,
+#button2:checked ~ #l5,
+#button2:checked ~ #l6,
+#button2:checked ~ #l7,
+#button2:checked ~ #l8
+{
+	visibility:hidden;
+}
+
+#button2:checked ~ #l3,
+#button2:checked ~ #l4
+{
+	visibility:visible;
+}
+
+#button3:checked ~ #l1,
+#button3:checked ~ #l2,
+#button3:checked ~ #l3,
+#button3:checked ~ #l4,
+#button3:checked ~ #l7,
+#button3:checked ~ #l8
+{
+	visibility:hidden;
+}
+
+#button3:checked ~ #l5,
+#button3:checked ~ #l6
+{
+	visibility:visible;
+}
+
+#button1:checked ~ #container div:nth-child(2),
+#button1:checked ~ #container div:nth-child(3),
+#button1:checked ~ #container div:nth-child(4)
+{
+	display:none;
+}
+
+#button1:checked ~ #container div:nth-child(1)
+{
+	display:flex;
+}
+
+#button2:checked ~ #container div:nth-child(1),
+#button2:checked ~ #container div:nth-child(3),
+#button2:checked ~ #container div:nth-child(4)
+{
+	display:none;
+}
+
+#button2:checked ~ #container div:nth-child(2)
+{
+	display:flex;
+}
+
+#button3:checked ~ #container div:nth-child(1),
+#button3:checked ~ #container div:nth-child(2),
+#button3:checked ~ #container div:nth-child(4)
+{
+	display:none;
+}
+
+#button3:checked ~ #container div:nth-child(3)
+{
+	display:flex;
+}
+
+#button4:checked ~ #container div:nth-child(1),
+#button4:checked ~ #container div:nth-child(2),
+#button4:checked ~ #container div:nth-child(3)
+{
+	display:none;
+}
+
+#button3:checked ~ #container div:nth-child(4)
+{
+	display:flex;
+}
+
 #container
 {
   border:1px solid black;
   width:100%;
-  height:55vw;
+  height:51vw;
   overflow:hidden;
   display:grid;
   grid-template-columns:100% 100% 100% 100% 100%;
 }
 #container>div{width:100%;height:100%;font-size:2.5vw;}
-#container>div:nth-child(1){background:url(../img/accueil/restaurants.jpg); background-repeat:no-repeat;}
-#container>div:nth-child(2){background:url(../img/accueil/transports.jpg); background-repeat:no-repeat;}
-#container>div:nth-child(3){background:url(../img/accueil/hebergement.jpg); background-repeat:no-repeat;}
-#container>div:nth-child(4){background:url(../img/accueil/specialite.jpg); background-repeat:no-repeat;}
+#container>div:nth-child(1){background:url(../img/accueil/restaurants.jpg); background-repeat:no-repeat; background-size:100%;}
+#container>div:nth-child(2){background:url(../img/accueil/transports.jpg); background-repeat:no-repeat; background-size:100%;}
+#container>div:nth-child(3){background:url(../img/accueil/hebergement.jpg); background-repeat:no-repeat; background-size:100%;}
+#container>div:nth-child(4){background:url(../img/accueil/specialite.jpg); background-repeat:no-repeat; background-size:100%;}
 #container>div
 {
   position:relative;
@@ -177,24 +370,16 @@ body {
     top:13vw;
 }
 
-@media only screen and (max-width:1420px)
-{
-    #container>div:first-child>p,#container>div:first-child>h2
-    {
-        color:white;
-        position:relative;
-        top:13vw;
-    }
-}
-/*Utiliser display:flex pour réafficher les divs dans JS*/
 
-/*On redimensionne toutes les images à la dimension du bloc de la balise img*/
+/*Utiliser display:flex pour rÃ©afficher les divs dans JS*/
+
+/*On redimensionne toutes les images Ã  la dimension du bloc de la balise img*/
 
 /*Pour plus d'infos se rendre sur https://www.w3schools.com/howto/howto_js_slideshow.asp*/
 
 
-/*On cache toutes nos slides afin qu'elles ne s'affichent pas les unes après les autres. 
-Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
+/*On cache toutes nos slides afin qu'elles ne s'affichent pas les unes aprÃ¨s les autres. 
+Le JS aura justement pour rÃ´le de sÃ©lectionner UNE SEULE Ã  afficher*/
 
 
 /************* MENU **************/
@@ -249,7 +434,31 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     display: block;
 }
 
+@media only screen and (max-width:500px)
+{
+    #Menu
+    {
+        text-align:center;
+        display:block;
+    }
+    .sub
+    {
+        position:relative;
+        margin:0;
+        background-color:aliceblue;
+        font-size:90%;
+    }
 
+    #tabsAndSlides
+    {
+        border-width:3rem;
+    }
+    #tabsAndSlides p,h2
+    {
+        font-size:1.5rem;
+    }
+
+}
 /***** LOGO ****/
 
 .logo {
@@ -347,7 +556,7 @@ section img.image {
 
 #comeByPlane > p
 {
-    padding-left: 10rem;
+    padding-left: 4rem;
     padding-right: 10rem;
     margin-bottom: 2rem;
 }
@@ -362,7 +571,7 @@ section img.image {
 #airports_choice div
 {
     margin:0 5px;
-    flex-basis: 100%; /*répartition égale sur le parent*/
+    flex-basis: 100%; /*rÃ©partition Ã©gale sur le parent*/
     border: 2px solid rgba(48, 120, 190, 1);
 }
 
@@ -461,7 +670,7 @@ section img.image {
     width: 100%;
 }
 
-/*    Page Hébergement*/
+/*    Page HÃ©bergement*/
 
 .contenu-3 {
     display: flex;
@@ -678,7 +887,7 @@ tr:last-child td:last-child
 }
 /*TEST DU MEDIAQUERY*/
 
-/* --------------------Très petit écran-------------------- */
+/* --------------------TrÃ¨s petit Ã©cran-------------------- */
 
 @media only screen and (max-width: 300px) {
     .prev,
@@ -689,14 +898,14 @@ tr:last-child td:last-child
 }
 
 /*
-rgb(218,237,255) couleur boîte menu
+rgb(218,237,255) couleur boÃ®te menu
 rgb(76,128,167) couleur texte menu
 rgb(29,154,232) couleur texte menu hover	
 <<<<<<< HEAD
 rgb(175,203,224) couleur bordure menu
 */
 
-/* --------------------Petit écran-------------------- */
+/* --------------------Petit Ã©cran-------------------- */
 
 @media only screen and (max-width: 576px) {
     main {
@@ -725,6 +934,22 @@ rgb(175,203,224) couleur bordure menu
         align-self: center;
         width: 70%;
         flex: 1;
+    }
+    
+    #airports_choice
+    {
+        display: grid;
+    }
+    
+    article h2
+    {
+        text-align:center;
+    }
+    
+    article > p
+    {
+        text-align:center;
+        width:200px;
     }
 }
 
@@ -764,11 +989,19 @@ rgb(175,203,224) couleur bordure menu
         padding-right: 3rem;
     }
 
-
+    #airports_choice
+    {
+        display:grid;
+    }
+    
+    article h2
+    {
+        text-align:center;
+    }
 
 }
 
-/* --------------------Moyen écran-------------------- */
+/* --------------------Moyen Ã©cran-------------------- */
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
 
@@ -811,7 +1044,7 @@ rgb(175,203,224) couleur bordure menu
     }
 }
 
-/* --------------------Grand écran-------------------- */
+/* --------------------Grand Ã©cran-------------------- */
 
 @media only screen and (min-width: 1200px) {
     main {
@@ -834,7 +1067,7 @@ rgb(175,203,224) couleur bordure menu
 
 
 
-    /* Page activités */
+    /* Page activitÃ©s */
     img.displayed {
         display: block;
         margin-left: auto;
@@ -845,7 +1078,7 @@ rgb(175,203,224) couleur bordure menu
         width: 30%;
     }
 
-    /*    Page Hébergement*/
+    /*    Page HÃ©bergement*/
     .contenu-3 {
         display: flex;
         align-items: stretch;
