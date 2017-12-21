@@ -974,6 +974,25 @@ tr:last-child td:last-child {
     #texte_acti img {
         width: 100%;
     }
+	
+	h3 {
+		text-align: center;
+	}
+	.displayed
+{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:40%;
+}
+
+.imgVH
+{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 800px;
+}
 
 
 /*****MEDIAQUERIES******/
@@ -1106,8 +1125,27 @@ rgb(175,203,224) couleur bordure menu
         grid-template-columns: 1fr;
         grid-column-gap: 10px;
     }
-   
+	
+	/*SPORT*/
+    .displayed
+    {
+        width: 80%;
+    }
 
+    /*VISITE HISTORIQUE*/
+    .imgVH
+    {
+        width: 250px;
+    }
+   
+}
+
+@media only screen and (min-width:380px)
+{
+    .imgVH
+    {
+    width:350px;
+    }
 }
 
 @media only screen and (min-width: 576px) {
@@ -1134,6 +1172,17 @@ rgb(175,203,224) couleur bordure menu
 
     #buttonsTrans > a {
         position: relative;
+    }
+	/*SPORT*/
+    .displayed
+    {
+        width: 60%;
+    }
+    
+    /*VISITE HISTORIQUE*/
+    .imgVH
+    {
+        width: 600px;
     }
 
 }
@@ -1185,6 +1234,12 @@ rgb(175,203,224) couleur bordure menu
     #airports_choice {
         grid-row-gap: 10px;
         grid-template-columns: 1fr;
+    }
+	
+	/*VISITE HISTORIQUE*/
+    .imgVH
+    {
+        width: 450px;
     }
 
 }
@@ -1243,6 +1298,17 @@ rgb(175,203,224) couleur bordure menu
     .article-3 {
         height: inherit;
     }
+	/* SPORT */
+    .displayed
+    {
+        width:50%;
+    }
+    
+	/*VISITE HISTORIQUE*/
+    .imgVH
+    {
+        width: 600px;
+    }
 
 }
 
@@ -1284,6 +1350,12 @@ rgb(175,203,224) couleur bordure menu
 
     article img {
         width: 100%;
+    }
+	
+	/*VISITE HISTORIQUE */
+    .imgVH
+    {
+        width: 800px;
     }
 
 }
