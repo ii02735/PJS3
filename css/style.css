@@ -975,7 +975,6 @@ tr:last-child td:last-child {
         width: 100%;
     }
 
-
 /*****MEDIAQUERIES******/
 
 /* --------------------Très petit écran-------------------- */
@@ -1186,6 +1185,12 @@ rgb(175,203,224) couleur bordure menu
         grid-row-gap: 10px;
         grid-template-columns: 1fr;
     }
+    
+    /* PAGE VILLES T*/
+    
+    .grid-villesT img{
+        width: 100%;
+    }
 
 }
 
@@ -1217,11 +1222,11 @@ rgb(175,203,224) couleur bordure menu
         min-height: 10rem;
         max-height: 20rem;
     }
+    
     #buttonsTrans > a {
         position: relative;
         right: 35%;
     }
-    
 }
 
 @media only screen and (min-width: 768px) {
@@ -1242,6 +1247,38 @@ rgb(175,203,224) couleur bordure menu
 
     .article-3 {
         height: inherit;
+    }
+
+    /*   Page Villes T   */
+    
+    .grid-villesT {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2%;
+        grid-row-gap: 1%;
+    }
+
+    .grid-villesT h2{
+        grid-column: 1/2;
+        grid-row: 1;
+    }
+
+    .grid-villesT p{
+        grid-column: 1/2;
+    }
+
+    .grid-villesT a{
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .source {
+        grid-column: 1/2;
+        grid-row: 3;
+    }
+
+    .grid-villesT img{     
+       width: 100%;
     }
 
 }
@@ -1285,5 +1322,7 @@ rgb(175,203,224) couleur bordure menu
     article img {
         width: 100%;
     }
+    
+    
 
 }
