@@ -930,70 +930,83 @@ tr:last-child td:last-child {
 
 /****ACTIVITES****/
 
+/* PAGE ACTIVITES */
 
-  /* PAGE ACTIVITES */
-    .grid-activités {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 2%;
-        grid-row-gap: 1%;
-    }
-
-    .grid-activités h2 {
-        grid-row: 1;
-    }
-
-    .grid-activités p {
-        grid-row: 2;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .grid-activités p span{
-        display: block;
-    }
-
-    .plus-info{
-        align-self:  stretch;
-        font-weight: 700;
-    }
-
-    .grid-activités img {
-        grid-row: 3;
-    }
-
-    .grid-activités img {
-        width: 100%;
-        height: 200px;
-    }
-
-    .lien-activites {
-        display: block;
-    }
-
-    #texte_acti img {
-        width: 100%;
-    }
-	
-	h3 {
-		text-align: center;
-	}
-	.displayed
-{
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    width:40%;
+.grid-activités {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 1%;
 }
 
-.imgVH
-{
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
+.grid-activités h2 {
+    grid-row: 1;
+}
+
+.grid-activités p {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-activités p span {
+    display: block;
+}
+
+.plus-info {
+    align-self: stretch;
+    font-weight: 700;
+}
+
+.grid-activités img {
+    grid-row: 3;
+}
+
+.grid-activités img {
+    width: 100%;
+    height: 200px;
+}
+
+.lien-activites {
+    display: block;
+}
+
+#texte_acti img {
+    width: 100%;
+}
+
+h3 {
+    text-align: center;
+}
+
+.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.imgVH {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 800px;
 }
 
+/* FOOTER */
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
+
+footer {
+    position: relative;
+    float: right;
+    max-width: inherit;
+    padding-right: 7%;
+    padding-bottom: 3%;
+}
 
 /*****MEDIAQUERIES******/
 
@@ -1029,7 +1042,6 @@ tr:last-child td:last-child {
 
 
     /* PAGE ACTIVITES */
-
     .grid-activités,
     #texte-acti {
         max-width: 280px;
@@ -1125,26 +1137,22 @@ rgb(175,203,224) couleur bordure menu
         grid-template-columns: 1fr;
         grid-column-gap: 10px;
     }
-	
-	/*SPORT*/
-    .displayed
-    {
+
+    /*SPORT*/
+    .displayed {
         width: 80%;
     }
 
     /*VISITE HISTORIQUE*/
-    .imgVH
-    {
+    .imgVH {
         width: 250px;
     }
-   
+
 }
 
-@media only screen and (min-width:380px)
-{
-    .imgVH
-    {
-    width:350px;
+@media only screen and (min-width:380px) {
+    .imgVH {
+        width: 350px;
     }
 }
 
@@ -1173,15 +1181,13 @@ rgb(175,203,224) couleur bordure menu
     #buttonsTrans > a {
         position: relative;
     }
-	/*SPORT*/
-    .displayed
-    {
+    /*SPORT*/
+    .displayed {
         width: 60%;
     }
-    
+
     /*VISITE HISTORIQUE*/
-    .imgVH
-    {
+    .imgVH {
         width: 600px;
     }
 
@@ -1235,10 +1241,9 @@ rgb(175,203,224) couleur bordure menu
         grid-row-gap: 10px;
         grid-template-columns: 1fr;
     }
-	
-	/*VISITE HISTORIQUE*/
-    .imgVH
-    {
+
+    /*VISITE HISTORIQUE*/
+    .imgVH {
         width: 450px;
     }
 
@@ -1276,7 +1281,7 @@ rgb(175,203,224) couleur bordure menu
         position: relative;
         right: 35%;
     }
-    
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -1298,15 +1303,13 @@ rgb(175,203,224) couleur bordure menu
     .article-3 {
         height: inherit;
     }
-	/* SPORT */
-    .displayed
-    {
-        width:50%;
+    /* SPORT */
+    .displayed {
+        width: 50%;
     }
-    
-	/*VISITE HISTORIQUE*/
-    .imgVH
-    {
+
+    /*VISITE HISTORIQUE*/
+    .imgVH {
         width: 600px;
     }
 
@@ -1326,17 +1329,19 @@ rgb(175,203,224) couleur bordure menu
 }
 
 @media only screen and (max-width: 1200px) {
-     
-    .grid-activités h2{margin-bottom: 0;}
+
+    .grid-activités h2 {
+        margin-bottom: 0;
+    }
     .grid-activités h2,
     .grid-activités p,
-    .grid-activités .lien-activites{
+    .grid-activités .lien-activites {
         grid-column: 1/4;
         grid-row: auto;
     }
-    
-    .grid-activités img{
-        height:20em;
+
+    .grid-activités img {
+        height: 20em;
     }
 }
 
@@ -1351,10 +1356,9 @@ rgb(175,203,224) couleur bordure menu
     article img {
         width: 100%;
     }
-	
-	/*VISITE HISTORIQUE */
-    .imgVH
-    {
+
+    /*VISITE HISTORIQUE */
+    .imgVH {
         width: 800px;
     }
 
