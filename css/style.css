@@ -215,11 +215,6 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 
 }
 
-#presentation {
-    margin: 2% 0;
-    background-color: rgb(43, 108, 163);
-}
-
 
 /************* MENU **************/
 
@@ -271,6 +266,7 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
 
 /*Menu Alternatif*/
 
+
 /*
 #Menu {
     display: flex;
@@ -280,8 +276,6 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     width: 50%;
     list-style-type: none;
     list-style-position: inside;
-    background-color: rgb(218, 237, 255);
-    border: 3px solid rgb(175, 203, 224);
 }
 
 #Menu > li{
@@ -336,6 +330,7 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     visibility: visible;
 }
 */
+
 
 /***** LOGO ****/
 
@@ -547,14 +542,34 @@ article {
 
 /***** ACCUEIL ***/
 
-section#tabsAndSlides,
-section#presentation {
+#tabsAndSlides,
+#presentation {
     border: 0;
-
 }
 
 section#tabsAndSlides {
     margin-top: 3rem;
+}
+
+#alsace-1{
+    font-size:10rem;
+    float:left;
+    line-height: 0.6;
+    margin-right: 0.1em;
+    font-weight: 700;
+    display: block;
+}
+
+#presentation{
+    font-size: 1.4rem;
+}
+
+#presentation-corps{
+    padding: 1rem 0;
+}
+
+#presentation-accroche{
+    font-size: 1.6rem;
 }
 
 /********* TRANSPORTS *********/
@@ -1028,7 +1043,7 @@ rgb(175,203,224) couleur bordure menu
 /* --------------------Petit écran-------------------- */
 
 @media only screen and (max-width: 576px) {
-    main {
+   #presentation article, main {
         width: auto;
         margin: auto;
     }
@@ -1111,7 +1126,7 @@ rgb(175,203,224) couleur bordure menu
 }
 
 @media only screen and (min-width: 576px) {
-    main {
+    #presentation article,main {
         max-width: 540px;
         margin: auto;
     }
@@ -1225,7 +1240,7 @@ rgb(175,203,224) couleur bordure menu
 }
 
 @media only screen and (min-width: 768px) {
-    main {
+    #presentation article,main {
         max-width: 720px;
         margin: auto;
     }
@@ -1247,7 +1262,7 @@ rgb(175,203,224) couleur bordure menu
 }
 
 @media only screen and (min-width: 992px) {
-    main {
+    #presentation article,main {
         max-width: 960px;
         margin: auto;
     }
@@ -1277,7 +1292,7 @@ rgb(175,203,224) couleur bordure menu
 /* --------------------Grand écran-------------------- */
 
 @media only screen and (min-width: 1200px) {
-    main {
+    #presentation article, main {
         max-width: 1140px;
         margin: auto;
     }
