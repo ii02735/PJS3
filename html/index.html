@@ -15,9 +15,17 @@
             <h1>Bienvenue en Alsace !</h1>
         </div>
         <nav>
+      <input type="checkbox" name="enableMenu" id="enableMenu">
+      <label for="enableMenu" id="showMenu">
+      <div id="control">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div></label>
+      <div style="clear:both"></div>
             <ul id="Menu">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Transports</a>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="./transports/transports.html">Transports</a>
                     <ul class="sub">
                         <li><a href="transports/transports.html">Se rendre en Alsace</a></li>
                         <li><a href="transports/se-deplacer-en-alsace.html">Se déplacer en Alsace</a></li>
@@ -38,49 +46,37 @@
                         <li><a href="plus/contact.html">Nous contacter</a></li>
                     </ul>
                 </li>
+        <li id="mediaquery"><label for="enableMenu">Fermer</label></li>
             </ul>
         </nav>
     </header>
 
-    <!--On place notre conteneur qui contiendra les slides-->
-    <!--force le centrage des éléments dans cette balise-->
     <section id="tabsAndSlides">
+        
+          <input type="radio" name="button" checked="checked" id="button1">
+          <input type="radio" name="button" id="button2">
+          <input type="radio" name="button" id="button3">
+          <input type="radio" name="button" id="button4">
 
-        <div id="slider-container">
-            <!--Dans le conteneur on place nos slides (toutes les images que nous souhaiterons afficher-->
-
-            <div class="slides">
-                <img src="../img/accueil/restaurants.jpg" alt="restaurant" class="resize" />
-                <!-- <div class="titre" style="color:black">Activités</div> -->
-            </div>
-            <div class="slides">
-                <img src="../img/accueil/transports.jpg" alt="transports" class="resize" />
-                <!-- 		        	<div class="titre" style="color:white">Transports</div>
- --></div>
-            <div class="slides">
-                <img src="../img/accueil/hebergement.jpg" alt="herbegement" class="resize" />
-                <!-- 		        	<div class="titre" style="color:white">Hébergement</div>
- --></div>
-            <div class="slides">
-                <img src="../img/accueil/specialite.jpg" alt="gestronomie" class="resize" />
-                <!-- 		        	<div class="titre" style="color:white">Gastronomie</div> -->
-            </div>
-            <div class="arrow" onclick="minusSlide()">&#10094;</div>
-            <div class="arrow" onclick="plusSlide()">&#10095;</div>
-            <div id="texteDyn"></div>
-            <!--JS-->
-            <div id="moreInfo">
-                <button>En savoir plus</button>
-            </div>
-            <!--On met en place un système de navigation pour nos slides-->
-            <div id="navSlides">
-                <span class="point" onclick="SlideSelectedByUser(0)"></span>
-                <span class="point" onclick="SlideSelectedByUser(1)"></span>
-                <span class="point" onclick="SlideSelectedByUser(2)"></span>
-                <span class="point" onclick="SlideSelectedByUser(3)"></span>
-            </div>
-        </div>
+          
+          <label for="button4" class="leftarrow" id="l1">&#10094;</label>
+          <label for="button2" class="rightarrow" id="l2">&#10095;</label>
+          <label for="button1" class="leftarrow" id="l3">&#10094;</label>
+          <label for="button3" class="rightarrow" id="l4">&#10095;</label>
+          <label for="button2" class="leftarrow" id="l5">&#10094;</label>
+          <label for="button4" class="rightarrow" id="l6">&#10095;</label>
+          <label for="button3" class="leftarrow" id="l7">&#10094;</label>
+          <label for="button1" class="rightarrow" id="l8">&#10095;</label>
+          
+          
+          <div id="container">
+              <div><h2 class="titleSlide">ACTIVITÉS</h2><p><a href="activites/activites.html">En savoir plus</a></p></div>
+              <div><h2 class="titleSlide">TRANSPORTS</h2><p><a href="transports/transports.html">En savoir plus</a></p></div>
+              <div><h2 class="titleSlide">HÉBERGEMENT</h2><p><a href="plus/hebergements.html">En savoir plus</a></p></div>
+              <div><h2 class="titleSlide">GASTRONOMIE</h2><p><a href="plus/gastronomie.html">En savoir plus</a></p></div>
+          </div>
     </section>
+
     <section id="presentation">
         <article id="presentation-corps">
 
@@ -99,15 +95,15 @@
     </section>
     <footer>
         <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Falsace.region&display=popup&ref=plugin&src=like&kid_directed_site=0">
-           <img src="../../img/logo_facebook.png" alt="logo_facebook" >
+           <img src="../img/logo_facebook.png" alt="logo_facebook" >
        </a>
 
         <a href="https://twitter.com/alsace">
-           <img src="../../img/logo_twitter.png" alt="logo_twitter" >
+           <img src="../img/logo_twitter.png" alt="logo_twitter" >
        </a>
 
         <a href="">
-           <img src="../../img/logo_google+.png" alt="logo_google" >
+           <img src="../img/logo_google+.png" alt="logo_google" >
        </a>
     </footer>
     <script type="text/javascript" src="../js/script.js"></script>

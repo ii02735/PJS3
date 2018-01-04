@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700,700i');
-
 /**** UTILITAIRES ****/
 
 body {
@@ -12,8 +11,15 @@ body {
     text-align: justify;
 }
 
-h1 {
-    font-size: 60px;
+.titleSlide
+{
+    font-weight: bolder;
+    font-size: 4vw;
+}
+
+#enableMenu
+{
+    display: none;
 }
 
 h2 {
@@ -23,19 +29,296 @@ h2 {
 }
 
 
+#control label
+{
+    padding:2.5vh 2px;
+    background: #164270;
+        -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+#container a
+{
+    text-decoration: none;
+    color:white;
+    padding:0 6px;
+}
+
+
+#showMenu
+{
+    margin-right:30px;
+    float:right;
+}
+
+#tabsAndSlides
+{
+    margin-bottom:20px;
+}
 
 /***** CAROUSSEL ****/
-
-/*On redimensionne toutes les images à la dimension du bloc de la balise img*/
-
-/*Pour plus d'infos se rendre sur https://www.w3schools.com/howto/howto_js_slideshow.asp*/
-
-img.resize {
-
-    max-width: 100%;
-    max-height: 100%;
-
+#tabsAndSlides
+{
+    border-width:3rem;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
+
+.leftarrow,.rightarrow
+{
+    position:absolute;
+    cursor:pointer;
+    text-align:center;
+    height:9vw;
+    padding-left:1vw;
+    padding-right:1vw;
+    font-size:6vw;
+    top:24vw;
+    z-index:1;
+    color:rgb(218, 237, 255);
+    transition:background 2s;
+}
+.arrow:hover
+{
+    background:rgba(218, 237, 255,0.25);
+}
+.rightarrow
+{
+  right:2vw;
+}
+.leftarrow
+{
+    left:2vw;
+}
+
+#button1,
+#button2,
+#button3,
+#button4,
+#button5,
+#button6,
+#button7,
+#button8
+{
+    visibility:hidden;
+    position:absolute;
+}
+
+#button1
+{
+    left:10%;
+}
+
+#button2
+{
+    left:20%;
+}
+
+#button3
+{
+    left:30%;
+}
+
+#button4
+{
+    left:40%;
+}
+#button5
+{
+    left:50%;
+}
+#button6
+{
+    left:60%;
+}
+#button7
+{
+    left:70%;
+}
+#button8
+{
+    left:80%;
+}
+
+#l3,#l4,#l5,#l6,#l7,#l8
+{
+    visibility:hidden;
+}
+
+#button4:checked ~ #container div:nth-child(1),
+#button4:checked ~ #container div:nth-child(2),
+#button4:checked ~ #container div:nth-child(3)
+{
+    display:none;
+}
+#button4:checked ~ #container div:nth-child(4)
+{
+    display:flex;
+}
+
+#button4:checked ~ #l1,
+#button4:checked ~ #l2,
+#button4:checked ~ #l5,
+#button4:checked ~ #l6,
+#button4:checked ~ #l7,
+#button4:checked ~ #l8
+{
+    visibility:hidden;
+}
+
+#button4:checked ~ #l7,
+#button4:checked ~ #l8
+{
+    visibility:visible;
+}
+
+#button2:checked ~ #l1,
+#button2:checked ~ #l2,
+#button2:checked ~ #l5,
+#button2:checked ~ #l6,
+#button2:checked ~ #l7,
+#button2:checked ~ #l8
+{
+    visibility:hidden;
+}
+
+#button2:checked ~ #l3,
+#button2:checked ~ #l4
+{
+    visibility:visible;
+}
+
+#button3:checked ~ #l1,
+#button3:checked ~ #l2,
+#button3:checked ~ #l3,
+#button3:checked ~ #l4,
+#button3:checked ~ #l7,
+#button3:checked ~ #l8
+{
+    visibility:hidden;
+}
+
+#button3:checked ~ #l5,
+#button3:checked ~ #l6
+{
+    visibility:visible;
+}
+
+#button1:checked ~ #container div:nth-child(2),
+#button1:checked ~ #container div:nth-child(3),
+#button1:checked ~ #container div:nth-child(4)
+{
+    display:none;
+}
+
+#button1:checked ~ #container div:nth-child(1)
+{
+    display:flex;
+}
+
+#button2:checked ~ #container div:nth-child(1),
+#button2:checked ~ #container div:nth-child(3),
+#button2:checked ~ #container div:nth-child(4)
+{
+    display:none;
+}
+
+#button2:checked ~ #container div:nth-child(2)
+{
+    display:flex;
+}
+
+#button3:checked ~ #container div:nth-child(1),
+#button3:checked ~ #container div:nth-child(2),
+#button3:checked ~ #container div:nth-child(4)
+{
+    display:none;
+}
+
+#button3:checked ~ #container div:nth-child(3)
+{
+    display:flex;
+}
+
+#button4:checked ~ #container div:nth-child(1),
+#button4:checked ~ #container div:nth-child(2),
+#button4:checked ~ #container div:nth-child(3)
+{
+    display:none;
+}
+
+#button3:checked ~ #container div:nth-child(4)
+{
+    display:flex;
+}
+
+#container
+{
+  width:100%;
+  height:51vw;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:100% 100% 100% 100% 100%;
+}
+#container>div{width:100%;height:100%;font-size:2.5vw;}
+#container>div:nth-child(1){background:url(../img/accueil/restaurants.jpg); background-repeat:no-repeat; background-size:100%;}
+#container>div:nth-child(2){background:url(../img/accueil/transports.jpg); background-repeat:no-repeat; background-size:100%;}
+#container>div:nth-child(3){background:url(../img/accueil/hebergement.jpg); background-repeat:no-repeat; background-size:100%;}
+#container>div:nth-child(4){background:url(../img/accueil/specialite.jpg); background-repeat:no-repeat; background-size:100%;}
+#container>div
+{
+  position:relative;
+}
+#container>div
+{
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+  align-items:center;
+}
+#container>div>*
+{
+  position:relative;
+  top:11vw;
+  margin:2%;
+  color:white;
+}
+#container p
+{
+  background:rgba(209, 39, 42, 1);
+  text-align:center;
+  padding:0.25vw 1vw;
+  color:white;
+  width:19vw;
+}
+#container p:hover
+{
+  cursor:pointer;
+  background:darkblue;
+}
+#container>div:first-child>h2
+{
+    color:black;
+}
+#container>div:first-child>p,#container>div:first-child>h2
+{
+    position:relative;
+    top:13vw;
+}
+
 
 
 /*On cache toutes nos slides afin qu'elles ne s'affichent pas les unes après les autres. 
@@ -46,36 +329,10 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     display: none;
 }
 
-#tabsAndSlides {
-    display: flex;
-    background-color: white;
-    justify-content: center;
-
-}
 
 
-#texteDyn {
-    position: absolute;
-    font-weight: bolder;
-    bottom: 25%;
-    left: 25%;
-    right: 25%;
-    font-size: 320%;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    text-align: center;
-}
 
-#texteDyn {
-    position: absolute;
-    bottom: 25%;
-    left: 25%;
-    right: 25%;
-    font-size: 320%;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    text-align: center;
-}
+
 
 #moreInfo {
     position: absolute;
@@ -85,251 +342,6 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     text-align: center;
 
 }
-
-
-#moreInfo button {
-    font-family: 'EB Garamond', serif;
-    cursor: pointer;
-    border: none;
-    color: white;
-    font-size: 150%;
-    padding: 4px 10px;
-    background-color: rgba(209, 39, 42, 1);
-    box-shadow: 0px 5px 10px 0px black;
-    -moz-transition: background-color 0.5s;
-    -webkit-transition: background-color 0.5s;
-}
-
-#moreInfo button {
-    cursor: pointer;
-    border: none;
-    color: white;
-    font-size: 150%;
-    padding: 4px 10px;
-    background-color: rgba(209, 39, 42, 1);
-    box-shadow: 0px 5px 10px 0px black;
-    -moz-transition: background-color 0.5s;
-    -webkit-transition: background-color 0.5s;
-}
-
-#moreInfo button:hover {
-    background-color: rgba(0, 46, 93, 1);
-}
-
-#navSlides {
-
-    position: relative;
-    /*positionnement relatif à son parent --> slider-container*/
-    /*De plus avec relative l'élément est enfermé dans son parent*/
-    /*En absolute, l'élément n'est plus enfermé dans son parent et peut se positionner
-	n'importe où*/
-    text-align: center;
-    bottom: 5%;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-
-#titre_slide {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    top: 70%;
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 320%;
-}
-
-#titre_slide {
-    font-family: 'EB Garamond', serif;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    top: 70%;
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 320%;
-
-}
-
-
-.point {
-
-    cursor: pointer;
-    height: 6px;
-    width: 6px;
-    margin: 0 3px;
-    background-color: rgb(175, 203, 224);
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.active,
-.point:hover {
-    /*class rajoutés depuis le D.O.M du JS*/
-    background-color: #717171;
-}
-
-.arrow {
-
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 12px 28px;
-    color: rgba(175, 203, 224, 1);
-    position: absolute;
-    font-weight: lighter;
-    top: 50%;
-    font-size: 400%;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
-    -webkit-transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
-    -ms-transition: background-color 0.5s;
-}
-
-.arrow:hover {
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.arrow:nth-child(5)
-/*Il s'agit du second enfant du parent tabsAndSlides*/
-
-    {
-
-    position: absolute;
-    left: 10%;
-
-}
-
-.arrow:nth-child(6)
-/*Il s'agit du troisième enfant du parent tabsAndSlides*/
-
-    {
-    position: absolute;
-    right: 10%;
-
-}
-
-
-/************* MENU **************/
-
-#Menu {
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    padding: 0;
-    width: 50%;
-    list-style-type: none;
-    list-style-position: inside;
-    background-color: rgb(218, 237, 255);
-    border: 3px solid rgb(175, 203, 224);
-}
-
-#Menu li {
-    position: relative;
-}
-
-#Menu li a {
-    color: rgb(76, 128, 167);
-    text-decoration: none;
-}
-
-#Menu li a:hover {
-    color: rgb(29, 154, 232);
-}
-
-.sub {
-    visibility: hidden;
-    position: absolute;
-    display: inline;
-    background-color: rgb(218, 237, 255);
-    list-style-type: none;
-    text-align: center;
-    padding: 0 10px;
-    z-index: 1;
-    cursor: pointer;
-    width: 180px;
-}
-
-#Menu li:hover .sub {
-    display: block;
-    margin: auto;
-    left: 50%;
-    margin-left: -100px;
-    visibility: visible;
-}
-
-/*Menu Alternatif*/
-
-
-/*
-#Menu {
-    display: flex;
-    justify-content:center;
-    margin: 0 auto;
-    padding: 10px 0;
-    width: 50%;
-    list-style-type: none;
-    list-style-position: inside;
-}
-
-#Menu > li{
-    width: 15%;
-    position: relative;
-}
-
-#Menu > li > a{
-    width: 100%;
-    text-align: center;
-    margin-bottom: 2em;
-    border-bottom: 3px solid rgba(29, 154, 232, 0);
-}
-
-#Menu li a {
-    display: inline-block;
-    color: rgb(76, 128, 167);
-    text-decoration: none;
-    transition: color 0.5s, border-color 0.5s;
-}
-
-#Menu > li > a:hover {
-    color: rgb(29, 154, 232);
-    border-bottom: 3px solid rgb(29, 154, 232);
-}
-
-#Menu > li > a:hover,
-#Menu li a:hover {
-    color: rgb(29, 154, 232);
-}
-
-
-
-.sub {
-    visibility: hidden;
-    position: absolute;
-    display: inline;
-    background-color: rgb(218, 237, 255);
-    list-style-type: none;
-    text-align: center;
-    padding: 0 10px;
-    z-index: 1;
-    cursor: pointer;
-    width: 180px;
-}
-#Menu li:hover .sub {
-    display: block;
-    margin: auto;
-    top:2em;
-    left: 50%;
-    margin-left: -100px;
-    visibility: visible;
-}
-*/
 
 
 /***** LOGO ****/
@@ -478,37 +490,7 @@ article {
     transform: translate(-50%, -50%);
 }
 
-@media only screen and (max-width: 810px) {
 
-
-    #menuDeplacement {
-        overflow: hidden;
-    }
-
-
-
-    #transportationButtons {
-        transform: scale(0.85);
-        position: absolute;
-    }
-    .transportationChoice {
-        position: relative;
-        margin: 60px 20px;
-        top: 350px;
-        transform: translateX(70%);
-        margin-top: 950px;
-        display: inline;
-    }
-    #airports_choice {
-        display: block;
-        grid-template-columns: 1fr;
-        grid-row-gap: 10px;
-    }
-    #buttonsTrans > a {
-        position: relative;
-        right: 68%;
-    }
-}
 
 /*@media only screen and (max-width: 780px)
 {
@@ -531,14 +513,7 @@ article {
     }
 }*/
 
-@media only screen and (max-width: 300px) {
-    .prev,
-    .next,
-    .text {
-        font-size: 200%;
-    }
 
-}
 
 /***** ACCUEIL ***/
 
@@ -1033,10 +1008,102 @@ footer {
     padding-bottom: 3%;
 }
 
->>>>>>> 40fffb601e5719ebc7c8e401dc8899a1a510f7a0
 /*****MEDIAQUERIES******/
 
+
+#mediaquery, #mediaquery>label
+{
+    margin:0;
+    display:none;
+    cursor:pointer;
+}
+
+/************* MENU **************/
+
+#Menu {
+    
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 50%;
+    list-style-type: none;
+    list-style-position: inside;
+    background-color: rgb(218, 237, 255);
+    border: 3px solid rgb(175, 203, 224);
+}
+
+#Menu li a {
+    color: rgb(76, 128, 167);
+    text-decoration: none;
+}
+
+#Menu li a:hover {
+    color: rgb(29, 154, 232);
+}
+/*
+#Menu {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 50%;
+    background-color: rgb(218, 237, 255);
+}*/
+
+#Menu div {
+    display: inline;
+    text-align: center;
+}
+
+.sub {
+    display:none;
+    position: absolute;
+    background-color: rgb(218, 237, 255);
+    list-style-type: none;
+    text-align: center;
+    margin-left: -35px;
+    padding: 0 10px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#Menu li:hover .sub {
+    display: block;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+@keyframes fadeIn
+{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+@-webkit-keyframes fadeIn
+{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+
 /* --------------------Très petit écran-------------------- */
+
+@media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+        font-size: 200%;
+    }
+
+}
+
 
 @media only screen and (max-width: 300px) {
     .prev,
@@ -1075,13 +1142,51 @@ footer {
 
 }
 
-/*
-rgb(218,237,255) couleur boîte menu
-rgb(76,128,167) couleur texte menu
-rgb(29,154,232) couleur texte menu hover	
-rgb(175,203,224) couleur bordure menu
-*/
+@media only screen and (max-width:500px)
+{
+    #Menu
+    {
+        text-align:center;
+        display:block;
+    }
+    .sub
+    {
 
+        position:relative;
+        margin:0;
+        background-color:aliceblue;
+        font-size:90%;
+    }
+
+    #Menu li .sub {
+    /* display: none; */
+    -webkit-transition:display 10s;
+    }
+
+    #Menu li:hover .sub {
+    display: block;
+    }
+
+
+    #tabsAndSlides
+    {
+        border-width: 0;
+    }
+    #tabsAndSlides p,h2
+    {
+        font-size:1.5rem;
+    }
+
+}
+
+@media only screen and (min-width:300px) and (max-width:500px)
+{
+    #container p, h2.titleSlide
+    {
+        font-size:24px;
+        width:150px;
+    }
+}
 /* --------------------Petit écran-------------------- */
 
 @media only screen and (max-width: 576px) {
@@ -1176,15 +1281,139 @@ rgb(175,203,224) couleur bordure menu
 
 }
 
+@media only screen and (min-width: 300px) and (max-width: 600px)
+{
+    #presentation-accroche
+    {
+        font-size: 130%;
+    }
+    #presentation-corps
+    {
+        font-size: 70%;
+    }
+}
+
 @media only screen and (min-width:380px) {
     .imgVH {
         width: 350px;
     }
 }
 
+@media only screen and (max-width:300px)
+{
+    #container p, h2.titleSlide
+    {
+        width:150px;
+        font-size:20px;
+    }
+}
+
+@media only screen and (max-width:500px)
+{   
+   
+    #mediaquery, #mediaquery>label
+    {
+        display: block;
+    }
+    #mediaquery:hover
+    {
+        color:crimson;
+    }
+    
+    #control
+    {
+    position:relative;
+    background:#164270;
+    width:75px;
+    padding:2px 0px;
+    }
+
+    #control span
+    {
+        cursor:pointer;
+        display: block;
+        background:#5C87B5;
+        margin:12px;
+        padding:4px 0px;
+    }
+
+    #control:hover
+    {
+        background:#ED6C6C;
+    }
+
+    #control:hover > span
+    {
+        background:white;
+    }
+
+    #control:active
+    {
+        background:#164270;
+    }
+    
+    #control:active > span
+    {
+        background:#5C87B5;
+    }
+    
+    #enableMenu:not(:checked) ~ #Menu
+    {
+        display:none;
+    }
+    
+    #enableMenu:not(:checked) ~ #showMenu
+    {
+        display:block;
+    }
+    
+    #enableMenu:checked ~ #showMenu
+    {
+        display:none;
+    }
+
+    #enableMenu:checked ~ #Menu
+    {
+        display:block;
+    }
+
+}
+
+@media only screen and (max-width:500px)
+{
+    #Menu
+    {
+        text-align:center;
+        display:block;
+    }
+    .sub
+    {
+
+        position:relative;
+        margin:0;
+        background-color:aliceblue;
+        font-size:90%;
+    }
+
+    #Menu li .sub {
+    /* display: none; */
+    -webkit-transition:display 10s;
+    }
+
+    #Menu li:hover .sub {
+    display: block;
+    }
+
+
+    #tabsAndSlides
+    {
+        border-width: 0;
+    }
+}
+
 @media only screen and (min-width: 576px) {
     #presentation article,main {
-        max-width: 540px;
+        max-width: 1000px;
         margin: auto;
     }
 
@@ -1216,9 +1445,115 @@ rgb(175,203,224) couleur bordure menu
     .imgVH {
         width: 600px;
     }
+}
+
+
+@media only screen and (min-width: 768px) {
+    #presentation article,main {
+        max-width: 720px;
+        margin: auto;
+    }
+
+    .gastronomie-img {
+        min-height: 35rem;
+        max-height: 35rem;
+    }
+
+    /*    Page Hébergement     */
+    .article-6 {
+        height: inherit;
+    }
+
+    .article-3 {
+        height: inherit;
+    }
+    /* SPORT */
+    .displayed {
+        width: 50%;
+    }
+
+    /*VISITE HISTORIQUE*/
+    .imgVH {
+        width: 600px;
+    }
+
+    /*   Page Villes T   */
+    
+    .grid-villesT {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2%;
+        grid-row-gap: 1%;
+    }
+
+    .grid-villesT h2{
+        grid-column: 1/2;
+        grid-row: 1;
+    }
+
+    .grid-villesT p{
+        grid-column: 1/2;
+    }
+
+    .grid-villesT a{
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .source {
+        grid-column: 1/2;
+        grid-row: 3;
+    }
+
+    .grid-villesT img{     
+       width: 100%;
+    }
 
 }
 
+
+@media only screen and (max-width: 810px) {
+
+
+    #menuDeplacement {
+        overflow: hidden;
+    }
+
+    #transportationButtons {
+        transform: scale(0.85);
+        position: absolute;
+    }
+    .transportationChoice {
+        position: relative;
+        margin: 60px 20px;
+        top: 350px;
+        transform: translateX(70%);
+        margin-top: 950px;
+        display: inline;
+    }
+    #airports_choice {
+        display: block;
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+    }
+    #buttonsTrans > a {
+        position: relative;
+        right: 68%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #presentation article,main {
+        max-width: 960px;
+        margin: auto;
+    }
+
+    .gastronomie-img {
+        min-height: 45rem;
+        max-height: 45rem;
+    }
+
+}
 @media only screen and (min-width: 576px) and (max-width: 768px) {
 
     .post {
@@ -1314,10 +1649,6 @@ rgb(175,203,224) couleur bordure menu
         position: relative;
         right: 35%;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 40fffb601e5719ebc7c8e401dc8899a1a510f7a0
 }
 
 @media only screen and (min-width: 768px) {
@@ -1416,6 +1747,7 @@ rgb(175,203,224) couleur bordure menu
 /* --------------------Grand écran-------------------- */
 
 @media only screen and (min-width: 1200px) {
+    
     #presentation article, main {
         max-width: 1140px;
         margin: auto;
