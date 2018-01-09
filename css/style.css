@@ -393,7 +393,6 @@ article {
 
 #button1:checked ~ #container div:nth-child(1) {
     display: flex;
-    animation: fadeIn 2s;
 }
 
 
@@ -405,7 +404,6 @@ article {
 
 #button2:checked ~ #container div:nth-child(2) {
     display: flex;
-    animation: fadeIn 3s;
 }
 
 #button3:checked ~ #container div:nth-child(1),
@@ -416,7 +414,6 @@ article {
 
 #button3:checked ~ #container div:nth-child(3) {
     display: flex;
-    animation: fadeIn 5s;
 }
 
 #button4:checked ~ #container div:nth-child(1),
@@ -427,7 +424,6 @@ article {
 
 #button3:checked ~ #container div:nth-child(4) {
     display: flex;
-    animation: fadeIn 5s;
 }
 
 #container {
@@ -521,11 +517,11 @@ article {
 }
 
 
- 
+
 /***** ACCUEIL ***/
- 
+
 #menuDeplacement {
-    position:relative;
+    position: relative;
     margin-top: 25px;
     height: 100%;
     max-height: 500px;
@@ -538,7 +534,7 @@ article {
     border: 0;
 }
 
- 
+
 section#tabsAndSlides {
     margin-top: 3rem;
 }
@@ -571,7 +567,18 @@ section#tabsAndSlides {
     height: 780;
     width: 100%;
 }
- 
+
+#retour{
+    display: block;
+    clear: both;
+    cursor: pointer;
+
+color:red;
+opacity: 0;}
+
+#retour:before{
+    content:"◄ "}
+
 
 .carteFrance {
     display: block;
@@ -600,8 +607,8 @@ rect {
 }
 
 .grand-est,
-#d05,
-#d07 {
+#d05 path,
+#d07 path {
     fill: #D12727;
 }
 
@@ -611,12 +618,10 @@ rect {
     stroke-width: 1.5;
 }
 
-.grand-est-group:hover .grand-est {
-    fill: #002E5D;
-    cursor: pointer;
-}
-
-.departement-group:hover path {
+.grand-est-group:hover .grand-est,
+.departement-group:hover path,
+#d07:hover path,
+#d05:hover path  {
     fill: #002E5D;
     cursor: pointer;
 }
@@ -643,36 +648,24 @@ rect {
     font-size: 0.8em;
 }
 
+.grand-est-group .tooltip text {
+    font-family: "EB Garamond", serif;
+    font-size: 1.1em;
+}
+
 /********* TRANSPORTS *********/
 
-#comeByPlane {
-    padding: 0;
-    color: #002E5D;
-}
-
-
-.transportationChoice
-{
-    position:absolute;
-    z-index:1000;
-}
-
-#comeByPlane > p {
-    padding-left: 10rem;
-    padding-right: 10rem;
-    margin-bottom: 2rem;
-}
-
 #airports_choice {
-    margin: 0px 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 1%;
 }
 
 #airports_choice div {
     /*répartition égale sur le parent*/
     border: 2px solid rgba(48, 120, 190, 1);
+    padding: 1rem;
+    
 }
 
 #airports_choice div h3 {
@@ -681,35 +674,13 @@ rect {
 
 #airports_choice div p {
     font-size: 85%;
-    margin-left: 6px;
-    margin-right: 20px;
-    text-align: justify;
+    text-align: left;
 }
 
 #airports_choice div a {
     text-decoration: none;
     color: #002E5D;
 }
-
-#slide_title article {
-    padding: 0;
-    margin: 0;
-
-}
-
-#slide_title {
-    overflow: hidden;
-    max-height: 508px;
-    height: 20%;
-}
-
-#slide_title img {
-
-    max-height: 2000px;
-    height: 20%;
-    width: 100%;
-}
-
 #mapBus {
     text-decoration: none;
     color: #002E50;
@@ -728,7 +699,6 @@ rect {
 
 #menuDeplacement {
     margin-top: 25px;
-    height: 50vh;
     overflow: hidden;
     background-image: url('../img/transports/menu_dep_alsace.png');
     background-position: center;
@@ -753,7 +723,7 @@ rect {
     margin-top: 7rem;
     z-index: 1;
     position: relative;
-   
+    margin-bottom: 25vw;
 }
 
 .transportationChoice {
@@ -763,7 +733,11 @@ rect {
     border-radius: 0;
     margin: 0;
     position: relative;
-   
+
+}
+
+.transportationChoice.bouton:hover {
+    background-color: rgb(0, 46, 93);
 }
 
 .transportationChoice:before,
@@ -771,17 +745,15 @@ rect {
     z-index: -1;
     position: absolute;
     content: "";
-    background-image: url(../img/activites/cathedraleStrasbourg.jpg);
-    bottom: 15px;
+    bottom: 13px;
     left: 10px;
     width: 50%;
-    top: 61%;
-    height: 10px;
-    max-width: 700px;
+    top: 10%;
+    max-width: 300px;
     background: #777;
-    -webkit-box-shadow: 0 15px 6px #000000;
-    -moz-box-shadow: 0 15px 6px #000000;
-    box-shadow: 0 15px 6px #000000;
+    -webkit-box-shadow: 0 15px 6px #000;
+    -moz-box-shadow: 0 15px 6px #000;
+    box-shadow: 0 15px 6px #000;
     -webkit-transform: rotate(-3deg);
     -moz-transform: rotate(-3deg);
     -o-transform: rotate(-3deg);
@@ -1184,6 +1156,11 @@ tr:last-child td:last-child {
     min-height: 35rem;
 }
 
+#Strasbourg .bouton,
+#Mulhouse .bouton,
+#Colmar .bouton{
+    width: 250px;
+}
 
 /* FOOTER */
 
@@ -1348,6 +1325,10 @@ footer {
         grid-template-columns: 1fr;
         grid-column-gap: 10px;
     }
+    
+    #menuDeplacement h2{
+        width: 90%;
+    }
 
     /*SPORT*/
     .displayed {
@@ -1482,11 +1463,6 @@ footer {
         max-height: 20rem;
     }
 
-    #airports_choice {
-        grid-row-gap: 10px;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
     #buttonsTrans > a {
         position: relative;
     }
@@ -1501,35 +1477,6 @@ footer {
     }
 }
 
-@media only screen and (max-width: 810px) {
-
-
-    #menuDeplacement {
-        overflow: hidden;
-    }
-
-    #transportationButtons {
-        transform: scale(0.85);
-        position: absolute;
-    }
-    .transportationChoice {
-        position: relative;
-        margin: 60px 20px;
-        top: 350px;
-        transform: translateX(70%);
-        margin-top: 950px;
-        display: inline;
-    }
-    #airports_choice {
-        display: block;
-        grid-template-columns: 1fr;
-        grid-row-gap: 10px;
-    }
-    #buttonsTrans > a {
-        position: relative;
-        right: 68%;
-    }
-}
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
 
@@ -1575,11 +1522,6 @@ footer {
         max-height: 20rem;
     }
 
-    #airports_choice {
-        grid-row-gap: 10px;
-        grid-template-columns: 1fr;
-    }
-
 
     /*VISITE HISTORIQUE*/
     .imgVH {
@@ -1589,6 +1531,19 @@ footer {
 }
 
 /* --------------------Moyen écran-------------------- */
+
+@media only screen and (max-width: 768px) {
+    #transportationButtons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .transportationChoice:first-child{
+        margin-bottom: 3rem;
+    }
+
+}
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
 
@@ -1694,9 +1649,13 @@ footer {
         grid-row: 2;
         grid-column: 1/3;
     }
+    
+    #airports_choice {
+        grid-row-gap: 10px;
+        grid-template-columns: 1fr;
+    }
 }
 
-}
 
 /* --------------------Grand écran-------------------- */
 
@@ -1705,10 +1664,6 @@ footer {
     main {
         max-width: 1140px;
         margin: auto;
-    }
-
-    article img {
-        width: 100%;
     }
 
     /*VISITE HISTORIQUE */

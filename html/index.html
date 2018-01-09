@@ -94,6 +94,7 @@
         </article>
     </section>
     <section id="carte">
+        <article>
     <div class="carte">
         
         <svg class="carteFrance" version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="650px" height="780px" viewbox="0 0 650 780" enable-background="new 0 0 650 780" xml:space="preserve">
@@ -113,8 +114,8 @@
     <svg id="d00" width="8em" height="4em" x="460" y="200">
         
     <g class="tooltip">
-        <rect x="5%" y="5%"  width="6rem" height="2rem" rx="10" ry="10"/>
-        <text x="42%" y="33%" text-anchor="middle" alignment-baseline="middle" fill="#000000" width="7rem" height="3rem">Grand-Est</text>
+        <rect x="5%" y="5%"  width="7rem" height="3rem" rx="10" ry="10"/>
+        <text x="40%" y="40%" text-anchor="middle" alignment-baseline="middle" fill="#000000" width="7rem" height="3rem">Grand-Est</text>
     </g>
         </svg>
         </g>
@@ -585,6 +586,8 @@
         </svg>
         </g>
         </svg>
+        
+        
         <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
@@ -593,6 +596,7 @@
                         $(".carteGrandEst").fadeIn(500);
                         $(".carteGrandEst").css('display', 'block');
                     });
+                    $("#retour").css('opacity','1');
                 });
 
 
@@ -606,10 +610,11 @@
                     }
                 );
                 
-                $(".retour").click(function() {
+                $("#retour").click(function() {
+                    console.log("Hello");
                     $(".carteGrandEst").fadeOut(500, function() {
                         $(".carteFrance").fadeIn(500);
-                        $(".carteFrance").css('display', 'block');
+                        $("#retour").css('opacity','0');
                     });
                 });
 
@@ -618,6 +623,8 @@
 
         </script>
     </div>
+        <p id="retour">Retour</p>
+        </article>
     </section>
     </main>
     <footer>
