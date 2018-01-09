@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700,700i');
+
+
 /**** UTILITAIRES ****/
 
 body {
@@ -11,15 +13,12 @@ body {
     text-align: justify;
 }
 
-.titleSlide
-{
-    font-weight: bolder;
-    font-size: 4vw;
+body#accueil {
+    background-color: #FFFFFF;
 }
 
-#enableMenu
-{
-    display: none;
+a {
+    text-decoration: none;
 }
 
 h2 {
@@ -27,351 +26,6 @@ h2 {
     font-weight: normal;
     text-align: center;
 }
-
-
-#control label
-{
-    padding:2.5vh 2px;
-    background: #164270;
-        -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
-}
-
-#container a
-{
-    text-decoration: none;
-    color:white;
-    padding:0 6px;
-}
-
-
-#showMenu
-{
-    margin-right:30px;
-    float:right;
-}
-
-#tabsAndSlides
-{
-    margin-bottom:20px;
-}
-
-/***** CAROUSSEL ****/
-#tabsAndSlides
-{
-    border-width:3rem;
-    position:relative;
-    display:flex;
-    justify-content: center;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
-}
-
-.leftarrow,.rightarrow
-{
-    position:absolute;
-    cursor:pointer;
-    text-align:center;
-    height:9vw;
-    padding-left:1vw;
-    padding-right:1vw;
-    font-size:6vw;
-    top:24vw;
-    z-index:1;
-    color:rgb(218, 237, 255);
-    transition:background 2s;
-}
-.arrow:hover
-{
-    background:rgba(218, 237, 255,0.25);
-}
-.rightarrow
-{
-  right:2vw;
-}
-.leftarrow
-{
-    left:2vw;
-}
-
-#button1,
-#button2,
-#button3,
-#button4,
-#button5,
-#button6,
-#button7,
-#button8
-{
-    visibility:hidden;
-    position:absolute;
-}
-
-#button1
-{
-    left:10%;
-}
-
-#button2
-{
-    left:20%;
-}
-
-#button3
-{
-    left:30%;
-}
-
-#button4
-{
-    left:40%;
-}
-#button5
-{
-    left:50%;
-}
-#button6
-{
-    left:60%;
-}
-#button7
-{
-    left:70%;
-}
-#button8
-{
-    left:80%;
-}
-
-#l3,#l4,#l5,#l6,#l7,#l8
-{
-    visibility:hidden;
-}
-
-#button4:checked ~ #container div:nth-child(1),
-#button4:checked ~ #container div:nth-child(2),
-#button4:checked ~ #container div:nth-child(3)
-{
-    display:none;
-}
-#button4:checked ~ #container div:nth-child(4)
-{
-    display:flex;
-}
-
-#button4:checked ~ #l1,
-#button4:checked ~ #l2,
-#button4:checked ~ #l5,
-#button4:checked ~ #l6,
-#button4:checked ~ #l7,
-#button4:checked ~ #l8
-{
-    visibility:hidden;
-}
-
-#button4:checked ~ #l7,
-#button4:checked ~ #l8
-{
-    visibility:visible;
-}
-
-#button2:checked ~ #l1,
-#button2:checked ~ #l2,
-#button2:checked ~ #l5,
-#button2:checked ~ #l6,
-#button2:checked ~ #l7,
-#button2:checked ~ #l8
-{
-    visibility:hidden;
-}
-
-#button2:checked ~ #l3,
-#button2:checked ~ #l4
-{
-    visibility:visible;
-}
-
-#button3:checked ~ #l1,
-#button3:checked ~ #l2,
-#button3:checked ~ #l3,
-#button3:checked ~ #l4,
-#button3:checked ~ #l7,
-#button3:checked ~ #l8
-{
-    visibility:hidden;
-}
-
-#button3:checked ~ #l5,
-#button3:checked ~ #l6
-{
-    visibility:visible;
-}
-
-#button1:checked ~ #container div:nth-child(2),
-#button1:checked ~ #container div:nth-child(3),
-#button1:checked ~ #container div:nth-child(4)
-{
-    display:none;
-}
-
-#button1:checked ~ #container div:nth-child(1)
-{
-    display:flex;
-}
-
-#button2:checked ~ #container div:nth-child(1),
-#button2:checked ~ #container div:nth-child(3),
-#button2:checked ~ #container div:nth-child(4)
-{
-    display:none;
-}
-
-#button2:checked ~ #container div:nth-child(2)
-{
-    display:flex;
-}
-
-#button3:checked ~ #container div:nth-child(1),
-#button3:checked ~ #container div:nth-child(2),
-#button3:checked ~ #container div:nth-child(4)
-{
-    display:none;
-}
-
-#button3:checked ~ #container div:nth-child(3)
-{
-    display:flex;
-}
-
-#button4:checked ~ #container div:nth-child(1),
-#button4:checked ~ #container div:nth-child(2),
-#button4:checked ~ #container div:nth-child(3)
-{
-    display:none;
-}
-
-#button3:checked ~ #container div:nth-child(4)
-{
-    display:flex;
-}
-
-#container
-{
-  width:100%;
-  height:51vw;
-  overflow:hidden;
-  display:grid;
-  grid-template-columns:100% 100% 100% 100% 100%;
-}
-#container>div{width:100%;height:100%;font-size:2.5vw;}
-#container>div:nth-child(1){background:url(../img/accueil/restaurants.jpg); background-repeat:no-repeat; background-size:100%;}
-#container>div:nth-child(2){background:url(../img/accueil/transports.jpg); background-repeat:no-repeat; background-size:100%;}
-#container>div:nth-child(3){background:url(../img/accueil/hebergement.jpg); background-repeat:no-repeat; background-size:100%;}
-#container>div:nth-child(4){background:url(../img/accueil/specialite.jpg); background-repeat:no-repeat; background-size:100%;}
-#container>div
-{
-  position:relative;
-}
-#container>div
-{
-  display:flex;
-  justify-content:center;
-  flex-direction:column;
-  align-items:center;
-}
-#container>div>*
-{
-  position:relative;
-  top:11vw;
-  margin:2%;
-  color:white;
-}
-#container p
-{
-  background:rgba(209, 39, 42, 1);
-  text-align:center;
-  padding:0.25vw 1vw;
-  color:white;
-  width:19vw;
-}
-#container p:hover
-{
-  cursor:pointer;
-  background:darkblue;
-}
-#container>div:first-child>h2
-{
-    color:black;
-}
-#container>div:first-child>p,#container>div:first-child>h2
-{
-    position:relative;
-    top:13vw;
-}
-
-
-
-/*On cache toutes nos slides afin qu'elles ne s'affichent pas les unes après les autres. 
-Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
-
-.slides {
-    position: relative;
-    display: none;
-}
-
-
-
-
-
-
-#moreInfo {
-    position: absolute;
-    bottom: 18%;
-    left: 25%;
-    right: 25%;
-    text-align: center;
-
-}
-
-
-/***** LOGO ****/
-
-.logo {
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    width: 50%;
-}
-
-#logo-img {
-    height: 120px;
-    width: 150px;
-    align-self: center;
-
-}
-
-.logo h1 {
-    align-self: center;
-    color: #D12727;
-    text-align: center;
-}
-
-
-
-
-/**** Contenu ****/
 
 main {
     margin: auto;
@@ -406,54 +60,6 @@ article {
     padding-right: 10rem;
     margin: 2rem auto 3rem auto;
 }
-
-/***TRANSPORT***/
-
-#menuDeplacement {
-    margin-top: 25px;
-    height: 100%;
-    max-height: 500px;
-    overflow: hidden;
-
-}
-
-#menuDeplacement h2 {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    color: white;
-    text-align: center;
-    background-color: #D12727;
-    width: 460px;
-    padding: 1rem 0 1rem 0;
-}
-
-#menuDeplacement img {
-    height: 100%;
-    width: 100%;
-
-}
-
-#transportationButtons {
-    position: relative;
-    bottom: 60%;
-    display: flex;
-    margin: 0 8.5%;
-    justify-content: space-between;
-
-}
-
-.transportationChoice {
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    background-color: #D12727;
-    font-size: 120%;
-    padding: 0.9rem 3rem;
-    justify-content: center;
-}
-
 
 .bouton {
     display: block;
@@ -491,34 +97,435 @@ article {
 }
 
 
+/***** LOGO ****/
 
-/*@media only screen and (max-width: 780px)
-{
-    #transportationButtons
-    {
-        transform: scale(0.85);
-        position:absolute;
-        display: block;
-    }
-    .transportationChoice
-    {
-        position:relative;
-        top:300px;
-        margin-right: 60px;
-        left:50%;
-        transform: translateX(90%);
-        margin-top:100px;
-        display: block;
-        color:black;
-    }
-}*/
+.logo {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 50%;
+}
 
+#logo-img {
+    height: 120px;
+    width: 150px;
+    align-self: center;
+
+}
+
+.logo h1 {
+    align-self: center;
+    color: #D12727;
+    text-align: center;
+    font-size: 4rem;
+    margin-left: 0.5em;
+}
+
+
+/************* MENU **************/
+
+#Menu {
+
+
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 50%;
+    list-style-type: none;
+    list-style-position: inside;
+    background-color: rgb(218, 237, 255);
+    border: 3px solid rgb(175, 203, 224);
+}
+
+#Menu li {
+    position: relative;
+}
+
+#Menu li a {
+    color: rgb(76, 128, 167);
+    text-decoration: none;
+}
+
+#Menu li a:hover {
+    color: rgb(29, 154, 232);
+}
+
+#Menu div {
+    display: inline;
+    text-align: center;
+}
+
+.sub {
+    visibility: hidden;
+    position: absolute;
+    display: inline;
+    background-color: rgb(218, 237, 255);
+    list-style-type: none;
+    text-align: center;
+    padding: 0 10px;
+    z-index: 1;
+    cursor: pointer;
+    width: 180px;
+}
+
+#Menu li:hover .sub {
+    display: block;
+    margin: auto;
+    left: 50%;
+    margin-left: -100px;
+    visibility: visible;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+#control label {
+    padding: 2.5vh 2px;
+    background: #164270;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+#showMenu {
+    margin-right: 30px;
+    float: right;
+}
+
+#enableMenu {
+    display: none;
+}
+
+#mediaquery,
+#mediaquery > label {
+    margin: 0;
+    display: none;
+    cursor: pointer;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/***** CAROUSSEL ****/
+
+#tabsAndSlides {
+    border-width: 3rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.leftarrow,
+.rightarrow {
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+    height: 9vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    font-size: 6vw;
+    top: 24vw;
+    z-index: 1;
+    color: rgb(218, 237, 255);
+    transition: background 2s;
+}
+
+.arrow:hover {
+    background: rgba(218, 237, 255, 0.25);
+}
+
+.rightarrow {
+    right: 2vw;
+}
+
+.leftarrow {
+    left: 2vw;
+}
+
+#button1,
+#button2,
+#button3,
+#button4 {
+    visibility: hidden;
+    position: absolute;
+}
+
+#button1 {
+    left: 10%;
+}
+
+#button2 {
+    left: 20%;
+}
+
+#button3 {
+    left: 30%;
+}
+
+#button4 {
+    left: 40%;
+}
+
+#l3,
+#l4,
+#l5,
+#l6,
+#l7,
+#l8 {
+    visibility: hidden;
+}
+
+
+#button4:checked ~ #l1,
+#button4:checked ~ #l2,
+#button4:checked ~ #l5,
+#button4:checked ~ #l6,
+#button4:checked ~ #l7,
+#button4:checked ~ #l8 {
+    visibility: hidden;
+}
+
+#button4:checked ~ #l7,
+#button4:checked ~ #l8 {
+    visibility: visible;
+}
+
+#button2:checked ~ #l1,
+#button2:checked ~ #l2,
+#button2:checked ~ #l5,
+#button2:checked ~ #l6,
+#button2:checked ~ #l7,
+#button2:checked ~ #l8 {
+    visibility: hidden;
+}
+
+#button2:checked ~ #l3,
+#button2:checked ~ #l4 {
+    visibility: visible;
+}
+
+#button3:checked ~ #l1,
+#button3:checked ~ #l2,
+#button3:checked ~ #l3,
+#button3:checked ~ #l4,
+#button3:checked ~ #l7,
+#button3:checked ~ #l8 {
+    visibility: hidden;
+}
+
+#button3:checked ~ #l5,
+#button3:checked ~ #l6 {
+    visibility: visible;
+}
+
+#button4:checked ~ #container div:nth-child(1),
+#button4:checked ~ #container div:nth-child(2),
+#button4:checked ~ #container div:nth-child(3) {
+    display: none;
+}
+
+#button4:checked ~ #container div:nth-child(4) {
+    display: flex;
+}
+
+
+#button1:checked ~ #container div:nth-child(2),
+#button1:checked ~ #container div:nth-child(3),
+#button1:checked ~ #container div:nth-child(4) {
+    display: none;
+}
+
+#button1:checked ~ #container div:nth-child(1) {
+    display: flex;
+    animation: fadeIn 2s;
+}
+
+
+#button2:checked ~ #container div:nth-child(1),
+#button2:checked ~ #container div:nth-child(3),
+#button2:checked ~ #container div:nth-child(4) {
+    display: none;
+}
+
+#button2:checked ~ #container div:nth-child(2) {
+    display: flex;
+    animation: fadeIn 3s;
+}
+
+#button3:checked ~ #container div:nth-child(1),
+#button3:checked ~ #container div:nth-child(2),
+#button3:checked ~ #container div:nth-child(4) {
+    display: none;
+}
+
+#button3:checked ~ #container div:nth-child(3) {
+    display: flex;
+    animation: fadeIn 5s;
+}
+
+#button4:checked ~ #container div:nth-child(1),
+#button4:checked ~ #container div:nth-child(2),
+#button4:checked ~ #container div:nth-child(3) {
+    display: none;
+}
+
+#button3:checked ~ #container div:nth-child(4) {
+    display: flex;
+    animation: fadeIn 5s;
+}
+
+#container {
+    width: 100%;
+    height: 51vw;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 100% 100% 100% 100% 100%;
+}
+
+#container > div {
+    width: 100%;
+    height: 100%;
+    font-size: 2.5vw;
+}
+
+#container > div:nth-child(1) {
+    background: url(../img/accueil/restaurants.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#container > div:nth-child(2) {
+    background: url(../img/accueil/transports.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#container > div:nth-child(3) {
+    background: url(../img/accueil/hebergement.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#container > div:nth-child(4) {
+    background: url(../img/accueil/specialite.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#container > div {
+    position: relative;
+}
+
+#container > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container > div > * {
+    position: relative;
+    top: 11vw;
+    margin: 2%;
+    color: white;
+}
+
+#container p {
+    background: rgba(209, 39, 42, 1);
+    text-align: center;
+    padding: 0.25vw 1vw;
+    color: white;
+    width: 19vw;
+}
+
+#container p:hover {
+    cursor: pointer;
+    background: darkblue;
+}
+
+#container > div:first-child > h2 {
+    color: black;
+}
+
+#container > div:first-child > p,
+#container > div:first-child > h2 {
+    position: relative;
+    top: 13vw;
+}
+
+#container a {
+    text-decoration: none;
+    color: white;
+    padding: 0 6px;
+}
+
+.titleSlide {
+    font-weight: bolder;
+    font-size: 4vw;
+}
 
 
 /***** ACCUEIL ***/
 
 #tabsAndSlides,
-#presentation {
+#presentation,
+#carte {
     border: 0;
 }
 
@@ -526,25 +533,103 @@ section#tabsAndSlides {
     margin-top: 3rem;
 }
 
-#alsace-1{
-    font-size:10rem;
-    float:left;
+#alsace-1 {
+    font-size: 10rem;
+    float: left;
     line-height: 0.6;
     margin-right: 0.1em;
     font-weight: 700;
     display: block;
 }
 
-#presentation{
+#presentation {
     font-size: 1.4rem;
 }
 
-#presentation-corps{
+#presentation-corps {
     padding: 1rem 0;
 }
 
-#presentation-accroche{
+#presentation-accroche {
     font-size: 1.6rem;
+}
+
+.carte {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    height: 780;
+    width: 100%;
+}
+
+.carteFrance {
+    display: block;
+}
+
+rect {
+    fill: #FFFFFF;
+    stroke: #002E5D;
+    stroke-width: 1;
+}
+
+.carteGrandEst {
+    display: none;
+    width: 100%;
+    height: 700px;
+}
+
+#fleche path {
+    fill: #FFFFFF;
+    stroke: #000;
+    stroke-width: 0.1px;
+}
+
+#svg2 {
+    overflow: visible;
+}
+
+.grand-est,
+#d05,
+#d07 {
+    fill: #D12727;
+}
+
+.st0 {
+    fill: #FFFFFF;
+    stroke: #002E5D;
+    stroke-width: 1.5;
+}
+
+.grand-est-group:hover .grand-est {
+    fill: #002E5D;
+    cursor: pointer;
+}
+
+.departement-group:hover path {
+    fill: #002E5D;
+    cursor: pointer;
+}
+
+.grand-est,
+.departement-group path {
+    -webkit-transition: all 500ms ease;
+}
+
+
+.tooltip {
+    opacity: 0;
+    -webkit-transition: all 200ms ease;
+}
+
+.grand-est-group:hover .tooltip,
+.departement-group:hover .tooltip {
+    opacity: 1;
+}
+
+
+.tooltip text {
+    font-family: "EB Garamond", serif;
+    font-size: 0.8em;
 }
 
 /********* TRANSPORTS *********/
@@ -619,6 +704,88 @@ section#tabsAndSlides {
 
 #SoleaMark {
     align-self: end;
+}
+
+/***TRANSPORT***/
+
+#menuDeplacement {
+    margin-top: 25px;
+    height: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    background-image: url('../img/transports/menu_dep_alsace.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#menuDeplacement h2 {
+    color: white;
+    text-align: center;
+    background-color: #D12727;
+    width: 460px;
+    margin: 4rem auto;
+    padding: 1rem 0 1rem 0;
+}
+
+#menuDeplacement img {
+    height: 100%;
+    width: 100%;
+
+}
+
+#transportationButtons {
+    display: flex;
+    margin: 0 8.5%;
+    justify-content: space-between;
+    margin-top: 7rem;
+    position: relative;
+    z-index: 1;
+}
+
+.transportationChoice {
+    background-color: #D12727;
+    font-size: 120%;
+    padding: 0.9rem 3rem;
+    border-radius: 0;
+    margin: 0;
+    position: relative;
+   
+}
+
+.transportationChoice:before,
+.transportationChoice:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    background-image: url(../img/activites/cathedraleStrasbourg.jpg);
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    top: 61%;
+    height: 10px;
+    max-width: 700px;
+    background: #777;
+    -webkit-box-shadow: 0 15px 6px #000000;
+    -moz-box-shadow: 0 15px 6px #000000;
+    box-shadow: 0 15px 6px #000000;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+.transportationChoice:after {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
 }
 
 /****** GASTRONOMIE *******/
@@ -788,7 +955,7 @@ textarea {
 
 .contact {
     background-color: #DAEDFF;
-    margin-top: 20px;
+    margin: 3rem 0;
     font-family: 'EB Garamond', serif;
 
 
@@ -962,19 +1129,19 @@ tr:last-child td:last-child {
 }
 
 
-    #texte_acti img {
-        width: 100%;
-    }
-	
+#texte_acti img {
+    width: 100%;
+}
 
-<<<<<<< HEAD
-=======
-	.displayed {
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    width:40%;
-	}
+
+
+.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
 #texte_acti img {
     width: 100%;
 }
@@ -993,6 +1160,20 @@ tr:last-child td:last-child {
     width: 800px;
 }
 
+/*   Page Villes T   */
+
+.grid-villesT {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-column-gap: 2%;
+    grid-template-rows: auto;
+}
+
+.img_villesT {
+    min-height: 35rem;
+}
+
+
 /* FOOTER */
 
 footer img {
@@ -1008,118 +1189,9 @@ footer {
     padding-bottom: 3%;
 }
 
-/*****MEDIAQUERIES******/
-
-
-#mediaquery, #mediaquery>label
-{
-    margin:0;
-    display:none;
-    cursor:pointer;
-}
-
-/************* MENU **************/
-
-#Menu {
-    
-
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
-
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    padding: 10px 0;
-    width: 50%;
-    list-style-type: none;
-    list-style-position: inside;
-    background-color: rgb(218, 237, 255);
-    border: 3px solid rgb(175, 203, 224);
-}
-
-#Menu li a {
-    color: rgb(76, 128, 167);
-    text-decoration: none;
-}
-
-#Menu li a:hover {
-    color: rgb(29, 154, 232);
-}
-/*
-#Menu {
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
-    width: 50%;
-    background-color: rgb(218, 237, 255);
-}*/
-
-#Menu div {
-    display: inline;
-    text-align: center;
-}
-
-.sub {
-    display:none;
-    position: absolute;
-    background-color: rgb(218, 237, 255);
-    list-style-type: none;
-    text-align: center;
-    margin-left: -35px;
-    padding: 0 10px;
-    z-index: 1;
-    cursor: pointer;
-}
-
-#Menu li:hover .sub {
-    display: block;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-}
-@keyframes fadeIn
-{
-    from{opacity:0;}
-    to{opacity:1;}
-}
-@-webkit-keyframes fadeIn
-{
-    from{opacity:0;}
-    to{opacity:1;}
-}
-
-
 /* --------------------Très petit écran-------------------- */
 
-@media only screen and (max-width: 300px) {
-    .prev,
-    .next,
-    .text {
-        font-size: 200%;
-    }
-
-}
-
-
-@media only screen and (max-width: 300px) {
-    .prev,
-    .next,
-    .text {
-        font-size: 11px
-    }
-}
-
 @media only screen and (min-width: 280px) and (max-width: 415px) {
-    .prev,
-    .next,
-    .text {
-        font-size: 11px
-    }
-
 
     #Menu {
         display: flex;
@@ -1142,55 +1214,52 @@ footer {
 
 }
 
-@media only screen and (max-width:500px)
-{
-    #Menu
-    {
-        text-align:center;
-        display:block;
+@media only screen and (max-width:500px) {
+    #Menu {
+        text-align: center;
+        display: block;
     }
-    .sub
-    {
 
-        position:relative;
-        margin:0;
-        background-color:aliceblue;
-        font-size:90%;
+    .sub {
+        display: none;
+        position: relative;
+        margin: 0;
+        background-color: aliceblue;
+        font-size: 90%;
     }
 
     #Menu li .sub {
-    /* display: none; */
-    -webkit-transition:display 10s;
+        -webkit-transition: display 10s;
     }
 
     #Menu li:hover .sub {
-    display: block;
+        display: block;
     }
 
 
-    #tabsAndSlides
-    {
+    #tabsAndSlides {
         border-width: 0;
     }
-    #tabsAndSlides p,h2
-    {
-        font-size:1.5rem;
+    #tabsAndSlides p,
+    h2 {
+        font-size: 1.5rem;
     }
 
 }
 
-@media only screen and (min-width:300px) and (max-width:500px)
-{
-    #container p, h2.titleSlide
-    {
-        font-size:24px;
-        width:150px;
+@media only screen and (min-width:300px) and (max-width:500px) {
+    #container p,
+    h2.titleSlide {
+        font-size: 24px;
+        width: 150px;
     }
 }
+
 /* --------------------Petit écran-------------------- */
 
 @media only screen and (max-width: 576px) {
-   #presentation article, main {
+
+    main {
         width: auto;
         margin: auto;
     }
@@ -1281,14 +1350,11 @@ footer {
 
 }
 
-@media only screen and (min-width: 300px) and (max-width: 600px)
-{
-    #presentation-accroche
-    {
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+    #presentation-accroche {
         font-size: 130%;
     }
-    #presentation-corps
-    {
+    #presentation-corps {
         font-size: 70%;
     }
 }
@@ -1299,120 +1365,97 @@ footer {
     }
 }
 
-@media only screen and (max-width:300px)
-{
-    #container p, h2.titleSlide
-    {
-        width:150px;
-        font-size:20px;
+@media only screen and (max-width:300px) {
+    #container p,
+    h2.titleSlide {
+        width: 150px;
+        font-size: 20px;
     }
 }
 
-@media only screen and (max-width:500px)
-{   
-   
-    #mediaquery, #mediaquery>label
-    {
+@media only screen and (max-width:500px) {
+
+    #mediaquery,
+    #mediaquery > label {
         display: block;
     }
-    #mediaquery:hover
-    {
-        color:crimson;
-    }
-    
-    #control
-    {
-    position:relative;
-    background:#164270;
-    width:75px;
-    padding:2px 0px;
+    #mediaquery:hover {
+        color: crimson;
     }
 
-    #control span
-    {
-        cursor:pointer;
+    #control {
+        position: relative;
+        background: #164270;
+        width: 75px;
+        padding: 2px 0px;
+    }
+
+    #control span {
+        cursor: pointer;
         display: block;
-        background:#5C87B5;
-        margin:12px;
-        padding:4px 0px;
+        background: #5C87B5;
+        margin: 12px;
+        padding: 4px 0px;
     }
 
-    #control:hover
-    {
-        background:#ED6C6C;
+    #control:hover {
+        background: #ED6C6C;
     }
 
-    #control:hover > span
-    {
-        background:white;
+    #control:hover > span {
+        background: white;
     }
 
-    #control:active
-    {
-        background:#164270;
-    }
-    
-    #control:active > span
-    {
-        background:#5C87B5;
-    }
-    
-    #enableMenu:not(:checked) ~ #Menu
-    {
-        display:none;
-    }
-    
-    #enableMenu:not(:checked) ~ #showMenu
-    {
-        display:block;
-    }
-    
-    #enableMenu:checked ~ #showMenu
-    {
-        display:none;
+    #control:active {
+        background: #164270;
     }
 
-    #enableMenu:checked ~ #Menu
-    {
-        display:block;
+    #control:active > span {
+        background: #5C87B5;
     }
 
-}
-
-@media only screen and (max-width:500px)
-{
-    #Menu
-    {
-        text-align:center;
-        display:block;
-    }
-    .sub
-    {
-
-        position:relative;
-        margin:0;
-        background-color:aliceblue;
-        font-size:90%;
+    #enableMenu:not(:checked) ~ #Menu {
+        display: none;
     }
 
-    #Menu li .sub {
-    /* display: none; */
-    -webkit-transition:display 10s;
+    #enableMenu:not(:checked) ~ #showMenu {
+        display: block;
     }
+
+    #enableMenu:checked ~ #showMenu {
+        display: none;
+    }
+
+    #enableMenu:checked ~ #Menu {
+        display: block;
+    }
+
+    #Menu {
+        text-align: center;
+        display: block;
+    }
+    .sub {
+
+        position: relative;
+        margin: 0;
+        background-color: aliceblue;
+        font-size: 90%;
+    }
+
 
     #Menu li:hover .sub {
-    display: block;
+        display: block;
     }
 
 
-    #tabsAndSlides
-    {
+    #tabsAndSlides {
         border-width: 0;
     }
 }
 
 @media only screen and (min-width: 576px) {
-    #presentation article,main {
+
+    main {
         max-width: 1000px;
         margin: auto;
     }
@@ -1447,71 +1490,6 @@ footer {
     }
 }
 
-
-@media only screen and (min-width: 768px) {
-    #presentation article,main {
-        max-width: 720px;
-        margin: auto;
-    }
-
-    .gastronomie-img {
-        min-height: 35rem;
-        max-height: 35rem;
-    }
-
-    /*    Page Hébergement     */
-    .article-6 {
-        height: inherit;
-    }
-
-    .article-3 {
-        height: inherit;
-    }
-    /* SPORT */
-    .displayed {
-        width: 50%;
-    }
-
-    /*VISITE HISTORIQUE*/
-    .imgVH {
-        width: 600px;
-    }
-
-    /*   Page Villes T   */
-    
-    .grid-villesT {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 2%;
-        grid-row-gap: 1%;
-    }
-
-    .grid-villesT h2{
-        grid-column: 1/2;
-        grid-row: 1;
-    }
-
-    .grid-villesT p{
-        grid-column: 1/2;
-    }
-
-    .grid-villesT a{
-        grid-column: 2;
-        grid-row: 3;
-    }
-
-    .source {
-        grid-column: 1/2;
-        grid-row: 3;
-    }
-
-    .grid-villesT img{     
-       width: 100%;
-    }
-
-}
-
-
 @media only screen and (max-width: 810px) {
 
 
@@ -1542,18 +1520,6 @@ footer {
     }
 }
 
-@media only screen and (min-width: 992px) {
-    #presentation article,main {
-        max-width: 960px;
-        margin: auto;
-    }
-
-    .gastronomie-img {
-        min-height: 45rem;
-        max-height: 45rem;
-    }
-
-}
 @media only screen and (min-width: 576px) and (max-width: 768px) {
 
     .post {
@@ -1602,12 +1568,7 @@ footer {
         grid-row-gap: 10px;
         grid-template-columns: 1fr;
     }
-    
-    /* PAGE VILLES T*/
-    
-    .grid-villesT img{
-        width: 100%;
-    }
+
 
     /*VISITE HISTORIQUE*/
     .imgVH {
@@ -1644,7 +1605,7 @@ footer {
         min-height: 10rem;
         max-height: 20rem;
     }
-    
+
     #buttonsTrans > a {
         position: relative;
         right: 35%;
@@ -1652,7 +1613,8 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
-    #presentation article,main {
+
+    main {
         max-width: 720px;
         margin: auto;
     }
@@ -1679,43 +1641,11 @@ footer {
     .imgVH {
         width: 600px;
     }
-
-    /*   Page Villes T   */
-    
-    .grid-villesT {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 2%;
-        grid-row-gap: 1%;
-    }
-
-    .grid-villesT h2{
-        grid-column: 1/2;
-        grid-row: 1;
-    }
-
-    .grid-villesT p{
-        grid-column: 1/2;
-    }
-
-    .grid-villesT a{
-        grid-column: 2;
-        grid-row: 3;
-    }
-
-    .source {
-        grid-column: 1/2;
-        grid-row: 3;
-    }
-
-    .grid-villesT img{     
-       width: 100%;
-    }
-
 }
 
 @media only screen and (min-width: 992px) {
-    #presentation article,main {
+
+    main {
         max-width: 960px;
         margin: auto;
     }
@@ -1742,13 +1672,26 @@ footer {
     .grid-activités img {
         height: 20em;
     }
+
+    /*   Page Villes T   */
+    .desc-villesT {
+        grid-row: 1;
+        grid-column: 1/3;
+    }
+
+    .img_villesT {
+        grid-row: 2;
+        grid-column: 1/3;
+    }
+}
+
 }
 
 /* --------------------Grand écran-------------------- */
 
 @media only screen and (min-width: 1200px) {
-    
-    #presentation article, main {
+
+    main {
         max-width: 1140px;
         margin: auto;
     }
@@ -1756,8 +1699,6 @@ footer {
     article img {
         width: 100%;
     }
-    
-    
 
     /*VISITE HISTORIQUE */
     .imgVH {
