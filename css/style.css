@@ -521,7 +521,16 @@ article {
 }
 
 
+ 
 /***** ACCUEIL ***/
+ 
+#menuDeplacement {
+    position:relative;
+    margin-top: 25px;
+    height: 100%;
+    max-height: 500px;
+    overflow: hidden;
+}
 
 #tabsAndSlides,
 #presentation,
@@ -529,6 +538,7 @@ article {
     border: 0;
 }
 
+ 
 section#tabsAndSlides {
     margin-top: 3rem;
 }
@@ -561,6 +571,7 @@ section#tabsAndSlides {
     height: 780;
     width: 100%;
 }
+ 
 
 .carteFrance {
     display: block;
@@ -639,6 +650,13 @@ rect {
     color: #002E5D;
 }
 
+
+.transportationChoice
+{
+    position:absolute;
+    z-index:1000;
+}
+
 #comeByPlane > p {
     padding-left: 10rem;
     padding-right: 10rem;
@@ -710,10 +728,8 @@ rect {
 
 #menuDeplacement {
     margin-top: 25px;
-    height: 100%;
-    height: 500px;
+    height: 50vh;
     overflow: hidden;
-    position: relative;
     background-image: url('../img/transports/menu_dep_alsace.png');
     background-position: center;
     background-size: cover;
@@ -730,19 +746,14 @@ rect {
     padding: 1rem 0 1rem 0;
 }
 
-#menuDeplacement img {
-    height: 100%;
-    width: 100%;
-
-}
-
 #transportationButtons {
     display: flex;
     margin: 0 8.5%;
     justify-content: space-between;
     margin-top: 7rem;
-    position: relative;
     z-index: 1;
+    position: relative;
+   
 }
 
 .transportationChoice {
