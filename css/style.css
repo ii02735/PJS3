@@ -410,11 +410,87 @@ article {
 /***TRANSPORT***/
 
 #menuDeplacement {
+    position:relative;
     margin-top: 25px;
     height: 100%;
     max-height: 500px;
     overflow: hidden;
 
+}
+
+#menuDeplacement img
+{
+    height:250px;
+}
+
+@media only screen and (max-width:990px)
+{
+    #menuDeplacement
+    {
+        height:400px;
+    }
+
+}
+
+@media only screen and (max-width:630px)
+{
+    #menuDeplacement
+    {
+        height:350px;
+    }
+
+    #menuDeplacement h2
+    {
+        font-size:150%;
+    }
+}
+
+@media only screen and (max-width:540px)
+{
+    #menuDeplacement
+    {
+        height:250px;
+    }
+}
+
+@media only screen and (max-width:450px)
+{
+    #menuDeplacement
+    {
+        height:300px;
+    }
+}
+
+@media only screen and (max-width:370px)
+{
+    #menuDeplacement
+    {
+        height:240px;
+    }
+
+    #menuDeplacement h2
+    {
+        font-size:100%;
+    }
+}
+
+#choiceBtn
+{
+    position:absolute;
+    display:grid;
+    width:100%;
+    grid-template-columns:50% 50%;  
+    justify-items:center;
+    top:50%;
+
+}
+
+#choiceBtn > a
+{
+    color:white;
+    text-decoration:none;
+    background:#D12727;
+    padding:10px 20px;
 }
 
 #menuDeplacement h2 {
@@ -430,29 +506,10 @@ article {
 }
 
 #menuDeplacement img {
-    height: 100%;
-    width: 100%;
-
+    height: inherit;
+    width: 111%;
 }
 
-#transportationButtons {
-    position: relative;
-    bottom: 60%;
-    display: flex;
-    margin: 0 8.5%;
-    justify-content: space-between;
-
-}
-
-.transportationChoice {
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    background-color: #D12727;
-    font-size: 120%;
-    padding: 0.9rem 3rem;
-    justify-content: center;
-}
 
 
 .bouton {
@@ -552,6 +609,13 @@ section#tabsAndSlides {
 #comeByPlane {
     padding: 0;
     color: #002E5D;
+}
+
+
+.transportationChoice
+{
+    position:absolute;
+    z-index:1000;
 }
 
 #comeByPlane > p {
