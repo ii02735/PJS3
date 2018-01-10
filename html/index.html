@@ -17,12 +17,12 @@
         <nav>
             <input type="checkbox" name="enableMenu" id="enableMenu">
             <label for="enableMenu" id="showMenu">
-      <div id="control">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div></label>
-            <div style="clear:both"></div>
+              <span id="control">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span></label>
+            <div id="clearBoth"></div>
             <ul id="Menu">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="transports/transports.html">Transports</a>
@@ -107,6 +107,7 @@
         </section>
         <section id="carte">
             <article>
+				<h2 class="titre-carte"><span>Carte interactive</span></h2>
                 <div class="carte">
 
                     <svg class="carteFrance" version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="650px" height="780px" viewbox="0 0 650 780" enable-background="new 0 0 650 780" xml:space="preserve">
@@ -601,7 +602,7 @@
 
 
                     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-                    <script type="text/javascript">
+                    <script>
                         $(document).ready(function() {
                             $(".grand-est").click(function() {
                                 $(".carteFrance").fadeOut(500, function() {
@@ -691,14 +692,14 @@
                     <textarea name="Message" id="message" cols="150" rows="5" placeholder="Message"></textarea>
                     <button>Commenter</button>
                     <div class="commentaire">
-                        <div class="avatar image"><img src="https://freeiconshop.com/wp-content/uploads/edd/person-flat.png"></div>
+                        <div class="avatar image"><img src="https://freeiconshop.com/wp-content/uploads/edd/person-flat.png" alt="person-flat"></div>
                         <div class="texte-commentaire">
                             <p>Simple et joli</p>
                             <small>Paul • il y a 3 mois</small>
                         </div>
                     </div>
                     <div class="commentaire">
-                        <div class="avatar image"><img src="https://freeiconshop.com/wp-content/uploads/edd/person-flat.png"></div>
+                        <div class="avatar image"><img src="https://freeiconshop.com/wp-content/uploads/edd/person-flat.png" alt="person-flat"></div>
                         <div class="texte-commentaire">
                             <p>
                                 Merci pour ce site intéressant !!</p>
@@ -706,14 +707,14 @@
                         </div>
                     </div>
                     <div class="commentaire">
-                        <div class="avatar image"><img src="https://freeiconshop.com/wp-content/uploads/edd/person-flat.png"></div>
+                        <div class="avatar image"><img src="https://freeiconshop.com/wp-content/uploads/edd/person-flat.png" alt="person-flat"></div>
                         <div class="texte-commentaire">
                             <p>Site simple et facile à comprendre pour une personne qui n'utilise pas souvent internet merci !!</p>
                             <small>Paul • il y a 3 mois</small>
                         </div>
                     </div>
                     <div class="commentaire">
-                        <div class="avatar image"><img src="https://freeiconshop.com/wp-content/uploads/edd/person-flat.png"></div>
+                        <div class="avatar image"><img src="https://freeiconshop.com/wp-content/uploads/edd/person-flat.png" alt="person-flat"></div>
                         <div class="texte-commentaire">
                             <p>
                                 Le meilleur site sur l'alsace !!!!!</p>
@@ -721,14 +722,14 @@
                         </div>
                     </div>
                     <div class="commentaire">
-                        <div class="avatar image"><img src="https://freeiconshop.com/wp-content/uploads/edd/person-flat.png"></div>
+                        <div class="avatar image"><img src="https://freeiconshop.com/wp-content/uploads/edd/person-flat.png" alt="person-flat"></div>
                         <div class="texte-commentaire">
                             <p>SUPER !!!!!!!!!!!!</p>
                             <small>Paul • il y a 3 mois</small>
                         </div>
                     </div>
                     <div class="commentaire">
-                        <div class="avatar image"><img src="https://freeiconshop.com/wp-content/uploads/edd/person-flat.png"></div>
+                        <div class="avatar image"><img src="https://freeiconshop.com/wp-content/uploads/edd/person-flat.png" alt="person-flat"></div>
                         <div class="texte-commentaire">
                             <p>
 Très bon site !heart #Alsace4Ever</p>
@@ -752,7 +753,7 @@ Très bon site !heart #Alsace4Ever</p>
            <img src="../img/logo_google+.png" alt="logo_google" >
        </a>
     </footer>
-    <script type="text/javascript" src="../js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
