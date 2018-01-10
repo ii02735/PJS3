@@ -184,6 +184,16 @@ article {
     width: 180px;
 }
 
+
+@media only screen and (max-width:310px)
+{
+    ul#Menu
+    {
+        width:80%;
+    }
+ 
+}
+
 #Menu li:hover .sub {
     display: block;
     margin: auto;
