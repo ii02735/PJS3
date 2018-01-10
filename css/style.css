@@ -1502,11 +1502,16 @@ footer {
     }
 
     #control {
-        position: relative;
+        position: absolute;
         background: #164270;
-        width: 75px;
+        width: 76px;
+        height:75px;
         padding: 2px 0px;
 		display:block;
+        bottom:0;
+        top:300px;
+        left:75vw;
+      
     }
 
     #control span {
