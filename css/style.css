@@ -570,6 +570,33 @@ section#tabsAndSlides {
     width: 100%;
 }
 
+.titre-carte {
+  line-height: 0;
+  text-align: center;
+}
+.titre-carte span {
+  display: inline-block;
+  position: relative;  
+}
+.titre-carte span:before,
+.titre-carte span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  top: 0;
+  width: 70%;
+}
+.titre-carte span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.titre-carte span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
 #retour {
     display: block;
     clear: both;
