@@ -1,74 +1,258 @@
 <!doctype html>
-<html>
+<html lang="fr">
 
 <head>
     <title>Hébergements</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
     <!--Menu-->
     <header>
         <div class="logo">
-            <img src="../img/logo.png" alt="logo">
+            <img id="logo-img" src="../../img/logo.png" alt="logo">
             <h1>Bienvenue en Alsace !</h1>
         </div>
         <nav>
+      <input type="checkbox" name="enableMenu" id="enableMenu">
+      <label for="enableMenu" id="showMenu">
+      <div id="control">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div></label>
+      <div style="clear:both"></div>
             <ul id="Menu">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="transports.html">Transports</a></li>
-                <li><a href="activités.html">Activités</a></li>
-                <li><a href="">Plus</a>
-                    <ul><a href="gastronomie.html">Gastronomie</a></ul>
-                    <ul><a href="hebergement.html">Hébergement</a></ul>
-                    <ul><a href="galerie.html">Galerie</a></ul>
-                    <ul><a href="contact.html">Nous Contacter</a></ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../transports/transports.html">Transports</a>
+                    <ul class="sub">
+                        <li><a href="../transports/transports.html">Se rendre en Alsace</a></li>
+                        <li><a href="../transports/se-deplacer-en-alsace.html">Se déplacer en Alsace</a></li>
+                    </ul>
                 </li>
+                <li><a href="../activites/activites.html">Activités</a>
+                    <ul class="sub">
+                        <li><a href="../activites/visites-historiques.html">Visites historiques</a></li>
+                        <li><a href="../activites/sport.html">Sport</a></li>
+                        <li><a href="../activites/villes-touristiques.html">Villes touristiques</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Plus</a>
+                    <ul class="sub">
+                        <li><a href="gastronomie.html">Gastronomie</a></li>
+                        <li><a href="hebergements.html">Hébergement</a></li>
+                        <li><a href="galerie.html">Galerie</a></li>
+                        <li><a href="contact.html">Nous contacter</a></li>
+                    </ul>
+                </li>
+      <li id="mediaquery"><label for="enableMenu">Fermer</label></li>
             </ul>
         </nav>
     </header>
 
-    <div class="grand-conteneur">
+    <main>
         <h2> Hébergements </h2>
-        <div class="petit-conteneur">
-            <div class="bande-rouge">
-            </div>
-            <div class="contenu">
-                <h2>Idées d'hébergement</h2>
-                <div class="div-3">
-                    <img src="" alt="img-hotel">
-                    <a href="">Hôtels</a>
-                </div>
-                <div class="div-3">
-                    <img src="" alt="campings">
-                    <a href="">Campings</a>
-                </div>
-                <div class="div-3">
-                    <img src="" alt="ferme-auberge">
-                    <a href="">Fermes-Auberges</a>
-                </div>
+        <section>
 
+            <h2>Idées d'hébergement</h2>
+            <div class="contenu-3">
+                <div class="div-3">
+                    <img src="../../img/hebergement/hôtel.jpg " alt="img-hotel ">
+                    <a class="bouton" href="#hôtels">Hôtels</a>
+                </div>
+                <div class="div-3 ">
+                    <img src="../../img/hebergement/camping.jpg " alt="campings ">
+                    <a class="bouton" href="#campings">Campings</a>
+                </div>
+                <div class="div-3 ">
+                    <img src="../../img/hebergement/ferme-auberge.jpg " alt="ferme-auberge ">
+                    <a class="bouton" href="#ferme-auberge">Fermes-Auberges</a>
+                </div>
             </div>
-        </div>
-        <div class="petit-conteneur">
-            <div class="bande-rouge">
-            </div>
-            <div class="contenu">
+        </section>
+        <section id="hôtels">
+            <article class="article-6">
+                <h2>Hôtels</h2>
+                <div class="contenu-bloc">
 
-            </div>
-        </div>
-        <div class="petit-conteneur">
-            <div class="bande-rouge">
-            </div>
-            <div class="contenu">
+                    <div class="bloc">
+                        <h3>Beauséjour</h3>
+                        <p>Beauséjour Hôtel &amp; Restaurant
+                            <br> 25 rue du ladhof
+                            <br> 68000 Colmar  FRANCE
+                            <br>Tél : +33 (0)3 89 20 66 66
+                            <br>Fax : +33 (0)3 89 20 66 00
+                            <br>Mail : info@beausejour.fr</p>
+                    </div>
 
-            </div>
-        </div>
-    </div>
+                    <div class="bloc">
+                        <h3>Hôtel Régent Petite France </h3>
+                        <p>Hôtel SPA
+                            <br> 5 rue des Moulins
+                            <br> 67000 Strasbourg
+                            <br>Tél : 03 88 76 43 43
+                            <br>Fax : 03 88 76 43 76
+                        </p>
+                    </div>
+
+                    <div class="bloc">
+                        <h3>Hôtel du Parc</h3>
+                        <p>26 rue de la Sinnebr
+                            <br> 68100 Mulhouse
+                            <br> Tél : 03 89 66 12 22
+                            <br> Fax : 03 89 66 42 44
+                            <br>
+                        </p>
+                    </div>
+
+                    <div class="bloc">
+                        <h3>Novotel Mulhouse Sausheim</h3>
+                        <p>Rue des Cévennes
+                            <br> 68390 Sausheim
+                            <br> Tél : 03 89 61 84 84
+                            <br> Fax : 03 89 61 77 99
+                        </p>
+                    </div>
+
+                    <div class="bloc">
+                        <h3>Hôtel Sofitel Strasbourg Grande Île</h3>
+                        <p>4 place St.Pierre-le-Jeune
+                            <br> 67000 Strasbourg
+                            <br> Tél : 03 88 15 49 00
+                            <br> Fax : 03 88 15 49 99
+                        </p>
+                    </div>
+
+                    <div class="bloc">
+                        <h3>Best Western Hôtel de la Bourse</h3>
+                        <p>14 rue de la Bourse
+                            <br>68100 Mulhouse
+                            <br> Tél : 03 89 56 18 44
+                            <br>Fax : 03 89 56 60 51
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section id="campings">
+            <article class="article-3">
+                <h2>Campings</h2>
+                <div class="contenu-bloc">
+
+                    <div class="bloc">
+                        <h3>Camping Les Bouleaux</h3>
+                        <p>
+                            8 rue des Bouleaux
+                            <br>68470 Ranspach
+                            <br>Tél : 03 89 82 64 70
+                        </p>
+                    </div>
+
+                    <div class="bloc">
+                        <h3>Camping Municipal</h3>
+                        <p>
+                            6 rue des Sapins
+                            <br>Centre de Loisirs
+                            <br> 67310 Wasselonne
+                        </p>
+                    </div>
+
+                    <div class="bloc">
+                        <h3>Camping Campéole Le Giessen</h3>
+                        <p>
+                            Route principale
+                            <br> Zone de loisirs
+                            <br> 67220 Bassemberg
+                            <br> Tél : 03 88 58 98 14
+                        </p>
+                    </div>
+
+                    <div class="bloc">
+                        <h3>Camping Le Vallon de l'Ehn</h3>
+                        <p>
+                            1 rue de Berlin
+                            <br> 67210 Obernai
+                            <br> Tél : 03 88 95 38 48
+                            <br> Fax : 03 88 48 31 47
+                        </p>
+                    </div>
+
+
+
+                </div>
+            </article>
+        </section>
+        <section id="ferme-auberge">
+            <article class="article-3">
+                <h2>Fermes-Auberges</h2>
+                <div class="contenu-bloc">
+
+                    <div class="bloc">
+                        <h3>Ferme-Auberge du Felsach</h3>
+                        <p>
+                            68470 Fellering
+                            <br> Tél : 03 89 82 77 71
+                            <br> Fax : 03 89 82 78 38
+                        </p>
+                    </div>
+
+                    <div class="bloc">
+                        <h3>Gîte à la ferme - Wilt Michèle</h3>
+                        <p>
+                            chemin de la Blieth
+                            <br> Ferme de la Blieth
+                            <br> 67120 Altorf
+                            <br> Tél : 03 88 38 33 28
+                        </p>
+                    </div>
+
+                    <div class="bloc">
+                        <h3>Ferme-Auberge du Thannerhubel</h3>
+                        <p>
+                            Thannerhubel
+                            <br> 68620 Bitschwiller-lès-Thann
+                            <br> Tél : 03 89 38 11 93
+                            <br> Fax : 03 89 37 80 79
+
+                        </p>
+                    </div>
+
+                    <div class="bloc">
+                        <h3>Ferme-Auberge du Kahlenwasen</h3>
+                        <p>
+                            Petit-Ballon
+                            <br> 68140 Luttenbach près Munster
+                            <br> Tél : 03 89 77 32 49
+                        </p>
+                    </div>
+
+
+
+                </div>
+            </article>
+        </section>
+    </main>
 
 
     <footer>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Falsace.region&display=popup&ref=plugin&src=like&kid_directed_site=0">
+           <img src="../../img/logo_facebook.png" alt="logo_facebook" >
+       </a>
+
+        <a href="https://twitter.com/alsace">
+           <img src="../../img/logo_twitter.png" alt="logo_twitter" >
+       </a>
+
+        <a href="">
+           <img src="../../img/logo_google+.png" alt="logo_google" >
+       </a>
+
+
+
+
 
     </footer>
 

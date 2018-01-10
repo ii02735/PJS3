@@ -1,181 +1,105 @@
-body{
-	position:relative;
-	background-color:#EDEDFF;
-	padding:0;
-	margin:0;
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700,700i');
+
+
+/**** UTILITAIRES ****/
+
+body {
+    background-color: #002E5D;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: "EB Garamond", serif;
+    font-size: 19px;
+    text-align: justify;
 }
 
-/*On redimensionne toutes les images à la dimension du bloc de la balise img*/
-/*Pour plus d'infos se rendre sur https://www.w3schools.com/howto/howto_js_slideshow.asp*/
-img.resize{
-
-	max-width:100%;
-	max-height:100%;
-
+body#accueil {
+    background-color: #FFFFFF;
 }
 
-/*On cache toutes nos slides afin qu'elles ne s'affichent pas les unes après les autres. 
-Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
-.slides{
-	position:relative;
-	display:none;
+a {
+    text-decoration: none;
 }
 
-#tabsAndSlides
-{
-	display: flex;
-	background-color: white;
-	justify-content: center;
-
+h2 {
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
 }
 
-#texteDyn
-{
-	position: absolute;
-	bottom:25%;
-	left:25%;
-	right: 25%;
-	font-size: 320%;
-	text-transform: uppercase;
-	letter-spacing: 10px;
-	text-align: center;
+main {
+    margin: auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
 }
 
-#moreInfo
-{
-	position:absolute;
-	bottom:18%;
-	left:25%;
-	right: 25%;
-	text-align: center;
 
+main > h2 {
+    color: white;
+    text-align: center;
+    background-color: #D12727;
+    width: 460px;
+    align-self: center;
+    padding: 1rem 0 1rem 0;
 }
 
-#moreInfo button
-{
-	cursor: pointer;
-	font-family: 'EB Garamond', serif;
-	border: none;
-	color:white;
-	font-size: 150%;
-	padding:4px 10px;
-	background-color: rgba(209, 39, 42, 1);
-	box-shadow: 0px 5px 10px 0px black;
-	-moz-transition:background-color 0.5s;
-	-webkit-transition:background-color 0.5s;
+
+section {
+    border-top: 3rem solid #D12727;
+    background-color: white;
+    margin-bottom: 5rem;
 }
 
-#moreInfo button:hover
-{
-	background-color:rgba(0, 46, 93, 1);
+
+article {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    margin: 2rem auto 3rem auto;
 }
 
-#navSlides{
-
-	position:relative;/*positionnement relatif à son parent --> slider-container*/
-	/*De plus avec relative l'élément est enfermé dans son parent*/
-	/*En absolute, l'élément n'est plus enfermé dans son parent et peut se positionner
-	n'importe où*/
-	text-align: center;
-	bottom:5%;
-	-webkit-user-select: none;  
-  	-moz-user-select: none;    
-  	-ms-user-select: none;      
-  	user-select: none;
+.bouton {
+    display: block;
+    width: 9rem;
+    padding: 0.5rem 0 0.5rem 0;
+    text-align: center;
+    background-color: rgb(0, 46, 93);
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    margin: 4rem auto;
+    -moz-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
 }
 
-#titre_slide
-{
-	font-family: 'EB Garamond', serif;
-	position:relative;
-	display: flex;
-	justify-content: center;
-	top:70%;
-	text-transform: uppercase;
-	font-weight: bolder;
-	font-size:320%;
+.bouton:hover {
+    background-color: #D12727;
 
 }
 
 
-.point{
-
-	cursor: pointer;
-	height: 6px;
-	width: 6px;
-	margin: 0 3px;
-	background-color:rgb(175, 203, 224);
-	border-radius: 50%;
-	display: inline-block;
+.image {
+    position: relative;
+    overflow: hidden;
 }
 
-.active, .point:hover{ /*class rajoutés depuis le D.O.M du JS*/
-	background-color:#717171;
+.image img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
-.arrow
-{
-
-	background-color: rgba(255,255,255,0.1);
-	padding:12px 28px;
-	color:rgba(175, 203, 224, 1);
-	position:absolute;
-	font-weight:lighter;
-	top:50%;
-	font-size: 400%;
-	-webkit-user-select: none;  
-  	-moz-user-select: none;    
-  	-ms-user-select: none;      
-  	user-select: none;
-
-  	-webkit-transition: background-color 0.5s;  
-  	-moz-transition: background-color 0.5s;     
-  	-ms-transition: background-color 0.5s; 
- }
-
-.arrow:hover
-{
-	cursor:pointer;
-	background-color: rgba(255,255,255,0.3);
-}
-
-.arrow:nth-child(5)/*Il s'agit du second enfant du parent tabsAndSlides*/
-{
-
-	position:absolute;
-	left:10%;
-	
-}
-
-.arrow:nth-child(6)/*Il s'agit du troisième enfant du parent tabsAndSlides*/
-{
-	position:absolute;
-	right:10%;
-	
-}
-#presentation
-{
-	margin:2% 0;
-	background-color: rgb(43, 108, 163);
-}
-
-#Menu
-{
-	display:flex;
-	justify-content:space-around;
-	margin:auto;
-	width:50%;
-	background-color:rgb(218,237,255);
-}
-
-#Menu div
-{
-	display:inline;
-	text-align:center;
-}
 
 /***** LOGO ****/
-.logo{
+
+.logo {
     display: flex;
     margin: auto;
     justify-content: center;
@@ -184,41 +108,1674 @@ Le JS aura justement pour rôle de sélectionner UNE SEULE à afficher*/
     width: 50%;
 }
 
-#logo-img{
+#logo-img {
     height: 120px;
     width: 150px;
+    align-self: center;
 
 }
 
-.logo h1{
+.logo h1 {
     align-self: center;
     color: #D12727;
+    text-align: center;
+    font-size: 4rem;
+    margin-left: 0.5em;
+}
+
+
+/************* MENU **************/
+
+#Menu {
+
+
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 50%;
+    list-style-type: none;
+    list-style-position: inside;
+    background-color: rgb(218, 237, 255);
+    border: 3px solid rgb(175, 203, 224);
+}
+
+#Menu li {
+    position: relative;
+}
+
+#Menu li a {
+    color: rgb(76, 128, 167);
+    text-decoration: none;
+}
+
+#Menu li a:hover {
+    color: rgb(29, 154, 232);
+}
+
+#Menu div {
+    display: inline;
+    text-align: center;
+}
+
+.sub {
+    visibility: hidden;
+    position: absolute;
+    display: inline;
+    background-color: rgb(218, 237, 255);
+    list-style-type: none;
+    text-align: center;
+    padding: 0 10px;
+    z-index: 1;
+    cursor: pointer;
+    width: 180px;
+}
+
+#Menu li:hover .sub {
+    display: block;
+    margin: auto;
+    left: 50%;
+    margin-left: -100px;
+    visibility: visible;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+#control label {
+    padding: 2.5vh 2px;
+    background: #164270;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+#showMenu {
+    margin-right: 30px;
+    float: right;
+}
+
+#enableMenu {
+    display: none;
+}
+
+#mediaquery,
+#mediaquery > label {
+    margin: 0;
+    display: none;
+    cursor: pointer;
 }
 
 
 
-
-/**** Contenu ****/
-.grand-conteneur{
-    max-width:1144px;
-    
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-.petit-conteneur{
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/***** CAROUSSEL ****/
+
+#tabsAndSlides {
+    border-width: 3rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.leftarrow,
+.rightarrow {
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+    height: 9vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    font-size: 6vw;
+    top: 24vw;
+    z-index: 1;
+    color: rgb(218, 237, 255);
+    transition: background 2s;
+}
+
+.arrow:hover {
+    background: rgba(218, 237, 255, 0.25);
+}
+
+.rightarrow {
+    right: 2vw;
+}
+
+.leftarrow {
+    left: 2vw;
+}
+
+#button1,
+#button2,
+#button3,
+#button4 {
+    visibility: hidden;
+    position: absolute;
+}
+
+#button1 {
+    left: 10%;
+}
+
+#button2 {
+    left: 20%;
+}
+
+#button3 {
+    left: 30%;
+}
+
+#button4 {
+    left: 40%;
+}
+
+#l3,
+#l4,
+#l5,
+#l6,
+#l7,
+#l8 {
+    visibility: hidden;
+}
+
+
+#button4:checked ~ #l1,
+#button4:checked ~ #l2,
+#button4:checked ~ #l5,
+#button4:checked ~ #l6,
+#button4:checked ~ #l7,
+#button4:checked ~ #l8 {
+    visibility: hidden;
+}
+
+#button4:checked ~ #l7,
+#button4:checked ~ #l8 {
+    visibility: visible;
+}
+
+#button2:checked ~ #l1,
+#button2:checked ~ #l2,
+#button2:checked ~ #l5,
+#button2:checked ~ #l6,
+#button2:checked ~ #l7,
+#button2:checked ~ #l8 {
+    visibility: hidden;
+}
+
+#button2:checked ~ #l3,
+#button2:checked ~ #l4 {
+    visibility: visible;
+}
+
+#button3:checked ~ #l1,
+#button3:checked ~ #l2,
+#button3:checked ~ #l3,
+#button3:checked ~ #l4,
+#button3:checked ~ #l7,
+#button3:checked ~ #l8 {
+    visibility: hidden;
+}
+
+#button3:checked ~ #l5,
+#button3:checked ~ #l6 {
+    visibility: visible;
+}
+
+#button4:checked ~ #container div:nth-child(1),
+#button4:checked ~ #container div:nth-child(2),
+#button4:checked ~ #container div:nth-child(3) {
+    display: none;
+}
+
+#button4:checked ~ #container div:nth-child(4) {
+    display: flex;
+}
+
+
+#button1:checked ~ #container div:nth-child(2),
+#button1:checked ~ #container div:nth-child(3),
+#button1:checked ~ #container div:nth-child(4) {
+    display: none;
+}
+
+#button1:checked ~ #container div:nth-child(1) {
+    display: flex;
+}
+
+
+#button2:checked ~ #container div:nth-child(1),
+#button2:checked ~ #container div:nth-child(3),
+#button2:checked ~ #container div:nth-child(4) {
+    display: none;
+}
+
+#button2:checked ~ #container div:nth-child(2) {
+    display: flex;
+}
+
+#button3:checked ~ #container div:nth-child(1),
+#button3:checked ~ #container div:nth-child(2),
+#button3:checked ~ #container div:nth-child(4) {
+    display: none;
+}
+
+#button3:checked ~ #container div:nth-child(3) {
+    display: flex;
+}
+
+#button4:checked ~ #container div:nth-child(1),
+#button4:checked ~ #container div:nth-child(2),
+#button4:checked ~ #container div:nth-child(3) {
+    display: none;
+}
+
+#button3:checked ~ #container div:nth-child(4) {
+    display: flex;
+}
+
+#container {
+    width: 100%;
+    height: 51vw;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 100% 100% 100% 100% 100%;
+}
+
+#container > div {
+    width: 100%;
+    height: 100%;
+    font-size: 2.5vw;
+}
+
+#container > div:nth-child(1) {
+    background: url(../img/accueil/restaurants.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#container > div:nth-child(2) {
+    background: url(../img/accueil/transports.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#container > div:nth-child(3) {
+    background: url(../img/accueil/hebergement.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#container > div:nth-child(4) {
+    background: url(../img/accueil/specialite.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#container > div {
+    position: relative;
+}
+
+#container > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container > div > * {
+    position: relative;
+    top: 11vw;
+    margin: 2%;
+    color: white;
+}
+
+#container p {
+    background: rgba(209, 39, 42, 1);
+    text-align: center;
+    padding: 0.25vw 1vw;
+    color: white;
+    width: 19vw;
+}
+
+#container p:hover {
+    cursor: pointer;
+    background: darkblue;
+}
+
+#container > div:first-child > h2 {
+    color: black;
+}
+
+#container > div:first-child > p,
+#container > div:first-child > h2 {
+    position: relative;
+    top: 13vw;
+}
+
+#container a {
+    text-decoration: none;
+    color: white;
+    padding: 0 6px;
+}
+
+.titleSlide {
+    font-weight: bolder;
+    font-size: 4vw;
+}
+
+
+
+/***** ACCUEIL ***/
+
+#menuDeplacement {
+    position: relative;
+    margin-top: 25px;
+    height: 100%;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+#tabsAndSlides,
+#presentation,
+#carte,
+#accueil section:last-child {
+    border: 0;
+    margin-bottom: 1rem;
+}
+
+
+section#tabsAndSlides {
+    margin-top: 3rem;
+}
+
+#alsace-1 {
+    font-size: 10rem;
+    float: left;
+    line-height: 0.6;
+    margin-right: 0.1em;
+    font-weight: 700;
+    display: block;
+}
+
+#presentation {
+    font-size: 1.4rem;
+}
+
+#presentation-corps {
+    padding: 1rem 0;
+}
+
+#presentation-accroche {
+    font-size: 1.6rem;
+}
+
+.carte {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    height: 780;
+    width: 100%;
+}
+
+#retour {
+    display: block;
+    clear: both;
+    cursor: pointer;
+
+    color: red;
+    opacity: 0;
+}
+
+#retour:before {
+    content: "◄ "
+}
+
+
+.carteFrance {
+    display: block;
+}
+
+rect {
+    fill: #FFFFFF;
+    stroke: #002E5D;
+    stroke-width: 1;
+}
+
+.carteGrandEst {
+    display: none;
+    width: 100%;
+    height: 700px;
+}
+
+#fleche path {
+    fill: #FFFFFF;
+    stroke: #000;
+    stroke-width: 0.1px;
+}
+
+#svg2 {
+    overflow: visible;
+}
+
+.grand-est,
+#d05 path,
+#d07 path {
+    fill: #D12727;
+}
+
+.st0 {
+    fill: #FFFFFF;
+    stroke: #002E5D;
+    stroke-width: 1.5;
+}
+
+.grand-est-group:hover .grand-est,
+.departement-group:hover path,
+#d07:hover path,
+#d05:hover path {
+    fill: #002E5D;
+    cursor: pointer;
+}
+
+.grand-est,
+.departement-group path {
+    -webkit-transition: all 500ms ease;
+}
+
+
+.tooltip {
+    opacity: 0;
+    -webkit-transition: all 200ms ease;
+}
+
+.grand-est-group:hover .tooltip,
+.departement-group:hover .tooltip {
+    opacity: 1;
+}
+
+
+.tooltip text {
+    font-family: "EB Garamond", serif;
+    font-size: 0.8em;
+}
+
+.grand-est-group .tooltip text {
+    font-family: "EB Garamond", serif;
+    font-size: 1.1em;
+}
+
+#accueil section:last-child article {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.entete {
+    text-align: center;
+    padding: 0.5em;
+    border: 1px solid;
+    background-color: #D12727;
+    color: white;
+    margin: 0;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 0.2em;
+    flex-grow: 1;
+}
+
+#calendar .day {
+    background-color: inherit;
+    border: inherit;
+}
+
+#calendar .next-month {
+    background-color: inherit;
+}
+
+#calendar .day {
+    font-weight: 700;
+}
+
+
+#calendar div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+    background-color: #eaeaea;
+    border: 1px solid #eaeaea;
+    height: 11vw;
+    max-height: 40px;
+}
+
+#calendar h3 {
+    grid-column: 1/8;
+}
+
+
+#livre-d-or button {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    background-color: #002E5D;
+    color: white;
+    font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+    font-family: "EB Garamond", serif;
+    border: 0;
+    transition: all 0.5s ease;
+}
+
+#livre-d-or button:hover {
+    opacity: 0.7;
+}
+
+#livre-d-or textarea{
+    margin-top: 1em;
+}
+.commentaire {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.commentaire * {
+    margin: 0;
+}
+
+.commentaire .texte-commentaire {
+    padding-left: 1em;
+   width:80%;
+}
+
+.commentaire small {
+    color: #a7a7a7a7;
+}
+
+.avatar {
+    height: 50px;
+    width: 50px;
+    width:20%;
+}
+
+/********* TRANSPORTS *********/
+
+#airports_choice {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1%;
+}
+
+#airports_choice div {
+    /*répartition égale sur le parent*/
+    border: 2px solid rgba(48, 120, 190, 1);
+    padding: 1rem;
+
+}
+
+#airports_choice div h3 {
+    text-align: center;
+}
+
+#airports_choice div p {
+    font-size: 85%;
+    text-align: left;
+}
+
+#airports_choice div a {
+    text-decoration: none;
+    color: #002E5D;
+}
+
+#mapBus {
+    text-decoration: none;
+    color: #002E50;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#SoleaMark {
+    align-self: end;
+}
+
+/***TRANSPORT***/
+
+#menuDeplacement {
+    margin-top: 25px;
+    overflow: hidden;
+    background-image: url('../img/transports/menu_dep_alsace.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#menuDeplacement h2 {
+    color: white;
+    text-align: center;
+    background-color: #D12727;
+    width: 460px;
+    margin: 4rem auto;
+    padding: 1rem 0 1rem 0;
+}
+
+#transportationButtons {
+    display: flex;
+    margin: 0 8.5%;
+    justify-content: space-between;
+    margin-top: 7rem;
+    z-index: 1;
+    position: relative;
+    margin-bottom: 25vw;
+}
+
+.transportationChoice {
+    background-color: #D12727;
+    font-size: 120%;
+    padding: 0.9rem 3rem;
+    border-radius: 0;
+    margin: 0;
+    position: relative;
+
+}
+
+.transportationChoice.bouton:hover {
+    background-color: rgb(0, 46, 93);
+}
+
+.transportationChoice:before,
+.transportationChoice:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 13px;
+    left: 10px;
+    width: 50%;
+    top: 10%;
+    max-width: 300px;
+    background: #777;
+    -webkit-box-shadow: 0 15px 6px #000;
+    -moz-box-shadow: 0 15px 6px #000;
+    box-shadow: 0 15px 6px #000;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+.transportationChoice:after {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+}
+
+/****** GASTRONOMIE *******/
+
+.gastronomie-img img {
+    width: 100%
+}
+
+.chefs {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.chef {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.chef p {
+    width: auto;
+    height: 19rem;
+    flex: 1;
+    padding: 0 1rem 0 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+
+.chef p:nth-child(2n) {
+    padding-top: 1rem;
+}
+
+
+.chef p:nth-child(2n + 1) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+.chef p span {
+    align-self: flex-end;
+}
+
+.chef-img {
+    height: 20rem;
+}
+
+/****HEBERGEMENTS****/
+
+.contenu-3 {
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.div-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-3 img {
+    height: 170px;
+    width: 235px;
+}
+
+.bloc {
+    border: 2px solid #002E5D;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 200px;
+    align-content: center;
+}
+
+.contenu-bloc {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.bloc p {
+    font-size: 15px;
+
+}
+
+.article-3 {
+    padding-right: 200px;
+    padding-left: 200px;
+    height: 600px;
+}
+
+.article-6 {
+    height: 600px;
+}
+
+/****CONTACT*****/
+
+input[type=submit] {
+    background-color: #5c697b;
+    color: #DAEDFF;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    font-size: 16px;
+    max-width: 35%;
+    margin: 0;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #3078be;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    resize: vertical;
+}
+
+.fieldsetContact {
+    border: none;
+    border-top: 4px solid #afcbe0;
+    text-align: center;
+
+}
+
+.contacth2 {
+    border: 4px solid #afcbe0;
+    color: #5c697b;
+    font-weight: bold;
+    font-family: 'EB Garamond', serif;
+    font-size: 40px;
+    padding: 25px;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+
+.sous-contact {
+    margin-top: -10px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-right: 50px;
+
+}
+
+.contact {
+    background-color: #DAEDFF;
+    margin: 3rem 0;
+    font-family: 'EB Garamond', serif;
+
+
+}
+
+.sous-contact2 {
+    border: 2px solid #3078be;
+}
+
+.sous-contact3 {
+    margin: 50px;
+}
+
+
+/**** GALERIE ****/
+
+#galerie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+
+}
+
+.post {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.15em;
+}
+
+.post-img {
+    padding-top: 100%;
+
+}
+
+
+.w-100 {
+    width: 100%;
+}
+
+
+.post-desc {
     background-color: white;
-    margin-bottom: 5rem;
+    flex: 1;
+}
+
+.post-desc {
+    padding: 1em;
+}
+
+.post-desc p {
+    margin: 0;
+}
+
+.post-desc small {
+    display: block;
+    color: gray;
+}
+
+#montOdile {
+    width: 70%;
+}
+
+#carte_aeroports {
+    width: 50%;
+}
+
+.multipleContents {
+    display: flex;
+
+}
+
+.multipleContents div:nth-of-type(2) a {
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 250px;
+    margin-top: 125px;
+    background-color: rgba(0, 46, 93, 1);
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-family: "Arial", serif;
+}
+
+/*TABLEAUX*/
+
+table {
+    font-family: "Arial", serif;
+    width: 70%;
+    margin: auto;
+    border-spacing: 0px;
+    color: #002E5D;
+}
+
+td,
+th {
+    border: 1px solid black;
+}
+
+th {
+    vertical-align: top;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    padding: 10px 0;
+}
+
+tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+
+/****ACTIVITES****/
+
+/* PAGE ACTIVITES */
+
+.grid-activités {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 1%;
+}
+
+.grid-activités h2 {
+    grid-row: 1;
+}
+
+.grid-activités p {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-activités p span {
+    display: block;
+}
+
+.plus-info {
+    align-self: stretch;
+    font-weight: 700;
+}
+
+.grid-activités img {
+    grid-row: 3;
+}
+
+.grid-activités img {
+    width: 100%;
+    height: 200px;
+}
+
+.lien-activites {
+    display: block;
+}
+
+
+#texte_acti img {
+    width: 100%;
 }
 
 
 
-
-/*TEST DU MEDIAQUERY*/
-
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
 }
-/*
-rgb(218,237,255) couleur boîte menu
-rgb(76,128,167) couleur texte menu
-rgb(29,154,232) couleur texte menu hover	
-*/
+
+#texte_acti img {
+    width: 100%;
+}
+
+.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.imgVH {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+
+/*   Page Villes T   */
+
+.grid-villesT {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-column-gap: 2%;
+    grid-template-rows: auto;
+}
+
+.img_villesT {
+    min-height: 35rem;
+}
+
+#Strasbourg .bouton,
+#Mulhouse .bouton,
+#Colmar .bouton {
+    width: 250px;
+}
+
+/* FOOTER */
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
+
+footer {
+    position: relative;
+    float: right;
+    max-width: inherit;
+    padding-right: 7%;
+    padding-bottom: 3%;
+}
+
+/* --------------------Très petit écran-------------------- */
+
+@media only screen and (min-width: 280px) and (max-width: 415px) {
+
+    #Menu {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        list-style-type: none;
+        list-style-position: inside;
+        background-color: rgb(218, 237, 255);
+        border: 3px solid rgb(175, 203, 224);
+    }
+
+
+    /* PAGE ACTIVITES */
+    .grid-activités,
+    #texte-acti {
+        max-width: 280px;
+    }
+
+}
+
+@media only screen and (max-width:500px) {
+    #Menu {
+        text-align: center;
+        display: block;
+    }
+
+    .sub {
+        display: none;
+        position: relative;
+        margin: 0;
+        background-color: aliceblue;
+        font-size: 90%;
+    }
+
+    #Menu li .sub {
+        -webkit-transition: display 10s;
+    }
+
+    #Menu li:hover .sub {
+        display: block;
+    }
+
+
+    #tabsAndSlides {
+        border-width: 0;
+    }
+    #tabsAndSlides p,
+    h2 {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (min-width:300px) and (max-width:500px) {
+    #container p,
+    h2.titleSlide {
+        font-size: 24px;
+        width: 150px;
+    }
+}
+
+/* --------------------Petit écran-------------------- */
+
+@media only screen and (max-width: 576px) {
+
+    main {
+        width: auto;
+        margin: auto;
+    }
+
+    .gastronomie-img {
+        min-height: 25rem;
+        max-height: 25rem;
+    }
+
+
+    #Menu {
+        width: 70%;
+    }
+
+    article,
+    header,
+    #galerie {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #galerie {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .post {
+        width: 100%;
+    }
+
+    .chefs {
+        flex-wrap: wrap;
+    }
+
+    .chef {
+        flex: none;
+        width: 50%;
+    }
+
+
+
+    /*    Page Hébergement    */
+    .article-6 {
+        height: inherit;
+        padding-right: 50px;
+        padding left: 50px;
+
+    }
+
+    .article-3 {
+        height: inherit;
+        padding: 0;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+
+    .images {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .images > img {
+        min-width: 10rem;
+        max-width: 20rem;
+        min-height: 8rem;
+        max-height: 20rem;
+    }
+
+    #airports_choice {
+        grid-template-columns: 1fr;
+        grid-column-gap: 10px;
+    }
+
+    #menuDeplacement h2 {
+        width: 90%;
+    }
+
+    /*SPORT*/
+    .displayed {
+        width: 80%;
+    }
+
+    /*VISITE HISTORIQUE*/
+    .imgVH {
+        width: 250px;
+    }
+
+}
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+    #presentation-accroche {
+        font-size: 130%;
+    }
+    #presentation-corps {
+        font-size: 70%;
+    }
+}
+
+@media only screen and (min-width:380px) {
+    .imgVH {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width:300px) {
+    #container p,
+    h2.titleSlide {
+        width: 150px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+
+    #mediaquery,
+    #mediaquery > label {
+        display: block;
+    }
+    #mediaquery:hover {
+        color: crimson;
+    }
+
+    #control {
+        position: relative;
+        background: #164270;
+        width: 75px;
+        padding: 2px 0px;
+    }
+
+    #control span {
+        cursor: pointer;
+        display: block;
+        background: #5C87B5;
+        margin: 12px;
+        padding: 4px 0px;
+    }
+
+    #control:hover {
+        background: #ED6C6C;
+    }
+
+    #control:hover > span {
+        background: white;
+    }
+
+    #control:active {
+        background: #164270;
+    }
+
+    #control:active > span {
+        background: #5C87B5;
+    }
+
+    #enableMenu:not(:checked) ~ #Menu {
+        display: none;
+    }
+
+    #enableMenu:not(:checked) ~ #showMenu {
+        display: block;
+    }
+
+    #enableMenu:checked ~ #showMenu {
+        display: none;
+    }
+
+    #enableMenu:checked ~ #Menu {
+        display: block;
+    }
+
+    #Menu {
+        text-align: center;
+        display: block;
+    }
+    .sub {
+
+        position: relative;
+        margin: 0;
+        background-color: aliceblue;
+        font-size: 90%;
+    }
+
+
+    #Menu li:hover .sub {
+        display: block;
+    }
+
+
+    #tabsAndSlides {
+        border-width: 0;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+
+    main {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .gastronomie-img {
+        min-height: 30rem;
+        max-height: 30rem;
+    }
+    .images > img {
+        min-width: 25rem;
+        max-width: 20rem;
+        min-height: 12rem;
+        max-height: 20rem;
+    }
+
+    #buttonsTrans > a {
+        position: relative;
+    }
+    /*SPORT*/
+    .displayed {
+        width: 60%;
+    }
+
+    /*VISITE HISTORIQUE*/
+    .imgVH {
+        width: 600px;
+    }
+}
+
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+
+    .post {
+        width: 49.445%;
+    }
+
+    .chefs {
+        flex-wrap: wrap;
+    }
+
+    .chef {
+        flex: none;
+        width: 40%;
+    }
+
+    article {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    /*    Page Hébergement     */
+    .article-6 {
+        height: inherit;
+    }
+
+    .article-3 {
+        padding: 0;
+        height: inherit;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .images {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .images > img {
+        min-width: 8rem;
+        max-width: 20rem;
+        min-height: 8rem;
+        max-height: 20rem;
+    }
+
+
+    /*VISITE HISTORIQUE*/
+    .imgVH {
+        width: 450px;
+    }
+
+}
+
+/* --------------------Moyen écran-------------------- */
+
+@media only screen and (max-width: 768px) {
+    #transportationButtons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .transportationChoice:first-child {
+        margin-bottom: 3rem;
+    }
+    
+    #accueil section:last-child article{
+        display: block;
+    }
+    
+    #livre-d-or{
+        margin-top: 1em;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+
+    .chefs {
+        flex-wrap: wrap;
+    }
+
+    article {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    /*    Page Hébergement     */
+    .article-6 {
+        height: inherit;
+    }
+
+    .article-3 {
+        height: inherit;
+    }
+
+    .images > img {
+        min-width: 15rem;
+        max-width: 20rem;
+        min-height: 10rem;
+        max-height: 20rem;
+    }
+
+    #buttonsTrans > a {
+        position: relative;
+        right: 35%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    main {
+        max-width: 720px;
+        margin: auto;
+    }
+
+    .gastronomie-img {
+        min-height: 35rem;
+        max-height: 35rem;
+    }
+
+    /*    Page Hébergement     */
+    .article-6 {
+        height: inherit;
+    }
+
+    .article-3 {
+        height: inherit;
+    }
+    /* SPORT */
+    .displayed {
+        width: 50%;
+    }
+
+    /*VISITE HISTORIQUE*/
+    .imgVH {
+        width: 600px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    main {
+        max-width: 960px;
+        margin: auto;
+    }
+
+    .gastronomie-img {
+        min-height: 45rem;
+        max-height: 45rem;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .grid-activités h2 {
+        margin-bottom: 0;
+    }
+    .grid-activités h2,
+    .grid-activités p,
+    .grid-activités .lien-activites {
+        grid-column: 1/4;
+        grid-row: auto;
+    }
+
+    .grid-activités img {
+        height: 20em;
+    }
+
+    /*   Page Villes T   */
+    .desc-villesT {
+        grid-row: 1;
+        grid-column: 1/3;
+    }
+
+    .img_villesT {
+        grid-row: 2;
+        grid-column: 1/3;
+    }
+
+    #airports_choice {
+        grid-row-gap: 10px;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* --------------------Grand écran-------------------- */
+
+@media only screen and (min-width: 1200px) {
+
+    main {
+        max-width: 1140px;
+        margin: auto;
+    }
+
+    /*VISITE HISTORIQUE */
+    .imgVH {
+        width: 800px;
+    }
+
+}
