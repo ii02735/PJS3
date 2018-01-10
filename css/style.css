@@ -1479,6 +1479,7 @@ footer {
         background: #164270;
         width: 75px;
         padding: 2px 0px;
+		display:block;
     }
 
     #control span {
