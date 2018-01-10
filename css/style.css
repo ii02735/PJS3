@@ -1157,8 +1157,9 @@ textarea {
 }
 
 .multipleContents {
-    display: flex;
+    display: grid;
 
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .multipleContents div:nth-of-type(2) a {
@@ -1173,6 +1174,58 @@ textarea {
     padding: 10px 30px;
     border-radius: 20px;
     font-family: "Arial", serif;
+}
+
+@media only screen and (max-width:770px)
+{   
+    article.multipleContents
+    {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    article.multipleContents>div
+    {
+        align-self: center;
+        text-align: center;
+        justify-self: center;
+    }
+    
+    #buttonsTrans
+    {
+        display: grid;
+        grid-template-rows:1fr 1fr;
+    }
+    
+    #buttonsTrans > a
+    {
+        align-self: center;
+        justify-self: center;
+        position:relative;
+        right:28%;
+    }
+    
+}
+
+@media only screen and (max-width:395px)
+{
+    article.multipleContents
+    {
+        overflow: hidden;
+    }
+    article.multipleContents img
+    {
+        position:relative;
+        right:13%;
+        width:330px;
+    }
+    
+    article.multipleContents a
+    {
+        position:relative;
+        left:-160px;
+    }
+    
+    
 }
 
 /*TABLEAUX*/
