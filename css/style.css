@@ -530,8 +530,10 @@ article {
 
 #tabsAndSlides,
 #presentation,
-#carte {
+#carte,
+#accueil section:last-child {
     border: 0;
+    margin-bottom: 1rem;
 }
 
 
@@ -568,16 +570,18 @@ section#tabsAndSlides {
     width: 100%;
 }
 
-#retour{
+#retour {
     display: block;
     clear: both;
     cursor: pointer;
 
-color:red;
-opacity: 0;}
+    color: red;
+    opacity: 0;
+}
 
-#retour:before{
-    content:"◄ "}
+#retour:before {
+    content: "◄ "
+}
 
 
 .carteFrance {
@@ -621,7 +625,7 @@ rect {
 .grand-est-group:hover .grand-est,
 .departement-group:hover path,
 #d07:hover path,
-#d05:hover path  {
+#d05:hover path {
     fill: #002E5D;
     cursor: pointer;
 }
@@ -653,11 +657,107 @@ rect {
     font-size: 1.1em;
 }
 
+#accueil section:last-child article {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.entete {
+    text-align: center;
+    padding: 0.5em;
+    border: 1px solid;
+    background-color: #D12727;
+    color: white;
+    margin: 0;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 0.2em;
+    flex-grow: 1;
+}
+
+#calendar .day {
+    background-color: inherit;
+    border: inherit;
+}
+
+#calendar .next-month {
+    background-color: inherit;
+}
+
+#calendar .day {
+    font-weight: 700;
+}
+
+
+#calendar div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+    background-color: #eaeaea;
+    border: 1px solid #eaeaea;
+    height: 11vw;
+    max-height: 40px;
+}
+
+#calendar h3 {
+    grid-column: 1/8;
+}
+
+
+#livre-d-or button {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    background-color: #002E5D;
+    color: white;
+    font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+    font-family: "EB Garamond", serif;
+    border: 0;
+    transition: all 0.5s ease;
+}
+
+#livre-d-or button:hover {
+    opacity: 0.7;
+}
+
+#livre-d-or textarea{
+    margin-top: 1em;
+}
+.commentaire {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.commentaire * {
+    margin: 0;
+}
+
+.commentaire .texte-commentaire {
+    padding-left: 1em;
+   width:80%;
+}
+
+.commentaire small {
+    color: #a7a7a7a7;
+}
+
+.avatar {
+    height: 50px;
+    width: 50px;
+    width:20%;
+}
+
 /********* TRANSPORTS *********/
 
 #airports_choice {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1%;
 }
 
@@ -665,7 +765,7 @@ rect {
     /*répartition égale sur le parent*/
     border: 2px solid rgba(48, 120, 190, 1);
     padding: 1rem;
-    
+
 }
 
 #airports_choice div h3 {
@@ -681,6 +781,7 @@ rect {
     text-decoration: none;
     color: #002E5D;
 }
+
 #mapBus {
     text-decoration: none;
     color: #002E50;
@@ -1158,7 +1259,7 @@ tr:last-child td:last-child {
 
 #Strasbourg .bouton,
 #Mulhouse .bouton,
-#Colmar .bouton{
+#Colmar .bouton {
     width: 250px;
 }
 
@@ -1262,8 +1363,6 @@ footer {
         width: 70%;
     }
 
-
-
     article,
     header,
     #galerie {
@@ -1325,8 +1424,8 @@ footer {
         grid-template-columns: 1fr;
         grid-column-gap: 10px;
     }
-    
-    #menuDeplacement h2{
+
+    #menuDeplacement h2 {
         width: 90%;
     }
 
@@ -1538,9 +1637,17 @@ footer {
         justify-content: center;
         align-items: center;
     }
-    
-    .transportationChoice:first-child{
+
+    .transportationChoice:first-child {
         margin-bottom: 3rem;
+    }
+    
+    #accueil section:last-child article{
+        display: block;
+    }
+    
+    #livre-d-or{
+        margin-top: 1em;
     }
 
 }
@@ -1649,7 +1756,7 @@ footer {
         grid-row: 2;
         grid-column: 1/3;
     }
-    
+
     #airports_choice {
         grid-row-gap: 10px;
         grid-template-columns: 1fr;
