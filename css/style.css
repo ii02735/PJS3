@@ -1086,6 +1086,17 @@ textarea {
     border: 2px solid #3078be;
 }
 
+@media only screen and (max-width:500px)
+{
+
+    .sous-contact2 input[type="submit"]
+    {
+        position:absolute;
+        display:flex;
+        right:30%;
+    }
+}
+
 .sous-contact3 {
     margin: 50px;
 }
